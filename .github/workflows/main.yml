@@ -32,7 +32,7 @@ jobs:
         uses: jiro4989/setup-nim-action@v1.1.3
 
       - run: nimble develop -Y
-      - run: nim js -o:src/cv.js src/cv.nim
+      - run: nim js -d:release -o:src/cv.js src/cv.nim
       
       - run: git config --local user.email "mudry.ado@gmail.com"
       - run: git config --local user.name "Adam Múdry"

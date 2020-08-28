@@ -7,4 +7,4 @@ proc createDom(): VNode =
       text "Hello world"
 
 setRenderer createDom
-addStylesheet "cv.css"
+addStylesheet "src/cv.css"
