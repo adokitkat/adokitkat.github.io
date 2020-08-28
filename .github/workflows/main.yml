@@ -31,5 +31,5 @@ jobs:
       - name: Setup Nim environment
         uses: jiro4989/setup-nim-action@v1.1.3
 
-      - run: nimble build -Y
-      - run: nimble test -Y
+      - run: nimble develop -Y
+      - run: nim js -o:src/cv.js src/cv.nim
