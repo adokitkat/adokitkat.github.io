@@ -2118,13 +2118,4 @@ function create_dom_12007014() {
   return result_12007016;
 
 }
-function add_stylesheet_12006075(href_12006077) {
-    var css_12006078 = document.createElement("link");
-    css_12006078.setAttribute("href", toJSStr(href_12006077));
-    css_12006078.setAttribute("rel", "stylesheet");
-    document.head.appendChild(css_12006078);
-
-  
-}
 set_renderer_10745238(create_dom_12007014, "ROOT", null);
-add_stylesheet_12006075(makeNimstrLit("src/cv.css"));
