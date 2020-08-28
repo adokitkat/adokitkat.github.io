@@ -21,8 +21,15 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
-
+      
+      - name: Sass Build
+        uses: gha-utilities/sass-build@v0.2.5
+        with:
+          source: src/cv.sass
+          destination: src/cv.css
+      
       - name: Setup Nim environment
         uses: jiro4989/setup-nim-action@v1.1.3
+
       - run: nimble build -Y
       - run: nimble test -Y
