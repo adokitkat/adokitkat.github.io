@@ -23,7 +23,7 @@ jobs:
       - uses: actions/checkout@v2
       
       - name: Sass Build
-        uses: gha-utilities/sass-build@v0.2.5
+        uses: gha-utilities/sass-build@v0.2.6
         with:
           source: src/cv.scss
           destination: src/cv.css
@@ -33,3 +33,10 @@ jobs:
 
       - run: nimble develop -Y
       - run: nim js -o:src/cv.js src/cv.nim
+      
+      - name: GitHub Push
+        uses: ad-m/github-push-action@v0.6.0
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+      
+      
