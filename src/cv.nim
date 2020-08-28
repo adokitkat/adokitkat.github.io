@@ -3,8 +3,8 @@ import jsutils, dom, jsffi
 
 proc createDom(): VNode =
   result = buildHtml(tdiv):
-    text(class="hello-world"):
-      "Hello world"
+    tdiv(class="hello-world"):
+      text "Hello world"
 
 setRenderer createDom
 addStylesheet "cv.css"
