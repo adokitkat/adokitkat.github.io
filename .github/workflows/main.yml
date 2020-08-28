@@ -25,7 +25,7 @@ jobs:
       - name: Sass Build
         uses: gha-utilities/sass-build@v0.2.5
         with:
-          source: src/cv.sass
+          source: src/cv.scss
           destination: src/cv.css
       
       - name: Setup Nim environment
