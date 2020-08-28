@@ -8,4 +8,6 @@ license       = ""
 
 # Dependencies
 
-requires "nim >= 1.2.0", "karax", "jsutils"
+requires "nim >= 1.2.0"
+requires "karax"
+requires "jsutils"
