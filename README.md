@@ -1,7 +1,11 @@
-# My personal CV page
+# Single page web app as my CV
 
-Made using [Nim](https://nim-lang.org/) + HTML and Sass.
+Github Pages serves only a static page -- entire functionality is client-side(d).
 
-Used external Nim libraries: [Karax](https://github.com/pragmagic/karax)
+Made using [Nim](https://nim-lang.org/) (JavaScript backend) and Sass.
+
+External Nim libraries: [Karax](https://github.com/pragmagic/karax)
 
 Automatized building via Github Actions.
+
+Work in progress...
