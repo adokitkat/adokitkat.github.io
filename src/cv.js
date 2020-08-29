@@ -2300,6 +2300,7 @@ function build_navbar_12010205() {
     tmp_12010208.class = "navbar is-primary";
     var tmp_12010209 = tree_9830445(43, []);
     tmp_12010209.class = "navbar-list center";
+    var navbar_item_12015009 = null;
     L1: do {
       var n_12015235 = 0;
       L2: do {
@@ -2310,8 +2311,15 @@ function build_navbar_12010205() {
             if (!(res_12025224 <= 2)) break L4;
               v_12025223 = chckRange(res_12025224, 0, 2);
               n_12015235 = v_12025223;
+              if ((n_12015235 == 0)) {
+              navbar_item_12015009 = "navbar-item navbar-item-left";
+              }
+              else {
+                navbar_item_12015009 = "navbar-item";
+              }
+              
               var tmp_12010210 = tree_9830445(44, []);
-              tmp_12010210.class = "navbar-item";
+              tmp_12010210.class = navbar_item_12015009;
               add_event_handler_10750154(tmp_12010210, 0, action_12010084(0, title_12007097(n_12015235)), kxi_10187284[0]);
               add_9820072(tmp_12010210, content_12007114(n_12015235, makeNimstrLit("title")));
               add_9820072(tmp_12010209, tmp_12010210);
@@ -2324,7 +2332,7 @@ function build_navbar_12010205() {
       } while(false);
     } while(false);
     var tmp_12010212 = tree_9830445(44, []);
-    tmp_12010212.class = "navbar-item";
+    tmp_12010212.class = "navbar-item navbar-item-right";
     add_event_handler_10750154(tmp_12010212, 0, action_12010084(1, ""), kxi_10187284[0]);
     if ((language_12007038[0] == 1)) {
     add_9820072(tmp_12010212, text_9830548(makeNimstrLit("EN")));
@@ -2340,17 +2348,17 @@ function build_navbar_12010205() {
   return result_12010207;
 
 }
-function build_content_12015270() {
-  var result_12015272 = null;
+function build_content_12015274() {
+  var result_12015276 = null;
 
-    var tmp_12015273 = tree_9830445(43, []);
-    var tmp_12015274 = tree_9830445(43, []);
-    tmp_12015274.class = "content center";
-    add_9820072(tmp_12015274, content_12007114(shown_content_12007037[0], makeNimstrLit("text")));
-    add_9820072(tmp_12015273, tmp_12015274);
-    result_12015272 = tmp_12015273;
+    var tmp_12015277 = tree_9830445(43, []);
+    var tmp_12015278 = tree_9830445(43, []);
+    tmp_12015278.class = "content center";
+    add_9820072(tmp_12015278, content_12007114(shown_content_12007037[0], makeNimstrLit("text")));
+    add_9820072(tmp_12015277, tmp_12015278);
+    result_12015276 = tmp_12015277;
 
-  return result_12015272;
+  return result_12015276;
 
 }
 function create_dom_12020022() {
@@ -2358,7 +2366,7 @@ function create_dom_12020022() {
 
     var tmp_12020025 = tree_9830445(43, []);
     add_9820072(tmp_12020025, build_navbar_12010205());
-    add_9820072(tmp_12020025, build_content_12015270());
+    add_9820072(tmp_12020025, build_content_12015274());
     result_12020024 = tmp_12020025;
 
   return result_12020024;
