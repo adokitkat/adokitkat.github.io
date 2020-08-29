@@ -8,4 +8,4 @@ External Nim libraries: [Karax](https://github.com/pragmagic/karax)
 
 Automatized building via Github Actions.
 
-## [LINK](adokitkat.github.io)
+## [LINK](https://adokitkat.github.io)
