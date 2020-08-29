@@ -34,7 +34,7 @@ O mne po slovensky...
 var
   shown_content = 0
   language : Language = Slovak
-
+#[
 proc `[]`(obj: JsObject; field: Language): JsObject =
   result = obj[ord(field)]
 
@@ -43,14 +43,14 @@ proc `[]`[T](arr: openArray[T]; field: Language): T =
 
 proc `[]`[T](arr: openArray[var T]; field: Language): var T =
   result = arr[ord(field)]
-
+]#
 proc action(typ: ActionType, entry: kstring): proc() =
   result = proc() = 
     case typ
     of NavbarAction:
       echo "clicked \"", entry, "\" menu button"
       for i, item in navbar_list:
-        if entry == item.title[language]:
+        if entry == item.title[int(language)]:
           shown_content = i
 
     of LanguageAction:
@@ -69,16 +69,16 @@ proc buildNavbar(): VNode =
       for i, m in navbar_list:
         span():
           text "/"
-        a(class="navbar-item", onclick=action(NavbarAction, m.title[language])):
-          text m.title[language]
+        a(class="navbar-item", onclick=action(NavbarAction, m.title[int(language)])):
+          text m.title[int(language)]
 
       a(class="navbar-item", onclick=action(LanguageAction, "")):
-          text languages[language]
+          text languages[int(language)]
 
 proc buildContent(): VNode =
   result = buildHtml(tdiv):
     tdiv(class="content center"):
-      text navbar_list[shown_content].content[language]
+      text navbar_list[shown_content].content[int(language)]
 
 proc createDom(): VNode =
   result = buildHtml(tdiv):
