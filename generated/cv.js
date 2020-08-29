@@ -2352,7 +2352,7 @@ function create_dom_10995018(data_10995020) {
     var tmp_10995023 = tree_9830445(31, []);
     add_9820072(tmp_10995023, text_9830548(makeNimstrLit("Powered by ")));
     var tmp_10995024 = tree_9830445(70, []);
-    tmp_10995024.class = "yellow";
+    tmp_10995024.class = "center nim-yellow";
     add_9820072(tmp_10995024, text_9830548(makeNimstrLit("Nim")));
     add_9820072(tmp_10995023, tmp_10995024);
     add_9820072(tmp_10995022, tmp_10995023);
