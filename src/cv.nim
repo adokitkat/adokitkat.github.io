@@ -14,8 +14,8 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin in pulvinar dolor
 
 Duis scelerisque, enim vitae sollicitudin semper, ante odio tempus mauris, non porttitor ante justo et metus. Praesent lacinia consectetur consequat. Integer iaculis, urna quis ullamcorper maximus, urna tellus dignissim elit, eget luctus diam orci in lectus. Praesent tristique vehicula justo vitae pulvinar. Phasellus tincidunt, orci ut suscipit tincidunt, augue massa laoreet metus, ut mollis purus purus nec enim. Cras vitae pharetra lacus. Integer volutpat, nisi quis tempor ornare, tellus sapien ultricies odio, in condimentum purus risus in ante. Aliquam erat volutpat. Aliquam sed nibh feugiat, tempus elit at, pulvinar arcu. Aliquam porta mi sodales, rhoncus eros vitae, venenatis lectus. Ut interdum nisi quis ante gravida lacinia. Nunc pretium, odio non molestie ultrices, libero mi gravida orci, quis lacinia leo elit ac arcu. Integer pretium elementum odio sed commodo. Quisque eget ligula a lectus pharetra sagittis id non elit. Nullam vitae consequat libero.
 """
-  text_skills : kstring
-  text_projects : kstring
+  text_skills : kstring = ""
+  text_projects : kstring = ""
 
   navbar_list : seq[ContentItem] = @[ContentItem(menu_title: "About", content: text_about),
                                      ContentItem(menu_title: "Skills", content: text_skills),
