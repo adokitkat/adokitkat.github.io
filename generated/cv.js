@@ -10,6 +10,7 @@ if (typeof Uint16Array === 'undefined') Uint16Array = Array;
 if (typeof Uint32Array === 'undefined') Uint32Array = Array;
 if (typeof Float32Array === 'undefined') Float32Array = Array;
 if (typeof Float64Array === 'undefined') Float64Array = Array;
+var NTI9770125 = {size: 0,kind: 24,base: null,node: null,finalizer: null};
 var NTI6253 = {size: 0, kind: 17, base: null, node: null, finalizer: null};
 var NTI10187211 = {size: 0, kind: 18, base: null, node: null, finalizer: null};
 var NTI861084 = {size: 0, kind: 18, base: null, node: null, finalizer: null};
@@ -450,6 +451,7 @@ NTI10187211.node = NNI10187211;
 var NNI6253 = {kind: 2, len: 0, offset: 0, typ: null, name: null, sons: []};
 NTI6253.node = NNI6253;
 NTI6253.base = NTI6219;
+NTI9770125.base = NTI114;
 function cstrToNimstr(c_225079) {
       var ln = c_225079.length;
   var result = new Array(ln);
@@ -2339,6 +2341,38 @@ function build_content_10990274() {
   return result_10990276;
 
 }
+function set_attr_9770105(n_9770107, key_9770108, val_9770109) {
+  BeforeRet: do {
+    if (((n_9770107.attrs != null ? n_9770107.attrs.length : 0) == 0)) {
+    n_9770107.attrs = nimCopy(null, [key_9770108, val_9770109], NTI9770125);
+    }
+    else {
+      L1: do {
+        var i_9770138 = 0;
+        var colontmp__11000238 = 0;
+        colontmp__11000238 = subInt((n_9770107.attrs != null ? n_9770107.attrs.length : 0), 2);
+        var res_11000239 = 0;
+        L2: do {
+            L3: while (true) {
+            if (!(res_11000239 <= colontmp__11000238)) break L3;
+              i_9770138 = res_11000239;
+              if ((n_9770107.attrs[chckIndx(i_9770138, 0, (n_9770107.attrs != null ? n_9770107.attrs.length : 0)+0-1)-0] == key_9770108)) {
+              n_9770107.attrs[chckIndx(addInt(i_9770138, 1), 0, (n_9770107.attrs != null ? n_9770107.attrs.length : 0)+0-1)-0] = val_9770109;
+              break BeforeRet;
+              }
+              
+              res_11000239 = addInt(res_11000239, 2);
+            }
+        } while(false);
+      } while(false);
+      if (n_9770107.attrs != null) { n_9770107.attrs.push(key_9770108); } else { n_9770107.attrs = [key_9770108]; };
+      if (n_9770107.attrs != null) { n_9770107.attrs.push(val_9770109); } else { n_9770107.attrs = [val_9770109]; };
+    }
+    
+  } while (false);
+
+  
+}
 function create_dom_10995018(data_10995020) {
   var result_10995021 = null;
 
@@ -2350,9 +2384,11 @@ function create_dom_10995018(data_10995020) {
     add_9820072(tmp_10995022, build_navbar_10985243());
     add_9820072(tmp_10995022, build_content_10990274());
     var tmp_10995023 = tree_9830445(31, []);
+    tmp_10995023.class = "center";
     add_9820072(tmp_10995023, text_9830548(makeNimstrLit("Powered by ")));
-    var tmp_10995024 = tree_9830445(70, []);
-    tmp_10995024.class = "center nim-yellow";
+    var tmp_10995024 = tree_9830445(44, []);
+    tmp_10995024.class = "nim-yellow";
+    set_attr_9770105(tmp_10995024, "href", "https://nim-lang.org/");
     add_9820072(tmp_10995024, text_9830548(makeNimstrLit("Nim")));
     add_9820072(tmp_10995023, tmp_10995024);
     add_9820072(tmp_10995022, tmp_10995023);
