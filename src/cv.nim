@@ -27,7 +27,7 @@ proc action(typ: ActionType, entry: kstring): proc() =
     case typ
     of MenuAction:
       echo "clicked \"", entry, "\" menu button"
-      for i, item in content_list:
+      for i, item in navbar_list:
         if entry == item.menu_title:
           mode = i
 
