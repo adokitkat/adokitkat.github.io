@@ -2387,7 +2387,7 @@ function create_dom_10995018(data_10995020) {
     tmp_10995023.class = "center";
     add_9820072(tmp_10995023, text_9830548(makeNimstrLit("Powered by ")));
     var tmp_10995024 = tree_9830445(44, []);
-    tmp_10995024.class = "nim-yellow";
+    tmp_10995024.class = "nim-link";
     set_attr_9770105(tmp_10995024, "href", "https://nim-lang.org/");
     add_9820072(tmp_10995024, text_9830548(makeNimstrLit("Nim")));
     add_9820072(tmp_10995023, tmp_10995024);
