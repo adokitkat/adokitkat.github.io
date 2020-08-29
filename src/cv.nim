@@ -1,5 +1,5 @@
 include karax / prelude
-import jsutils, dom, jsffi, strutils
+import dom, jsffi, strutils
 
 type
   ActionType {.pure.} = enum
@@ -11,11 +11,9 @@ type
   ContentType {.pure.} = enum
     About, Skills, Projects
 
-  ContentItem = object
-    title, content : array[2, kstring]
-
-var
+const
   ContentTypeKstring = [kstring"About", "Skills", "Projects"]
+var
   shown_content : ContentType = About
   language : Language = English
 
@@ -58,7 +56,6 @@ proc content(typ: ContentType, part: string) : VNode =
 proc action(typ: ActionType, entry: kstring): proc() =
   result = proc() = 
     case typ
-
     of LanguageAction:
       echo "clicked language button"
       if language == English:
@@ -99,7 +96,7 @@ proc buildContent(): VNode =
       content(shown_content, "text")
 
 proc createDom(data: RouterData): VNode =
-  if data.hashPart == "#/sk": language = Slovak
+  if data.hashPart == "#/sk": language = Slovak # doesn't work on Github Pages...
   result = buildHtml(tdiv):
     buildNavbar()
     buildContent()
