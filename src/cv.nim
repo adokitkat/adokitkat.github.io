@@ -98,7 +98,8 @@ proc buildContent(): VNode =
     tdiv(class="content center"):
       content(shown_content, "text")
 
-proc createDom(): VNode =
+proc createDom(data: RouterData): VNode =
+  if data.hashPart == "#/sk": language = Slovak
   result = buildHtml(tdiv):
     buildNavbar()
     buildContent()
