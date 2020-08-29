@@ -1,55 +1,63 @@
 include karax / prelude
-import jsutils, dom, jsffi
+import jsutils, dom, jsffi, strutils
 
 type
   ActionType {.pure.} = enum
-    NavbarAction, ButtonAction, LanguageAction
+    NavbarAction, LanguageAction
 
   Language {.pure.} = enum
     English, Slovak
 
+  ContentType {.pure.} = enum
+    About, Skills, Projects
+
   ContentItem = object
     title, content : array[2, kstring]
 
-const
-  about_title = [kstring"About", "O mne"]
-  about_text = [kstring"""
-About me in English...
-""",
-"""
-O mne po slovensky...
-"""]
-
-  skills_title = [kstring"Skills", "Schopnosti"]
-  skills_text = [kstring"", ""]
-
-  projects_title = [kstring"Projects", "Projekty"]
-  projects_text = [kstring"", ""]
-
-  navbar_list : seq[ContentItem] = @[ContentItem(title: about_title, content: about_text),
-                                     ContentItem(title: skills_title, content: skills_text),
-                                     ContentItem(title: projects_title, content: projects_text)]
 var
-  shown_content = 0
-  language : Language = Slovak
-#[
-proc `[]`(obj: JsObject; field: Language): JsObject =
-  result = obj[ord(field)]
+  ContentTypeKstring = [kstring"About", "Skills", "Projects"]
+  shown_content : ContentType = About
+  language : Language = English
 
-proc `[]`[T](arr: openArray[T]; field: Language): T =
-  result = arr[ord(field)]
+proc title(typ: ContentType) : kstring =
+  result = case typ
+    of About:
+      kstring"About"
+    of Skills:
+      kstring"Skills"
+    of Projects:
+      kstring"Projects"
 
-proc `[]`[T](arr: openArray[var T]; field: Language): var T =
-  result = arr[ord(field)]
-]#
+proc content(typ: ContentType, part: string) : VNode =
+  result = buildHtml(tdiv(class="")):
+    case typ
+    of About:
+      case part
+      of "title":
+        text [kstring"About", "O mne"][ord(language)]
+      of "text":
+        text [kstring"""abc""",
+              """xyz"""][ord(language)]
+
+    of Skills:
+      case part
+      of "title":
+        text [kstring"Skills", "Schopnosti"][ord(language)]
+      of "text":
+        text [kstring"""dfe""",
+              """qwerty"""][ord(language)]
+
+    of Projects:
+      case part
+      of "title":
+        text [kstring"Projects", "Projekty"][ord(language)]
+      of "text":
+        text [kstring"""123""",
+              """666"""][ord(language)]
+
 proc action(typ: ActionType, entry: kstring): proc() =
   result = proc() = 
     case typ
-    of NavbarAction:
-      echo "clicked \"", entry, "\" menu button"
-      for i, item in navbar_list:
-        if entry == item.title[int(language)]:
-          shown_content = i
 
     of LanguageAction:
       echo "clicked language button"
@@ -57,16 +65,21 @@ proc action(typ: ActionType, entry: kstring): proc() =
         language = Slovak
       elif language == Slovak:
         language = English
-
-    of ButtonAction:
-      echo "clicked \"", entry, "\" normal button"
+    
+    of NavbarAction:
+      echo "clicked \"", entry, "\" menu button"
+      for i, n in ContentTypeKstring:
+        if entry == n:
+          shown_content = ContentType(i)
 
 proc buildNavbar(): VNode =
   result = buildHtml(nav(class="navbar is-primary")):
+    
     tdiv(class="navbar-list center"):
-      for i, m in navbar_list:
-        a(class="navbar-item", onclick=action(NavbarAction, m.title[int(language)])):
-          text m.title[int(language)]
+      
+      for n in ContentType:
+        a(class="navbar-item", onclick=action(NavbarAction, title(n))):
+          content(n, "title")
         span():
           text "/"
 
@@ -79,7 +92,7 @@ proc buildNavbar(): VNode =
 proc buildContent(): VNode =
   result = buildHtml(tdiv):
     tdiv(class="content center"):
-      text navbar_list[shown_content].content[int(language)]
+      content(shown_content, "text")
 
 proc createDom(): VNode =
   result = buildHtml(tdiv):
