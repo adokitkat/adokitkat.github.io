@@ -2166,7 +2166,7 @@ function create_dom_12025037() {
     var tmp_12025040 = tree_9830445(43, []);
     add_9820072(tmp_12025040, build_menu_12007079());
     var tmp_12025041 = tree_9830445(43, []);
-    tmp_12025041.class = "hello-world";
+    tmp_12025041.class = "center";
     add_9820072(tmp_12025041, text_9830548(makeNimstrLit("Hello world")));
     add_9820072(tmp_12025040, tmp_12025041);
     result_12025039 = tmp_12025040;
