@@ -103,9 +103,9 @@ proc createDom(data: RouterData): VNode =
   result = buildHtml(tdiv):
     buildNavbar()
     buildContent()
-    p:
+    p(class="center"):
       text "Powered by "
-      span(class="center nim-yellow"):
+      a(class="nim-yellow", href="https://nim-lang.org/"):
         text "Nim"
 
 setRenderer createDom
