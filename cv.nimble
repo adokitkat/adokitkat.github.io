@@ -1,6 +1,6 @@
 # Package
 
-version       = "0.1.0"
+version       = "0.5.0"
 author        = "Adam Múdry"
 description   = "CV page"
 license       = "MIT"
@@ -8,4 +8,4 @@ license       = "MIT"
 
 # Dependencies
 
-requires "nim >= 1.2.0", "karax", "jsutils"
+requires "nim >= 1.2.0", "karax"
