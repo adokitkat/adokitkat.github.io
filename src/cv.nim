@@ -12,8 +12,6 @@ type
     title, content : array[2, kstring]
 
 const
-  languages = [kstring"EN", "SK"]
-
   about_title = [kstring"About", "O mne"]
   about_text = [kstring"""
 About me in English...
@@ -22,10 +20,10 @@ About me in English...
 O mne po slovensky...
 """]
 
-  skills_title = [kstring"", ""]
+  skills_title = [kstring"Skills", "Schopnosti"]
   skills_text = [kstring"", ""]
 
-  projects_title = [kstring"", ""]
+  projects_title = [kstring"Projects", "Projekty"]
   projects_text = [kstring"", ""]
 
   navbar_list : seq[ContentItem] = @[ContentItem(title: about_title, content: about_text),
@@ -67,13 +65,16 @@ proc buildNavbar(): VNode =
   result = buildHtml(nav(class="navbar is-primary")):
     tdiv(class="navbar-list center"):
       for i, m in navbar_list:
-        span():
-          text "/"
         a(class="navbar-item", onclick=action(NavbarAction, m.title[int(language)])):
           text m.title[int(language)]
+        span():
+          text "/"
 
       a(class="navbar-item", onclick=action(LanguageAction, "")):
-          text languages[int(language)]
+          if language == Slovak:
+            text "EN"
+          else:
+            text "SK"
 
 proc buildContent(): VNode =
   result = buildHtml(tdiv):
