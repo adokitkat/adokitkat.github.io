@@ -2,13 +2,13 @@ include karax / prelude
 import jsutils, dom, jsffi
 
 type
-  NavbarItem = object
+  ContentItem = object
     menu_title, content : kstring
 
 const
-  navbar_list : seq[NavbarItem] = @[NavbarItem(menu_title: "About", content: ""),
-                                    NavbarItem(menu_title: "Skills", content: ""),
-                                    NavbarItem(menu_title: "Projects", content: "")]
+  navbar_list : seq[ContentItem] = @[ContentItem(menu_title: "About", content: ""),
+                                     ContentItem(menu_title: "Skills", content: ""),
+                                     ContentItem(menu_title: "Projects", content: "")]
 var mode = 0
 
 proc buildMenu(): VNode =
@@ -24,7 +24,7 @@ proc buildMenu(): VNode =
 proc createDom(): VNode =
   result = buildHtml(tdiv):
     buildMenu()
-    tdiv(class="hello-world"):
+    tdiv(class="center"):
       text "Hello world"
 
 setRenderer createDom

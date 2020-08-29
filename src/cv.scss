@@ -3,7 +3,6 @@
   src: url(retro_gaming.ttf);
 }
 
-
 body {
   margin: 0;
   font-family: 'Retro Gaming';
@@ -18,6 +17,9 @@ body {
   padding: 10px;
 }
 
-.hello-world {
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
   text-align: center;
 }
