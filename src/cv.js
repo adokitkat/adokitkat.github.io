@@ -741,6 +741,7 @@ function nimMin(a_230803, b_230804) {
 
 }
             var navbar_list_12007066 = [{title: ["About", "O mne"], content: ["About me in English...\n", "O mne po slovensky...\n"]}, {title: ["", ""], content: ["", ""]}, {title: ["", ""], content: ["", ""]}];
+    var languages_12007032 = ["EN", "SK"];
 var nim_program_result = 0;
 var global_raise_hook_142018 = [null];
 var local_raise_hook_142023 = [null];
@@ -2134,38 +2135,27 @@ function add_event_handler_10750154(n_10750156, k_10750157, action_10750160, kxi
 
   
 }
-function HEX5BHEX5D_12015245(arr_12015250, field_12015251) {
-  var result_12015253 = null;
-  var result_12015253_Idx = 0;
-
-    result_12015253 = arr_12015250[chckIndx(field_12015251, 0, (arr_12015250 != null ? arr_12015250.length : 0)+0-1)-0][0]; result_12015253_Idx = arr_12015250[chckIndx(field_12015251, 0, (arr_12015250 != null ? arr_12015250.length : 0)+0-1)-0][1];
-
-  return [result_12015253, result_12015253_Idx];
-
-}
-function action_12007170(typ_12007172, entry_12007173) {
-    function HEX3Aanonymous_12007177() {
-                    var Tmp4;
-
-        switch (typ_12007172) {
+function action_12007128(typ_12007130, entry_12007131) {
+    function HEX3Aanonymous_12007135() {
+        switch (typ_12007130) {
         case 0:
-          rawEcho(makeNimstrLit("clicked \""), cstrToNimstr(entry_12007173), makeNimstrLit("\" menu button"));
+          rawEcho(makeNimstrLit("clicked \""), cstrToNimstr(entry_12007131), makeNimstrLit("\" menu button"));
           L1: do {
             var i_12015229 = 0;
             var item_12015230 = ({title: [null, null], content: [null, null]});
-            var i_12030220 = 0;
-            var l_12030221 = 3;
+            var i_12030224 = 0;
+            var l_12030225 = 3;
             L2: do {
                 L3: while (true) {
-                if (!(i_12030220 < l_12030221)) break L3;
-                  i_12015229 = i_12030220;
-                  nimCopy(item_12015230, navbar_list_12007066[chckIndx(i_12030220, 0, (navbar_list_12007066 != null ? navbar_list_12007066.length : 0)+0-1)-0], NTI12007019);
-                  if ((entry_12007173 == (Tmp4 = HEX5BHEX5D_12015245(item_12015230.title, language_12007069[0]), Tmp4)[0][Tmp4[1]])) {
+                if (!(i_12030224 < l_12030225)) break L3;
+                  i_12015229 = i_12030224;
+                  nimCopy(item_12015230, navbar_list_12007066[chckIndx(i_12030224, 0, (navbar_list_12007066 != null ? navbar_list_12007066.length : 0)+0-1)-0], NTI12007019);
+                  if ((entry_12007131 == item_12015230.title[chckIndx(((language_12007069[0])|0), 0, (item_12015230.title != null ? item_12015230.title.length : 0)+0-1)-0])) {
                   shown_content_12007068[0] = i_12015229;
                   }
                   
-                  i_12030220 = addInt(i_12030220, 1);
-                  if (!((3 == l_12030221))) {
+                  i_12030224 = addInt(i_12030224, 1);
+                  if (!((3 == l_12030225))) {
                   failed_assert_impl_102680(makeNimstrLit("iterators.nim(122, 11) `len(a) == L` the length of the seq changed while iterating over it"));
                   }
                   
@@ -2185,18 +2175,18 @@ function action_12007170(typ_12007172, entry_12007173) {
           }
           break;
         case 1:
-          rawEcho(makeNimstrLit("clicked \""), cstrToNimstr(entry_12007173), makeNimstrLit("\" normal button"));
+          rawEcho(makeNimstrLit("clicked \""), cstrToNimstr(entry_12007131), makeNimstrLit("\" normal button"));
           break;
         }
 
       
     }
 
-  var result_12007176 = null;
+  var result_12007134 = null;
 
-    result_12007176 = HEX3Aanonymous_12007177;
+    result_12007134 = HEX3Aanonymous_12007135;
 
-  return result_12007176;
+  return result_12007134;
 
 }
 function text_9830601(s_9830603) {
@@ -2207,78 +2197,72 @@ function text_9830601(s_9830603) {
   return result_9830604;
 
 }
-function build_navbar_12015344() {
-            var Tmp4;
-            var Tmp5;
-    var Tmp6;
+function build_navbar_12015292() {
+  var result_12015294 = null;
 
-  var result_12015346 = null;
-
-    var tmp_12015383 = tree_9830445(18, []);
-    tmp_12015383.class = "navbar is-primary";
-    var tmp_12015389 = tree_9830445(43, []);
-    tmp_12015389.class = "navbar-list center";
+    var tmp_12015331 = tree_9830445(18, []);
+    tmp_12015331.class = "navbar is-primary";
+    var tmp_12015337 = tree_9830445(43, []);
+    tmp_12015337.class = "navbar-list center";
     L1: do {
       var i_12020018 = 0;
       var m_12020019 = ({title: [null, null], content: [null, null]});
-      var i_12030214 = 0;
-      var l_12030215 = 3;
+      var i_12030216 = 0;
+      var l_12030217 = 3;
       L2: do {
           L3: while (true) {
-          if (!(i_12030214 < l_12030215)) break L3;
-            i_12020018 = i_12030214;
-            nimCopy(m_12020019, navbar_list_12007066[chckIndx(i_12030214, 0, (navbar_list_12007066 != null ? navbar_list_12007066.length : 0)+0-1)-0], NTI12007019);
-            var tmp_12015390 = tree_9830445(70, []);
-            add_9820072(tmp_12015390, text_9830548(makeNimstrLit("/")));
-            add_9820072(tmp_12015389, tmp_12015390);
-            var tmp_12015391 = tree_9830445(44, []);
-            tmp_12015391.class = "navbar-item";
-            add_event_handler_10750154(tmp_12015391, 0, action_12007170(0, (Tmp4 = HEX5BHEX5D_12015245(m_12020019.title, language_12007069[0]), Tmp4)[0][Tmp4[1]]), kxi_10187284[0]);
-            add_9820072(tmp_12015391, text_9830601((Tmp5 = HEX5BHEX5D_12015245(m_12020019.title, language_12007069[0]), Tmp5)[0][Tmp5[1]]));
-            add_9820072(tmp_12015389, tmp_12015391);
-            i_12030214 = addInt(i_12030214, 1);
-            if (!((3 == l_12030215))) {
+          if (!(i_12030216 < l_12030217)) break L3;
+            i_12020018 = i_12030216;
+            nimCopy(m_12020019, navbar_list_12007066[chckIndx(i_12030216, 0, (navbar_list_12007066 != null ? navbar_list_12007066.length : 0)+0-1)-0], NTI12007019);
+            var tmp_12015338 = tree_9830445(70, []);
+            add_9820072(tmp_12015338, text_9830548(makeNimstrLit("/")));
+            add_9820072(tmp_12015337, tmp_12015338);
+            var tmp_12015339 = tree_9830445(44, []);
+            tmp_12015339.class = "navbar-item";
+            add_event_handler_10750154(tmp_12015339, 0, action_12007128(0, m_12020019.title[chckIndx(((language_12007069[0])|0), 0, (m_12020019.title != null ? m_12020019.title.length : 0)+0-1)-0]), kxi_10187284[0]);
+            add_9820072(tmp_12015339, text_9830601(m_12020019.title[chckIndx(((language_12007069[0])|0), 0, (m_12020019.title != null ? m_12020019.title.length : 0)+0-1)-0]));
+            add_9820072(tmp_12015337, tmp_12015339);
+            i_12030216 = addInt(i_12030216, 1);
+            if (!((3 == l_12030217))) {
             failed_assert_impl_102680(makeNimstrLit("iterators.nim(122, 11) `len(a) == L` the length of the seq changed while iterating over it"));
             }
             
           }
       } while(false);
     } while(false);
-    var tmp_12015392 = tree_9830445(44, []);
-    tmp_12015392.class = "navbar-item";
-    add_event_handler_10750154(tmp_12015392, 0, action_12007170(2, ""), kxi_10187284[0]);
-    add_9820072(tmp_12015392, text_9830601((Tmp6 = HEX5BHEX5D_12015245(["EN", "SK"], language_12007069[0]), Tmp6)[0][Tmp6[1]]));
-    add_9820072(tmp_12015389, tmp_12015392);
-    add_9820072(tmp_12015383, tmp_12015389);
-    result_12015346 = tmp_12015383;
+    var tmp_12015340 = tree_9830445(44, []);
+    tmp_12015340.class = "navbar-item";
+    add_event_handler_10750154(tmp_12015340, 0, action_12007128(2, ""), kxi_10187284[0]);
+    add_9820072(tmp_12015340, text_9830601(languages_12007032[chckIndx(((language_12007069[0])|0), 0, (languages_12007032 != null ? languages_12007032.length : 0)+0-1)-0]));
+    add_9820072(tmp_12015337, tmp_12015340);
+    add_9820072(tmp_12015331, tmp_12015337);
+    result_12015294 = tmp_12015331;
 
-  return result_12015346;
-
-}
-function build_content_12020130() {
-    var Tmp1;
-
-  var result_12020132 = null;
-
-    var tmp_12020133 = tree_9830445(43, []);
-    var tmp_12020134 = tree_9830445(43, []);
-    tmp_12020134.class = "content center";
-    add_9820072(tmp_12020134, text_9830601((Tmp1 = HEX5BHEX5D_12015245(navbar_list_12007066[chckIndx(shown_content_12007068[0], 0, (navbar_list_12007066 != null ? navbar_list_12007066.length : 0)+0-1)-0].content, language_12007069[0]), Tmp1)[0][Tmp1[1]]));
-    add_9820072(tmp_12020133, tmp_12020134);
-    result_12020132 = tmp_12020133;
-
-  return result_12020132;
+  return result_12015294;
 
 }
-function create_dom_12025044() {
-  var result_12025046 = null;
+function build_content_12020064() {
+  var result_12020066 = null;
 
-    var tmp_12025047 = tree_9830445(43, []);
-    add_9820072(tmp_12025047, build_navbar_12015344());
-    add_9820072(tmp_12025047, build_content_12020130());
-    result_12025046 = tmp_12025047;
+    var tmp_12020067 = tree_9830445(43, []);
+    var tmp_12020068 = tree_9830445(43, []);
+    tmp_12020068.class = "content center";
+    add_9820072(tmp_12020068, text_9830601(navbar_list_12007066[chckIndx(shown_content_12007068[0], 0, (navbar_list_12007066 != null ? navbar_list_12007066.length : 0)+0-1)-0].content[chckIndx(((language_12007069[0])|0), 0, (navbar_list_12007066[chckIndx(shown_content_12007068[0], 0, (navbar_list_12007066 != null ? navbar_list_12007066.length : 0)+0-1)-0].content != null ? navbar_list_12007066[chckIndx(shown_content_12007068[0], 0, (navbar_list_12007066 != null ? navbar_list_12007066.length : 0)+0-1)-0].content.length : 0)+0-1)-0]));
+    add_9820072(tmp_12020067, tmp_12020068);
+    result_12020066 = tmp_12020067;
 
-  return result_12025046;
+  return result_12020066;
 
 }
-set_renderer_10745238(create_dom_12025044, "ROOT", null);
+function create_dom_12025022() {
+  var result_12025024 = null;
+
+    var tmp_12025025 = tree_9830445(43, []);
+    add_9820072(tmp_12025025, build_navbar_12015292());
+    add_9820072(tmp_12025025, build_content_12020064());
+    result_12025024 = tmp_12025025;
+
+  return result_12025024;
+
+}
+set_renderer_10745238(create_dom_12025022, "ROOT", null);
