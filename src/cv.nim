@@ -74,16 +74,20 @@ proc action(typ: ActionType, entry: kstring): proc() =
 
 proc buildNavbar(): VNode =
   result = buildHtml(nav(class="navbar is-primary")):
-    
     tdiv(class="navbar-list center"):
-      
+      var navbar_item : kstring
       for n in ContentType:
-        a(class="navbar-item", onclick=action(NavbarAction, title(n))):
+        if ord(n) == 0 :
+          navbar_item = "navbar-item navbar-item-left"
+        else :
+          navbar_item = "navbar-item"
+
+        a(class=navbar_item, onclick=action(NavbarAction, title(n))):
           content(n, "title")
         span():
           text "/"
 
-      a(class="navbar-item", onclick=action(LanguageAction, "")):
+      a(class="navbar-item navbar-item-right", onclick=action(LanguageAction, "")):
           if language == Slovak:
             text "EN"
           else:

@@ -15,6 +15,15 @@ body {
 .navbar-item {
   display: inline-block;
   padding: 10px;
+
+  .navbar-item-left {
+    padding-left: 5px;
+  }
+
+  .navbar-item-right {
+    padding-right: 5px;
+  }
+
 }
 
 .center {
