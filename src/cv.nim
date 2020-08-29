@@ -27,22 +27,26 @@ proc title(typ: ContentType) : kstring =
       kstring"Projects"
 
 proc content(typ: ContentType, part: string) : VNode =
-  result = buildHtml(tdiv(class="")):
+  result = buildHtml(tdiv(class="content")):
     case typ
     of About:
       case part
       of "title":
         text [kstring"About", "O mne"][ord(language)]
       of "text":
-        text [kstring"""abc""",
-              """xyz"""][ord(language)]
-
+        h2:
+          text "Adam Múdry"
+        p:
+          text ["""abc""",
+              """xyz"""            
+              ][ord(language)]
+        
     of Skills:
       case part
       of "title":
         text [kstring"Skills", "Schopnosti"][ord(language)]
       of "text":
-        text [kstring"""dfe""",
+        text ["""dfe""",
               """qwerty"""][ord(language)]
 
     of Projects:
@@ -50,7 +54,7 @@ proc content(typ: ContentType, part: string) : VNode =
       of "title":
         text [kstring"Projects", "Projekty"][ord(language)]
       of "text":
-        text [kstring"""123""",
+        text ["""123""",
               """666"""][ord(language)]
 
 proc action(typ: ActionType, entry: kstring): proc() =
@@ -91,8 +95,7 @@ proc buildNavbar(): VNode =
             text "SK"
 
 proc buildContent(): VNode =
-  result = buildHtml(tdiv):
-    tdiv(class="content center"):
+  result = buildHtml(tdiv(class="content-body center")):
       content(shown_content, "text")
 
 proc createDom(data: RouterData): VNode =
