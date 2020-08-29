@@ -3,10 +3,10 @@ import jsutils, dom, jsffi
 
 type
   ActionType {.pure.} = enum
-    MenuAction, ButtonAction
+    NavbarAction, ButtonAction
 
   ContentItem = object
-    menu_title, content : kstring
+    title, content : kstring
 
 const
   text_about : kstring = """
@@ -17,32 +17,32 @@ Duis scelerisque, enim vitae sollicitudin semper, ante odio tempus mauris, non p
   text_skills : kstring = ""
   text_projects : kstring = ""
 
-  navbar_list : seq[ContentItem] = @[ContentItem(menu_title: "About", content: text_about),
-                                     ContentItem(menu_title: "Skills", content: text_skills),
-                                     ContentItem(menu_title: "Projects", content: text_projects)]
+  navbar_list : seq[ContentItem] = @[ContentItem(title: "About", content: text_about),
+                                     ContentItem(title: "Skills", content: text_skills),
+                                     ContentItem(title: "Projects", content: text_projects)]
 var mode = 0
 
 proc action(typ: ActionType, entry: kstring): proc() =
   result = proc() = 
     case typ
-    of MenuAction:
+    of NavbarAction:
       echo "clicked \"", entry, "\" menu button"
       for i, item in navbar_list:
-        if entry == item.menu_title:
+        if entry == item.title:
           mode = i
 
     of ButtonAction:
       echo "clicked \"", entry, "\" normal button"
 
-proc buildMenu(): VNode =
+proc buildNavbar(): VNode =
   result = buildHtml(nav(class="navbar is-primary")):
     tdiv(class="navbar-list center"):
       for i, m in navbar_list:
         if i != 0:
           span():
             text "/"
-        a(class="navbar-item"):
-          text m.menu_title
+        a(class="navbar-item", onclick=action(NavbarAction, m.title)):
+          text m.title
 
 proc buildContent(): VNode =
   result = buildHtml(tdiv):
@@ -51,9 +51,7 @@ proc buildContent(): VNode =
 
 proc createDom(): VNode =
   result = buildHtml(tdiv):
-    buildMenu()
+    buildNavbar()
     buildContent()
-    tdiv(class="center"):
-      text "Hello world"
 
 setRenderer createDom
