@@ -2117,33 +2117,33 @@ function apply_theme_10985111(s_10985113) {
     else {
     if ((s_10985113 == "nim-link")) {
     if ((theme_10981040[0] == 1)) {
-    result_10985114 = "nim-link nim-link-light";
+    result_10985114 = "nim-link nim-link-dark";
     }
     else {
     if ((theme_10981040[0] == 0)) {
-    result_10985114 = "nim-link nim-link-dark";
+    result_10985114 = "nim-link nim-link-light";
     }
     }
     }
     else {
     if ((s_10985113 == "navbar")) {
     if ((theme_10981040[0] == 1)) {
-    result_10985114 = "navbar navbar-light";
+    result_10985114 = "navbar navbar-dark";
     }
     else {
     if ((theme_10981040[0] == 0)) {
-    result_10985114 = "navbar navbar-dark";
+    result_10985114 = "navbar navbar-light";
     }
     }
     }
     else {
     if ((s_10985113 == "footer")) {
     if ((theme_10981040[0] == 1)) {
-    result_10985114 = "footer center footer-light";
+    result_10985114 = "footer center footer-dark";
     }
     else {
     if ((theme_10981040[0] == 0)) {
-    result_10985114 = "footer center footer-dark";
+    result_10985114 = "footer center footer-light";
     }
     }
     }
