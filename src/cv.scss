@@ -7,10 +7,22 @@
 body {
   margin: 0;
   font-family: 'Retro Gaming Slovak';
+  margin-top: 85px;
 }
 
 .navbar {
   width: 100%;
+  position: fixed;
+  top: 0;
+  overflow: hidden;
+
+  &.navbar-dark {
+    color: black;
+  }
+
+  &.navbar-light {
+    color: white;
+  }
 }
 
 .navbar-item {
@@ -71,4 +83,12 @@ body {
   bottom: 0;
   width: 100%;
   padding: 5px 0px;
+
+  &.footer-dark {
+    color: black;
+  }
+
+  &.footer-light {
+    color: white;
+  }
 }

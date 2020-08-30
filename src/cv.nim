@@ -77,6 +77,18 @@ proc applyTheme(s: kstring) : kstring =
     elif theme == Theme.Light:
       result = kstring"nim-link nim-link-dark"
 
+  elif s == "navbar":
+    if theme == Theme.Dark:
+      result = kstring"navbar navbar-light"
+    elif theme == Theme.Light:
+      result = kstring"navbar navbar-dark"
+
+  elif s == "footer":
+    if theme == Theme.Dark:
+      result = kstring"footer center footer-light"
+    elif theme == Theme.Light:
+      result = kstring"footer center footer-dark"
+
 proc action(typ: ActionType, entry: kstring): proc() =
   result = proc() = 
     case typ
@@ -101,7 +113,7 @@ proc action(typ: ActionType, entry: kstring): proc() =
           shown_content = ContentType(i)
 
 proc buildNavbar(): VNode =
-  result = buildHtml(nav(class="navbar")):
+  result = buildHtml(nav(class=applyTheme(kstring"navbar"))):
     tdiv(class="navbar-list center"):
       var navbar_item : kstring
       for n in ContentType:
@@ -141,7 +153,7 @@ proc buildContent(): VNode =
     content(shown_content, "text")
 
 proc buildFooter(): VNode =
-  result = buildHtml(footer(class="footer center")):
+  result = buildHtml(footer(class=applyTheme(kstring"footer"))):
     text "Powered by "
     a(class=applyTheme(kstring"nim-link"), href="https://nim-lang.org/"):
       text "NIM"
