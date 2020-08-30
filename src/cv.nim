@@ -73,21 +73,21 @@ proc applyTheme(s: kstring) : kstring =
 
   elif s == "nim-link":
     if theme == Theme.Dark:
-      result = kstring"nim-link nim-link-light"
-    elif theme == Theme.Light:
       result = kstring"nim-link nim-link-dark"
+    elif theme == Theme.Light:
+      result = kstring"nim-link nim-link-light"
 
   elif s == "navbar":
     if theme == Theme.Dark:
-      result = kstring"navbar navbar-light"
-    elif theme == Theme.Light:
       result = kstring"navbar navbar-dark"
+    elif theme == Theme.Light:
+      result = kstring"navbar navbar-light"
 
   elif s == "footer":
     if theme == Theme.Dark:
-      result = kstring"footer center footer-light"
-    elif theme == Theme.Light:
       result = kstring"footer center footer-dark"
+    elif theme == Theme.Light:
+      result = kstring"footer center footer-light"
 
 proc action(typ: ActionType, entry: kstring): proc() =
   result = proc() = 

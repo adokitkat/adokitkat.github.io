@@ -7,7 +7,7 @@
 body {
   margin: 0;
   font-family: 'Retro Gaming Slovak';
-  margin-top: 85px;
+  margin-top: 100px;
 }
 
 .navbar {
@@ -17,11 +17,11 @@ body {
   overflow: hidden;
 
   &.navbar-dark {
-    color: black;
+    background-color: black;
   }
 
   &.navbar-light {
-    color: white;
+    background-color: white;
   }
 }
 
@@ -48,13 +48,13 @@ body {
 }
 
 .nim-link {
-  
+
   &.nim-link-dark {
-    color: white;
+    color: black;
   }
 
   &.nim-link-light {
-    color: black;
+    color: white;
   }
   
   text-decoration: none;
@@ -85,10 +85,10 @@ body {
   padding: 5px 0px;
 
   &.footer-dark {
-    color: black;
+    background-color: black;
   }
 
   &.footer-light {
-    color: white;
+    background-color: white;
   }
 }
