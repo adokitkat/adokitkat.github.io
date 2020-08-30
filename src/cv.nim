@@ -1,6 +1,29 @@
 include karax / prelude
 import dom, jsffi, strutils
 
+const
+  ContentTypeKstring* = [kstring"About", "Skills", "Projects"]
+  Themes* = [kstring"theme theme-light", "theme theme-dark"]
+
+  about_title* = [kstring"About", "O mne"]
+  skills_title* = [kstring"Skills", "Schopnosti"]
+  projects_title* = [kstring"Projects", "Projekty"]
+
+  about_text* = [kstring"""Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris mollis vulputate diam vitae consectetur. Maecenas eleifend massa sed maximus placerat. Sed aliquet tincidunt quam efficitur malesuada. Praesent tristique porttitor eros non auctor. Vivamus vitae sapien sapien. Donec lobortis, purus aliquet blandit volutpat, orci tortor dignissim quam, et vehicula neque magna aliquam ligula. Nullam vel ultricies augue. Nam laoreet pellentesque turpis, sit amet blandit ligula pretium ac. Donec dictum magna id commodo maximus. Donec elementum lacinia tortor. Integer tristique, dui viverra sodales gravida, erat mi scelerisque libero, ut mollis ipsum dui et orci. Ut id arcu dapibus, pellentesque dolor at, placerat odio. Sed suscipit auctor justo. Integer dui ipsum, elementum a fermentum eu, bibendum id tellus. Nam eleifend lectus lectus, id ullamcorper velit eleifend ut. Quisque eros nulla, pharetra quis aliquam nec, sollicitudin id arcu.
+
+Integer imperdiet aliquam sem eget vestibulum. Ut iaculis porta congue. Integer at massa sagittis, convallis dui vel, mollis mauris. Ut tincidunt risus at tristique convallis. Aenean quis dictum urna. Aliquam in turpis sit amet arcu fermentum ultrices. Integer faucibus accumsan arcu, in iaculis dui lobortis ut. Nam elementum arcu quis ipsum cursus, sit amet bibendum arcu bibendum. Ut quam lacus, consectetur aliquet massa quis, condimentum malesuada eros. Cras sed aliquet nisl, ac tincidunt ipsum. Vivamus convallis ipsum quis porta mollis. Suspendisse potenti. Praesent sodales malesuada turpis. Suspendisse potenti.
+
+Quisque imperdiet nibh mauris, ut malesuada libero commodo eget. Fusce vitae gravida dolor. Morbi mi dolor, pharetra eget nisl in, placerat imperdiet justo. In hac habitasse platea dictumst. Integer tincidunt magna mi, a molestie elit aliquet sed. Integer nec diam sed massa ornare sollicitudin. Curabitur vel tempor diam. Nunc tempus consectetur erat id aliquam.
+
+Suspendisse molestie purus quis velit tempus, vitae dignissim velit vehicula. Vivamus at vehicula est. Phasellus nunc neque, gravida sed nisi sit amet, pharetra viverra nunc. Pellentesque vel euismod lorem, commodo vestibulum leo. Vivamus aliquam dolor dui, vel ultrices mi ornare non. Nunc vehicula pulvinar metus, ac ornare leo. Pellentesque non pharetra enim.""",
+                        """xyz"""]
+
+  skills_text* = [kstring"""dfe""",
+                         """qwerty"""]
+
+  projects_text* = [kstring"""123""",
+                           """666"""]
+
 type
   ActionType {.pure.} = enum
     NavbarAction, LanguageAction, ThemeAction
@@ -14,9 +37,6 @@ type
   ContentType {.pure.} = enum
     About, Skills, Projects
 
-const
-  ContentTypeKstring = [kstring"About", "Skills", "Projects"]
-  Themes = [kstring"theme theme-light", "theme theme-dark"]
 var
   shown_content : ContentType = About
   language : Language = English
@@ -37,32 +57,28 @@ proc content(typ: ContentType, part: string) : VNode =
     of About:
       case part
       of "title":
-        text [kstring"About", "O mne"][ord(language)]
+        text about_title[ord(language)]
       of "text":
         #h2:
         #  text "Adam Múdry"
         p:
-          text ["""abc""",
-              """xyz"""            
-              ][ord(language)]
+          text about_text[ord(language)]
         
     of Skills:
       case part
       of "title":
-        text [kstring"Skills", "Schopnosti"][ord(language)]
+        text skills_title[ord(language)]
       of "text":
         p:
-          text ["""dfe""",
-              """qwerty"""][ord(language)]
+          text skills_text[ord(language)]
 
     of Projects:
       case part
       of "title":
-        text [kstring"Projects", "Projekty"][ord(language)]
+        text projects_title[ord(language)]
       of "text":
         p:
-          text ["""123""",
-              """666"""][ord(language)]
+          text projects_text[ord(language)]
 
 proc applyTheme(s: kstring) : kstring =
   if s == "theme":
