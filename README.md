@@ -1,4 +1,4 @@
-# Single page web app as my CV
+# Single page web app as my CV / Portfolio
 
 Github Pages serves only a static page - entire functionality is client-side(d).
 
