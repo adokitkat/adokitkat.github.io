@@ -761,9 +761,9 @@ function chckRange(i_255016, a_255017, b_255018) {
 }
                   var content_type_kstring_10981003 = ["About", "Skills", "Projects"];
         var about_title_10981009 = ["About me", "O mne"];
-        var about_text_10981018 = ["Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris mollis vulputate diam vitae consectetur. Maecenas eleifend massa sed maximus placerat. Sed aliquet tincidunt quam efficitur malesuada. Praesent tristique porttitor eros non auctor. Vivamus vitae sapien sapien. Donec lobortis, purus aliquet blandit volutpat, orci tortor dignissim quam, et vehicula neque magna aliquam ligula. Nullam vel ultricies augue. Nam laoreet pellentesque turpis, sit amet blandit ligula pretium ac. Donec dictum magna id commodo maximus. Donec elementum lacinia tortor. Integer tristique, dui viverra sodales gravida, erat mi scelerisque libero, ut mollis ipsum dui et orci. Ut id arcu dapibus, pellentesque dolor at, placerat odio. Sed suscipit auctor justo. Integer dui ipsum, elementum a fermentum eu, bibendum id tellus. Nam eleifend lectus lectus, id ullamcorper velit eleifend ut. Quisque eros nulla, pharetra quis aliquam nec, sollicitudin id arcu.\n", "xyz"];
+        var about_text_10981018 = ["Work in progress...", "Na stránke sa pracuje..."];
         var skills_title_10981012 = ["Skills", "Schopnosti"];
-        var skills_text_10981021 = ["dfe", "qwerty"];
+        var skills_text_10981021 = ["Work in progress...", "Na stránke sa pracuje..."];
         var projects_title_10981015 = ["Projects", "Projekty"];
 var nim_program_result = 0;
 var global_raise_hook_142018 = [null];
@@ -2183,7 +2183,6 @@ function action_10985336(typ_10985338, entry_10985339) {
     function HEX3Aanonymous_10985343() {
         switch (typ_10985338) {
         case 1:
-          rawEcho(makeNimstrLit("clicked language button"));
           if ((language_10981044[0] == 0)) {
           language_10981044[0] = 1;
           }
@@ -2194,7 +2193,6 @@ function action_10985336(typ_10985338, entry_10985339) {
           }
           break;
         case 2:
-          rawEcho(makeNimstrLit("clicked theme button"));
           if ((theme_10981045[0] == 1)) {
           theme_10981045[0] = 0;
           }
@@ -2205,19 +2203,18 @@ function action_10985336(typ_10985338, entry_10985339) {
           }
           break;
         case 0:
-          rawEcho(makeNimstrLit("clicked \""), cstrToNimstr(entry_10985339), makeNimstrLit("\" menu button"));
           L1: do {
-            var i_10985447 = 0;
-            var n_10985448 = null;
+            var i_10985433 = 0;
+            var n_10985434 = null;
             var i_11005223 = 0;
             if ((i_11005223 <= 2)) {
             L2: do {
                 L3: while (true) {
                 if (!true) break L3;
-                  i_10985447 = i_11005223;
-                  n_10985448 = content_type_kstring_10981003[chckIndx(i_11005223, 0, (content_type_kstring_10981003 != null ? content_type_kstring_10981003.length : 0)+0-1)-0];
-                  if ((entry_10985339 == n_10985448)) {
-                  shown_content_10981043[0] = i_10985447;
+                  i_10985433 = i_11005223;
+                  n_10985434 = content_type_kstring_10981003[chckIndx(i_11005223, 0, (content_type_kstring_10981003 != null ? content_type_kstring_10981003.length : 0)+0-1)-0];
+                  if ((entry_10985339 == n_10985434)) {
+                  shown_content_10981043[0] = i_10985433;
                   }
                   
                   if ((2 <= i_11005223)) {
@@ -2487,13 +2484,13 @@ function content_10981063(typ_10981065, part_10981066) {
   return result_10981067;
 
 }
-function build_navbar_10985550() {
-  var result_10985552 = null;
+function build_navbar_10985521() {
+  var result_10985523 = null;
 
-    var tmp_10985553 = tree_9830445(18, []);
-    tmp_10985553.class = apply_theme_10985261("navbar");
-    var tmp_10985554 = tree_9830445(43, []);
-    tmp_10985554.class = "navbar-list center";
+    var tmp_10985524 = tree_9830445(18, []);
+    tmp_10985524.class = apply_theme_10985261("navbar");
+    var tmp_10985525 = tree_9830445(43, []);
+    tmp_10985525.class = "navbar-list center";
     var navbar_item_10990009 = null;
     L1: do {
       var n_10990235 = 0;
@@ -2512,15 +2509,15 @@ function build_navbar_10985550() {
                 navbar_item_10990009 = "navbar-item";
               }
               
-              var tmp_10985555 = tree_9830445(44, []);
-              tmp_10985555.class = navbar_item_10990009;
-              add_event_handler_10750154(tmp_10985555, 0, action_10985336(0, title_10981046(n_10990235)), kxi_10187284[0]);
-              add_9820072(tmp_10985555, content_10981063(n_10990235, makeNimstrLit("title")));
-              add_9820072(tmp_10985554, tmp_10985555);
+              var tmp_10985526 = tree_9830445(44, []);
+              tmp_10985526.class = navbar_item_10990009;
+              add_event_handler_10750154(tmp_10985526, 0, action_10985336(0, title_10981046(n_10990235)), kxi_10187284[0]);
+              add_9820072(tmp_10985526, content_10981063(n_10990235, makeNimstrLit("title")));
+              add_9820072(tmp_10985525, tmp_10985526);
               if ((n_10990235 < 2)) {
-              var tmp_10985556 = tree_9830445(70, []);
-              add_9820072(tmp_10985556, text_9830548(makeNimstrLit("/")));
-              add_9820072(tmp_10985554, tmp_10985556);
+              var tmp_10985527 = tree_9830445(70, []);
+              add_9820072(tmp_10985527, text_9830548(makeNimstrLit("/")));
+              add_9820072(tmp_10985525, tmp_10985527);
               }
               
               res_11005210 = addInt(res_11005210, 1);
@@ -2528,38 +2525,38 @@ function build_navbar_10985550() {
         } while(false);
       } while(false);
     } while(false);
-    var tmp_10985557 = tree_9830445(43, []);
-    tmp_10985557.class = "navbar-break";
-    var tmp_10985558 = tree_9830445(44, []);
-    tmp_10985558.class = "navbar-item";
-    add_event_handler_10750154(tmp_10985558, 0, action_10985336(1, ""), kxi_10187284[0]);
+    var tmp_10985528 = tree_9830445(43, []);
+    tmp_10985528.class = "navbar-break";
+    var tmp_10985529 = tree_9830445(44, []);
+    tmp_10985529.class = "navbar-item";
+    add_event_handler_10750154(tmp_10985529, 0, action_10985336(1, ""), kxi_10187284[0]);
     if ((language_10981044[0] == 1)) {
-    add_9820072(tmp_10985558, text_9830548(makeNimstrLit("EN")));
+    add_9820072(tmp_10985529, text_9830548(makeNimstrLit("EN")));
     }
     else {
-    add_9820072(tmp_10985558, text_9830548(makeNimstrLit("SK")));
+    add_9820072(tmp_10985529, text_9830548(makeNimstrLit("SK")));
     }
     
-    add_9820072(tmp_10985557, tmp_10985558);
-    var tmp_10985559 = tree_9830445(70, []);
-    add_9820072(tmp_10985559, text_9830548(makeNimstrLit("/")));
-    add_9820072(tmp_10985557, tmp_10985559);
-    var tmp_10985560 = tree_9830445(44, []);
-    tmp_10985560.class = "navbar-item navbar-item-right";
-    add_event_handler_10750154(tmp_10985560, 0, action_10985336(2, ""), kxi_10187284[0]);
+    add_9820072(tmp_10985528, tmp_10985529);
+    var tmp_10985530 = tree_9830445(70, []);
+    add_9820072(tmp_10985530, text_9830548(makeNimstrLit("/")));
+    add_9820072(tmp_10985528, tmp_10985530);
+    var tmp_10985531 = tree_9830445(44, []);
+    tmp_10985531.class = "navbar-item navbar-item-right";
+    add_event_handler_10750154(tmp_10985531, 0, action_10985336(2, ""), kxi_10187284[0]);
     if ((theme_10981045[0] == 0)) {
-    add_9820072(tmp_10985560, text_9830548(makeNimstrLit("Dark")));
+    add_9820072(tmp_10985531, text_9830548(makeNimstrLit("Dark")));
     }
     else {
-    add_9820072(tmp_10985560, text_9830548(makeNimstrLit("Light")));
+    add_9820072(tmp_10985531, text_9830548(makeNimstrLit("Light")));
     }
     
-    add_9820072(tmp_10985557, tmp_10985560);
-    add_9820072(tmp_10985554, tmp_10985557);
-    add_9820072(tmp_10985553, tmp_10985554);
-    result_10985552 = tmp_10985553;
+    add_9820072(tmp_10985528, tmp_10985531);
+    add_9820072(tmp_10985525, tmp_10985528);
+    add_9820072(tmp_10985524, tmp_10985525);
+    result_10985523 = tmp_10985524;
 
-  return result_10985552;
+  return result_10985523;
 
 }
 function build_content_10990306() {
@@ -2602,7 +2599,7 @@ function create_dom_11000026(data_11000028) {
     
     var tmp_11000030 = tree_9830445(43, []);
     tmp_11000030.class = apply_theme_10985261("theme");
-    add_9820072(tmp_11000030, build_navbar_10985550());
+    add_9820072(tmp_11000030, build_navbar_10985521());
     add_9820072(tmp_11000030, build_content_10990306());
     add_9820072(tmp_11000030, build_footer_10995018());
     result_11000029 = tmp_11000030;
@@ -2610,7 +2607,7 @@ function create_dom_11000026(data_11000028) {
   return result_11000029;
 
 }
-var shown_content_10981043 = [0];
-var language_10981044 = [0];
+var shown_content_10981043 = [2];
+var language_10981044 = [1];
 var theme_10981045 = [0];
 set_renderer_10740678(create_dom_11000026, "ROOT", null);
