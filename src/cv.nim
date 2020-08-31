@@ -115,6 +115,20 @@ proc content(typ: ContentType, part: string) : VNode =
             tdiv(class="links"):
               a(class="button github", href="https://github.com/adokitkat/vut-fit-ipk-2"): text "</> Github"
 
+          tdiv(class="project"):
+            h3: text ["This portfolio page", "Táto portfólio stránka"][ord(language)]
+            
+            tdiv(class="language"):
+              p(class="left"): text ["Language:", "Jazyk:"][ord(language)]
+              p(class="right"): text ["Nim (compiled to JS), Sass", "Nim (skompilovaný na JS), Sass"][ord(language)]
+            
+            tdiv(class="os"):
+              p(class="left"): text "OS:"
+              p(class="right"): text "Linux"
+            
+            tdiv(class="links"):
+              a(class="button github", href="https://github.com/adokitkat/adokitkat.github.io"): text "</> Github"
+           
 
 proc applyTheme(s: kstring) : kstring =
   if s == "theme":
