@@ -11,15 +11,14 @@ const
   skills_title* = [kstring"Skills", "Schopnosti"]
   projects_title* = [kstring"Projects", "Projekty"]
 
-  about_text* = [kstring"""Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris mollis vulputate diam vitae consectetur. Maecenas eleifend massa sed maximus placerat. Sed aliquet tincidunt quam efficitur malesuada. Praesent tristique porttitor eros non auctor. Vivamus vitae sapien sapien. Donec lobortis, purus aliquet blandit volutpat, orci tortor dignissim quam, et vehicula neque magna aliquam ligula. Nullam vel ultricies augue. Nam laoreet pellentesque turpis, sit amet blandit ligula pretium ac. Donec dictum magna id commodo maximus. Donec elementum lacinia tortor. Integer tristique, dui viverra sodales gravida, erat mi scelerisque libero, ut mollis ipsum dui et orci. Ut id arcu dapibus, pellentesque dolor at, placerat odio. Sed suscipit auctor justo. Integer dui ipsum, elementum a fermentum eu, bibendum id tellus. Nam eleifend lectus lectus, id ullamcorper velit eleifend ut. Quisque eros nulla, pharetra quis aliquam nec, sollicitudin id arcu.
-""",
-                        """xyz"""]
+  about_text* = [kstring"Work in progress...",
+                        "Na stránke sa pracuje..."]
 
-  skills_text* = [kstring"""dfe""",
-                         """qwerty"""]
+  skills_text* = [kstring"Work in progress...",
+                         "Na stránke sa pracuje..."]
 
-  projects_text* = [kstring"""123""",
-                           """666"""]
+  projects_text* = [kstring"Work in progress...",
+                           "Na stránke sa pracuje..."]
 
 type
   ActionType {.pure.} = enum
@@ -35,8 +34,8 @@ type
     About, Skills, Projects
 
 var
-  shown_content : ContentType = About
-  language : Language = English
+  shown_content : ContentType = Projects
+  language : Language = Slovak
   theme : Theme = Light
 
 proc title(typ: ContentType) : kstring =
@@ -146,21 +145,21 @@ proc action(typ: ActionType, entry: kstring): proc() =
   result = proc() = 
     case typ
     of LanguageAction:
-      echo "clicked language button"
+      #echo "clicked language button"
       if language == English:
         language = Slovak
       elif language == Slovak:
         language = English
 
     of ThemeAction:
-      echo "clicked theme button"
+      #echo "clicked theme button"
       if theme == Theme.Dark:
         theme = Theme.Light
       elif theme == Theme.Light:
         theme = Theme.Dark
     
     of NavbarAction:
-      echo "clicked \"", entry, "\" menu button"
+      #echo "clicked \"", entry, "\" menu button"
       for i, n in ContentTypeKstring:
         if entry == n:
           shown_content = ContentType(i)
@@ -182,10 +181,6 @@ proc buildNavbar(): VNode =
             text "/"
     
       tdiv(class="navbar-break"):
-      #[
-        span():
-            text "~"
-      ]#
         a(class="navbar-item", onclick=action(LanguageAction, "")):
             if language == Slovak:
               text "EN"
