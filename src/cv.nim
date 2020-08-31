@@ -1,3 +1,5 @@
+{.experimental: "codeReordering".}
+
 include karax / prelude
 import dom, jsffi, strutils
 
@@ -5,7 +7,7 @@ const
   ContentTypeKstring* = [kstring"About", "Skills", "Projects"]
   Themes* = [kstring"theme theme-light", "theme theme-dark"]
 
-  about_title* = [kstring"About", "O mne"]
+  about_title* = [kstring"About me", "O mne"]
   skills_title* = [kstring"Skills", "Schopnosti"]
   projects_title* = [kstring"Projects", "Projekty"]
 
@@ -77,8 +79,50 @@ proc content(typ: ContentType, part: string) : VNode =
       of "title":
         text projects_title[ord(language)]
       of "text":
-        p:
-          text projects_text[ord(language)]
+        tdiv(class="projects"):
+          tdiv(class="project"):
+            h3: text ["Apache log viewer & filter", "Nástroj pre zobrazovanie a filtrovanie Apache logov"][ord(language)]
+            
+            tdiv(class="language"):
+              p(class="left"): text ["Language:", "Jazyk:"][ord(language)]
+              p(class="right"): text "Shell script"
+            
+            tdiv(class="os"):
+              p(class="left"): text "OS:"
+              p(class="right"): text "Linux, BSD, MacOS"
+            
+            tdiv(class="links"):
+              a(class="button github", href="https://github.com/adokitkat/vut-fit-ios-1"): text "</> Github"
+
+          tdiv(class="project"):
+            h3: text ["Public transport line simulator", "Simulátor liniek hromadnej dopravy"][ord(language)]
+            
+            tdiv(class="language"):
+              p(class="left"): text ["Language:", "Jazyk:"][ord(language)]
+              p(class="right"): text "C++, Qt5"
+            
+            tdiv(class="os"):
+              p(class="left"): text "OS:"
+              p(class="right"): text "Windows, Linux"
+            
+            tdiv(class="links"):
+              a(class="button github", href="https://github.com/adokitkat/vut-fit-icp"): text "</> Github"
+              a(class="button", href="https://github.com/adokitkat/vut-fit-icp/releases"): text ["<~> Try it", "<~> Vyskúšaj"][ord(language)]
+
+          tdiv(class="project"):
+            h3: text ["Packet sniffer (IPv4)", "Sniffer packetov (IPv4)"][ord(language)]
+            
+            tdiv(class="language"):
+              p(class="left"): text ["Language:", "Jazyk:"][ord(language)]
+              p(class="right"): text "C++"
+            
+            tdiv(class="os"):
+              p(class="left"): text "OS:"
+              p(class="right"): text "Linux"
+            
+            tdiv(class="links"):
+              a(class="button github", href="https://github.com/adokitkat/vut-fit-ipk-2"): text "</> Github"
+
 
 proc applyTheme(s: kstring) : kstring =
   if s == "theme":
@@ -133,9 +177,9 @@ proc buildNavbar(): VNode =
     tdiv(class="navbar-list center"):
       var navbar_item : kstring
       for n in ContentType:
-        if ord(n) == 0 :
+        if ord(n) == 0:
           navbar_item = "navbar-item navbar-item-left"
-        else :
+        else:
           navbar_item = "navbar-item"
 
         a(class=navbar_item, onclick=action(NavbarAction, title(n))):
@@ -165,7 +209,7 @@ proc buildNavbar(): VNode =
               text "Light"
 
 proc buildContent(): VNode =
-  result = buildHtml(tdiv(class="content-body center")):
+  result = buildHtml(tdiv(class="content-body")):
     content(shown_content, "text")
 
 proc buildFooter(): VNode =

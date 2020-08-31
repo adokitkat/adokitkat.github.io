@@ -1,12 +1,31 @@
 @font-face{ 
-	font-family: 'Retro Gaming Slovak';
-	src: url('../src/RetroGamingSlovak-Regular.woff2') format('woff2'),
-	     url('../src/RetroGamingSlovak-Regular.woff') format('woff')
+  font-family: 'Retro Gaming Slovak';
+  src: url('../src/retrogamingslovak-regular.eot');
+  src: url('../src/retrogamingslovak-regular?#iefix') format('embedded-opentype'),
+       url('../src/retrogamingslovak-regular.woff') format('woff'),
+       url('../src/retrogamingslovak-regular.ttf') format('truetype'),
+       url('../src/retrogamingslovak-regular.svg#webfont') format('svg');
 }
+
+$mini: 315px;
+$phone: 640px;
+$tablet: 768px;
+$desktop: 1024px;
 
 body {
   margin: 0;
   font-family: 'Retro Gaming Slovak';
+}
+
+button {
+  font-family: 'Retro Gaming Slovak';
+}
+
+a {
+  text-decoration: none;
+  &:visited {
+    color: inherit;
+  }
 }
 
 .navbar {
@@ -36,7 +55,6 @@ body {
     padding-right: 5px;
   }
 
-  //&.navbar-break {}
 }
 
 .center {
@@ -47,7 +65,18 @@ body {
 }
 
 .content-body {
-  padding-top: 85px;
+  
+  @media (min-width: $mini + 1) {
+    padding-top: 85px;
+  }
+
+  @media (max-width: $mini) {
+    padding-top: 126px;
+  }
+  
+  margin-left: 10vw;
+  margin-right: 10vw;
+  text-align: center;
 }
 
 .nim-link {
@@ -59,8 +88,7 @@ body {
   &.nim-link-light {
     color: white;
   }
-  
-  text-decoration: none;
+
   padding: 0px 4px;
   background-color: #ffe953;
 }
@@ -93,5 +121,48 @@ body {
 
   &.footer-light {
     background-color: white;
+  }
+}
+
+.projects {
+  display: inline-flex;
+  flex-wrap: wrap;
+}
+
+.project {
+  flex-grow: 1;
+  //display: table-cell;
+  padding-left: 20px;
+  padding-right: 20px;
+  text-align: left;
+
+  & p {
+    margin: 8px 0;
+  }
+
+  & h3 {
+    margin-block-end: 8px;
+  }
+
+  & .left {
+    display: inline-block;
+    margin-right: 10px;
+  }
+
+  & .right {
+    display: inline-block;
+  }
+
+  & .links {
+    margin: 8px 0;
+
+    & .button {
+      border: solid;
+      padding: 3px 4px;
+    }
+    
+    & .github {
+      margin: 0 30px 0 0;
+    }
   }
 }
