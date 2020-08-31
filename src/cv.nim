@@ -89,6 +89,8 @@ proc content(typ: ContentType, part: string) : VNode =
           tdiv(class="project"):
             h3: text ["Public transport line simulator", "Simulátor liniek hromadnej dopravy"][ord(language)]
             
+            p(class="left"): text ["Uses A* path-finding algorithm", "Používa A* algoritmus na nájdenie cesty"][ord(language)]
+
             tdiv(class="language"):
               p(class="left"): text ["Language:", "Jazyk:"][ord(language)]
               p(class="right"): text "C++, Qt5"
@@ -118,7 +120,7 @@ proc content(typ: ContentType, part: string) : VNode =
           tdiv(class="project"):
             h3: text ["This portfolio page", "Táto portfólio stránka"][ord(language)]
             
-            p: text ["Single-page web app experiment with automatized building via Github Actions", "Single-page web app experiment s automatickým stavaním pomocou Github Actions"][ord(language)]
+            p(class="left"): text ["Single-page web app experiment with automatized building via Github Actions", "Single-page web app experiment s automatickým stavaním pomocou Github Actions"][ord(language)]
 
             tdiv(class="language"):
               p(class="left"): text ["Language:", "Jazyk:"][ord(language)]
