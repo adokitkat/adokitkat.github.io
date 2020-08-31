@@ -61,8 +61,6 @@ proc content(typ: ContentType, part: string) : VNode =
       of "title":
         text about_title[ord(language)]
       of "text":
-        #h2:
-        #  text "Adam Múdry"
         p:
           text about_text[ord(language)]
         

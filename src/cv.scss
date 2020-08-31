@@ -8,6 +8,7 @@
 }
 
 $mini: 315px;
+$link_mini: 360px;
 $phone: 640px;
 $tablet: 768px;
 $desktop: 1024px;
@@ -73,6 +74,8 @@ a {
   @media (max-width: $mini) {
     padding-top: 126px;
   }
+
+  padding-bottom: 62px;
   
   margin-left: 10vw;
   margin-right: 10vw;
@@ -89,7 +92,8 @@ a {
     color: white;
   }
 
-  padding: 0px 4px;
+  padding-right: 4px;
+  padding-left: 3px;
   background-color: #ffe953;
 }
 
@@ -131,7 +135,6 @@ a {
 
 .project {
   flex-grow: 1;
-  //display: table-cell;
   padding-left: 20px;
   padding-right: 20px;
   text-align: left;
@@ -156,13 +159,26 @@ a {
   & .links {
     margin: 8px 0;
 
+    &a {
+      color: inherit;
+    }
+
     & .button {
+      display:  inline-block;
       border: solid;
       padding: 3px 4px;
+
     }
     
     & .github {
-      margin: 0 30px 0 0;
+      @media (min-width: $link_mini + 1) {
+        margin: 0 30px 0 0;
+      }
+
+      @media (max-width: $link_mini) {
+        margin: 0 10px 10px 0;
+      }
+      
     }
   }
 }
