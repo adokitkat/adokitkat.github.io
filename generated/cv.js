@@ -2103,55 +2103,55 @@ function tree_9830445(kind_9830447, kids_9830449) {
   return result_9830450;
 
 }
-function apply_theme_10985319(s_10985321) {
-  var result_10985322 = null;
+function apply_theme_10985317(s_10985319) {
+  var result_10985320 = null;
 
-    if ((s_10985321 == "theme")) {
+    if ((s_10985319 == "theme")) {
     if ((theme_10981045[0] == 1)) {
-    result_10985322 = "theme theme-dark";
+    result_10985320 = "theme theme-dark";
     }
     else {
     if ((theme_10981045[0] == 0)) {
-    result_10985322 = "theme theme-light";
+    result_10985320 = "theme theme-light";
     }
     }
     }
     else {
-    if ((s_10985321 == "nim-link")) {
+    if ((s_10985319 == "nim-link")) {
     if ((theme_10981045[0] == 1)) {
-    result_10985322 = "nim-link nim-link-dark";
+    result_10985320 = "nim-link nim-link-dark";
     }
     else {
     if ((theme_10981045[0] == 0)) {
-    result_10985322 = "nim-link nim-link-light";
+    result_10985320 = "nim-link nim-link-light";
     }
     }
     }
     else {
-    if ((s_10985321 == "navbar")) {
+    if ((s_10985319 == "navbar")) {
     if ((theme_10981045[0] == 1)) {
-    result_10985322 = "navbar navbar-dark";
+    result_10985320 = "navbar navbar-dark";
     }
     else {
     if ((theme_10981045[0] == 0)) {
-    result_10985322 = "navbar navbar-light";
+    result_10985320 = "navbar navbar-light";
     }
     }
     }
     else {
-    if ((s_10985321 == "footer")) {
+    if ((s_10985319 == "footer")) {
     if ((theme_10981045[0] == 1)) {
-    result_10985322 = "footer center footer-dark";
+    result_10985320 = "footer center footer-dark";
     }
     else {
     if ((theme_10981045[0] == 0)) {
-    result_10985322 = "footer center footer-light";
+    result_10985320 = "footer center footer-light";
     }
     }
     }
     }}}
 
-  return result_10985322;
+  return result_10985320;
 
 }
 function raiseRangeError() {
@@ -2179,9 +2179,9 @@ function add_event_handler_10750154(n_10750156, k_10750157, action_10750160, kxi
 
   
 }
-function action_10985394(typ_10985396, entry_10985397) {
-    function HEX3Aanonymous_10985401() {
-        switch (typ_10985396) {
+function action_10985392(typ_10985394, entry_10985395) {
+    function HEX3Aanonymous_10985399() {
+        switch (typ_10985394) {
         case 1:
           if ((language_10981044[0] == 0)) {
           language_10981044[0] = 1;
@@ -2204,17 +2204,17 @@ function action_10985394(typ_10985396, entry_10985397) {
           break;
         case 0:
           L1: do {
-            var i_10985491 = 0;
-            var n_10985492 = null;
+            var i_10985489 = 0;
+            var n_10985490 = null;
             var i_11005223 = 0;
             if ((i_11005223 <= 2)) {
             L2: do {
                 L3: while (true) {
                 if (!true) break L3;
-                  i_10985491 = i_11005223;
-                  n_10985492 = content_type_kstring_10981003[chckIndx(i_11005223, 0, (content_type_kstring_10981003 != null ? content_type_kstring_10981003.length : 0)+0-1)-0];
-                  if ((entry_10985397 == n_10985492)) {
-                  shown_content_10981043[0] = i_10985491;
+                  i_10985489 = i_11005223;
+                  n_10985490 = content_type_kstring_10981003[chckIndx(i_11005223, 0, (content_type_kstring_10981003 != null ? content_type_kstring_10981003.length : 0)+0-1)-0];
+                  if ((entry_10985395 == n_10985490)) {
+                  shown_content_10981043[0] = i_10985489;
                   }
                   
                   if ((2 <= i_11005223)) {
@@ -2233,11 +2233,11 @@ function action_10985394(typ_10985396, entry_10985397) {
       
     }
 
-  var result_10985400 = null;
+  var result_10985398 = null;
 
-    result_10985400 = HEX3Aanonymous_10985401;
+    result_10985398 = HEX3Aanonymous_10985399;
 
-  return result_10985400;
+  return result_10985398;
 
 }
 function title_10981046(typ_10981048) {
@@ -2285,19 +2285,19 @@ function set_attr_9770105(n_9770107, key_9770108, val_9770109) {
     else {
       L1: do {
         var i_9770138 = 0;
-        var colontmp__11005273 = 0;
-        colontmp__11005273 = subInt((n_9770107.attrs != null ? n_9770107.attrs.length : 0), 2);
-        var res_11005274 = 0;
+        var colontmp__11005271 = 0;
+        colontmp__11005271 = subInt((n_9770107.attrs != null ? n_9770107.attrs.length : 0), 2);
+        var res_11005272 = 0;
         L2: do {
             L3: while (true) {
-            if (!(res_11005274 <= colontmp__11005273)) break L3;
-              i_9770138 = res_11005274;
+            if (!(res_11005272 <= colontmp__11005271)) break L3;
+              i_9770138 = res_11005272;
               if ((n_9770107.attrs[chckIndx(i_9770138, 0, (n_9770107.attrs != null ? n_9770107.attrs.length : 0)+0-1)-0] == key_9770108)) {
               n_9770107.attrs[chckIndx(addInt(i_9770138, 1), 0, (n_9770107.attrs != null ? n_9770107.attrs.length : 0)+0-1)-0] = val_9770109;
               break BeforeRet;
               }
               
-              res_11005274 = addInt(res_11005274, 2);
+              res_11005272 = addInt(res_11005272, 2);
             }
         } while(false);
       } while(false);
@@ -2320,6 +2320,7 @@ function content_10981063(typ_10981065, part_10981066) {
         var Tmp8;
         var Tmp9;
         var Tmp10;
+        var Tmp11;
 
   var result_10981067 = null;
 
@@ -2480,36 +2481,28 @@ function content_10981063(typ_10981065, part_10981066) {
         var tmp_10981145 = tree_9830445(23, []);
         add_9820072(tmp_10981145, text_9830548((Tmp8 = [makeNimstrLit("This portfolio page"), makeNimstrLit("T\xC3\xA1to portf\xC3\xB3lio str\xC3\xA1nka")], Tmp8)[chckIndx(language_10981044[0], 0, (Tmp8 != null ? Tmp8.length : 0)+0-1)-0]));
         add_9820072(tmp_10981144, tmp_10981145);
-        var tmp_10981146 = tree_9830445(43, []);
-        tmp_10981146.class = "language";
-        var tmp_10981147 = tree_9830445(31, []);
-        tmp_10981147.class = "left";
-        add_9820072(tmp_10981147, text_9830548((Tmp9 = [makeNimstrLit("Language:"), makeNimstrLit("Jazyk:")], Tmp9)[chckIndx(language_10981044[0], 0, (Tmp9 != null ? Tmp9.length : 0)+0-1)-0]));
-        add_9820072(tmp_10981146, tmp_10981147);
-        var tmp_10981148 = tree_9830445(31, []);
-        tmp_10981148.class = "right";
-        add_9820072(tmp_10981148, text_9830548((Tmp10 = [makeNimstrLit("Nim (compiled to JS), Sass"), makeNimstrLit("Nim (skompilovan\xC3\xBD na JS), Sass")], Tmp10)[chckIndx(language_10981044[0], 0, (Tmp10 != null ? Tmp10.length : 0)+0-1)-0]));
-        add_9820072(tmp_10981146, tmp_10981148);
+        var tmp_10981146 = tree_9830445(31, []);
+        add_9820072(tmp_10981146, text_9830548((Tmp9 = [makeNimstrLit("Single-page web app experiment with automatized building via Github Actions"), makeNimstrLit("Single-page web app experiment s automatick\xC3\xBDm stavan\xC3\xADm pomocou Github Actions")], Tmp9)[chckIndx(language_10981044[0], 0, (Tmp9 != null ? Tmp9.length : 0)+0-1)-0]));
         add_9820072(tmp_10981144, tmp_10981146);
-        var tmp_10981149 = tree_9830445(43, []);
-        tmp_10981149.class = "os";
-        var tmp_10981150 = tree_9830445(31, []);
-        tmp_10981150.class = "left";
-        add_9820072(tmp_10981150, text_9830548(makeNimstrLit("OS:")));
-        add_9820072(tmp_10981149, tmp_10981150);
-        var tmp_10981151 = tree_9830445(31, []);
-        tmp_10981151.class = "right";
-        add_9820072(tmp_10981151, text_9830548(makeNimstrLit("Linux")));
-        add_9820072(tmp_10981149, tmp_10981151);
-        add_9820072(tmp_10981144, tmp_10981149);
-        var tmp_10981152 = tree_9830445(43, []);
-        tmp_10981152.class = "links";
-        var tmp_10981153 = tree_9830445(44, []);
-        tmp_10981153.class = "button github";
-        set_attr_9770105(tmp_10981153, "href", "https://github.com/adokitkat/adokitkat.github.io");
-        add_9820072(tmp_10981153, text_9830548(makeNimstrLit("</> Github")));
-        add_9820072(tmp_10981152, tmp_10981153);
-        add_9820072(tmp_10981144, tmp_10981152);
+        var tmp_10981147 = tree_9830445(43, []);
+        tmp_10981147.class = "language";
+        var tmp_10981148 = tree_9830445(31, []);
+        tmp_10981148.class = "left";
+        add_9820072(tmp_10981148, text_9830548((Tmp10 = [makeNimstrLit("Language:"), makeNimstrLit("Jazyk:")], Tmp10)[chckIndx(language_10981044[0], 0, (Tmp10 != null ? Tmp10.length : 0)+0-1)-0]));
+        add_9820072(tmp_10981147, tmp_10981148);
+        var tmp_10981149 = tree_9830445(31, []);
+        tmp_10981149.class = "right";
+        add_9820072(tmp_10981149, text_9830548((Tmp11 = [makeNimstrLit("Nim (compiled to JS), Sass"), makeNimstrLit("Nim (skompilovan\xC3\xBD na JS), Sass")], Tmp11)[chckIndx(language_10981044[0], 0, (Tmp11 != null ? Tmp11.length : 0)+0-1)-0]));
+        add_9820072(tmp_10981147, tmp_10981149);
+        add_9820072(tmp_10981144, tmp_10981147);
+        var tmp_10981150 = tree_9830445(43, []);
+        tmp_10981150.class = "links";
+        var tmp_10981151 = tree_9830445(44, []);
+        tmp_10981151.class = "button github";
+        set_attr_9770105(tmp_10981151, "href", "https://github.com/adokitkat/adokitkat.github.io");
+        add_9820072(tmp_10981151, text_9830548(makeNimstrLit("</> Github")));
+        add_9820072(tmp_10981150, tmp_10981151);
+        add_9820072(tmp_10981144, tmp_10981150);
         add_9820072(tmp_10981112, tmp_10981144);
         add_9820072(tmp_10981104, tmp_10981112);
         break;
@@ -2523,13 +2516,13 @@ function content_10981063(typ_10981065, part_10981066) {
   return result_10981067;
 
 }
-function build_navbar_10985579() {
-  var result_10985581 = null;
+function build_navbar_10985577() {
+  var result_10985579 = null;
 
-    var tmp_10985582 = tree_9830445(18, []);
-    tmp_10985582.class = apply_theme_10985319("navbar");
-    var tmp_10985583 = tree_9830445(43, []);
-    tmp_10985583.class = "navbar-list center";
+    var tmp_10985580 = tree_9830445(18, []);
+    tmp_10985580.class = apply_theme_10985317("navbar");
+    var tmp_10985581 = tree_9830445(43, []);
+    tmp_10985581.class = "navbar-list center";
     var navbar_item_10990009 = null;
     L1: do {
       var n_10990235 = 0;
@@ -2548,15 +2541,15 @@ function build_navbar_10985579() {
                 navbar_item_10990009 = "navbar-item";
               }
               
-              var tmp_10985584 = tree_9830445(44, []);
-              tmp_10985584.class = navbar_item_10990009;
-              add_event_handler_10750154(tmp_10985584, 0, action_10985394(0, title_10981046(n_10990235)), kxi_10187284[0]);
-              add_9820072(tmp_10985584, content_10981063(n_10990235, makeNimstrLit("title")));
-              add_9820072(tmp_10985583, tmp_10985584);
+              var tmp_10985582 = tree_9830445(44, []);
+              tmp_10985582.class = navbar_item_10990009;
+              add_event_handler_10750154(tmp_10985582, 0, action_10985392(0, title_10981046(n_10990235)), kxi_10187284[0]);
+              add_9820072(tmp_10985582, content_10981063(n_10990235, makeNimstrLit("title")));
+              add_9820072(tmp_10985581, tmp_10985582);
               if ((n_10990235 < 2)) {
-              var tmp_10985585 = tree_9830445(70, []);
-              add_9820072(tmp_10985585, text_9830548(makeNimstrLit("/")));
-              add_9820072(tmp_10985583, tmp_10985585);
+              var tmp_10985583 = tree_9830445(70, []);
+              add_9820072(tmp_10985583, text_9830548(makeNimstrLit("/")));
+              add_9820072(tmp_10985581, tmp_10985583);
               }
               
               res_11005210 = addInt(res_11005210, 1);
@@ -2564,38 +2557,38 @@ function build_navbar_10985579() {
         } while(false);
       } while(false);
     } while(false);
-    var tmp_10985586 = tree_9830445(43, []);
-    tmp_10985586.class = "navbar-break";
-    var tmp_10985587 = tree_9830445(44, []);
-    tmp_10985587.class = "navbar-item";
-    add_event_handler_10750154(tmp_10985587, 0, action_10985394(1, ""), kxi_10187284[0]);
+    var tmp_10985584 = tree_9830445(43, []);
+    tmp_10985584.class = "navbar-break";
+    var tmp_10985585 = tree_9830445(44, []);
+    tmp_10985585.class = "navbar-item";
+    add_event_handler_10750154(tmp_10985585, 0, action_10985392(1, ""), kxi_10187284[0]);
     if ((language_10981044[0] == 1)) {
-    add_9820072(tmp_10985587, text_9830548(makeNimstrLit("EN")));
+    add_9820072(tmp_10985585, text_9830548(makeNimstrLit("EN")));
     }
     else {
-    add_9820072(tmp_10985587, text_9830548(makeNimstrLit("SK")));
+    add_9820072(tmp_10985585, text_9830548(makeNimstrLit("SK")));
     }
     
-    add_9820072(tmp_10985586, tmp_10985587);
-    var tmp_10985588 = tree_9830445(70, []);
-    add_9820072(tmp_10985588, text_9830548(makeNimstrLit("/")));
-    add_9820072(tmp_10985586, tmp_10985588);
-    var tmp_10985589 = tree_9830445(44, []);
-    tmp_10985589.class = "navbar-item navbar-item-right";
-    add_event_handler_10750154(tmp_10985589, 0, action_10985394(2, ""), kxi_10187284[0]);
+    add_9820072(tmp_10985584, tmp_10985585);
+    var tmp_10985586 = tree_9830445(70, []);
+    add_9820072(tmp_10985586, text_9830548(makeNimstrLit("/")));
+    add_9820072(tmp_10985584, tmp_10985586);
+    var tmp_10985587 = tree_9830445(44, []);
+    tmp_10985587.class = "navbar-item navbar-item-right";
+    add_event_handler_10750154(tmp_10985587, 0, action_10985392(2, ""), kxi_10187284[0]);
     if ((theme_10981045[0] == 0)) {
-    add_9820072(tmp_10985589, text_9830548(makeNimstrLit("Dark")));
+    add_9820072(tmp_10985587, text_9830548(makeNimstrLit("Dark")));
     }
     else {
-    add_9820072(tmp_10985589, text_9830548(makeNimstrLit("Light")));
+    add_9820072(tmp_10985587, text_9830548(makeNimstrLit("Light")));
     }
     
-    add_9820072(tmp_10985586, tmp_10985589);
-    add_9820072(tmp_10985583, tmp_10985586);
-    add_9820072(tmp_10985582, tmp_10985583);
-    result_10985581 = tmp_10985582;
+    add_9820072(tmp_10985584, tmp_10985587);
+    add_9820072(tmp_10985581, tmp_10985584);
+    add_9820072(tmp_10985580, tmp_10985581);
+    result_10985579 = tmp_10985580;
 
-  return result_10985581;
+  return result_10985579;
 
 }
 function build_content_10990306() {
@@ -2613,10 +2606,10 @@ function build_footer_10995018() {
   var result_10995020 = null;
 
     var tmp_10995021 = tree_9830445(28, []);
-    tmp_10995021.class = apply_theme_10985319("footer");
+    tmp_10995021.class = apply_theme_10985317("footer");
     add_9820072(tmp_10995021, text_9830548(makeNimstrLit("Powered by ")));
     var tmp_10995022 = tree_9830445(44, []);
-    tmp_10995022.class = apply_theme_10985319("nim-link");
+    tmp_10995022.class = apply_theme_10985317("nim-link");
     set_attr_9770105(tmp_10995022, "href", "https://nim-lang.org/");
     add_9820072(tmp_10995022, text_9830548(makeNimstrLit("NIM")));
     add_9820072(tmp_10995021, tmp_10995022);
@@ -2637,8 +2630,8 @@ function create_dom_11000026(data_11000028) {
     }
     
     var tmp_11000030 = tree_9830445(43, []);
-    tmp_11000030.class = apply_theme_10985319("theme");
-    add_9820072(tmp_11000030, build_navbar_10985579());
+    tmp_11000030.class = apply_theme_10985317("theme");
+    add_9820072(tmp_11000030, build_navbar_10985577());
     add_9820072(tmp_11000030, build_content_10990306());
     add_9820072(tmp_11000030, build_footer_10995018());
     result_11000029 = tmp_11000030;
