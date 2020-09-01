@@ -172,7 +172,7 @@ proc action(typ: ActionType, entry: kstring): proc() =
       elif theme == Theme.Light:
         theme = Theme.Dark
       
-      cookie = setCookie(key="theme", value=`$`theme, domain="localhost", path="/")
+      cookie = setCookie(key="theme", value=`$`theme, domain="adokitkat.github.io", path="/")
 
       document.cookie &= cookie
       echo cookie
