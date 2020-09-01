@@ -99,19 +99,23 @@ a {
   &.theme-dark {
     background-color: black;
     color: white;
+    & a {
+      color: whilte;
+    }
+    & a:visited {
+      color: white;
+    }
   }
   
   &.theme-light {
     background-color: white;
     color: black;
-  }
-
-  & a {
-    color: black;
-  }
-
-  & a:visited {
-    color: black;
+    & a {
+      color: black;
+    }
+    & a:visited {
+      color: black;
+    }
   }
 
   height: 100%;
