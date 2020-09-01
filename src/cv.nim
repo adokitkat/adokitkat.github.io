@@ -136,6 +136,12 @@ proc content(typ: ContentType, part: string) : VNode =
             tdiv(class="links"):
               a(class="button github", href="https://github.com/adokitkat/adokitkat.github.io"): text "</> Github"
 
+          tdiv(class="project"):
+            h3: text ["And others...", "A iné..."][ord(language)]
+            tdiv(class="links"):
+              a(class="button github", href="https://github.com/adokitkat"): text "</> Github " & ["profile", "profil"][ord(language)]
+
+
 proc parseCookieTheme(start : var bool) =
   if start == false:
     start = true
