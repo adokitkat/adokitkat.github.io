@@ -2276,7 +2276,7 @@ function action_11985402(typ_11985404, entry_11985405) {
           theme_11981045[0] = 1;
           }
           }
-          cookie_11981046[0] = toJSStr(set_cookie_11965020(makeNimstrLit("theme"), reprEnum(theme_11981045[0], NTI11981035), makeNimstrLit("localhost"), makeNimstrLit("/"), [], false, false, false));
+          cookie_11981046[0] = toJSStr(set_cookie_11965020(makeNimstrLit("theme"), reprEnum(theme_11981045[0], NTI11981035), makeNimstrLit("adokitkat.github.io"), makeNimstrLit("/"), [], false, false, false));
           if (document.cookie != null) { document.cookie += cookie_11981046[0]; } else { document.cookie = cookie_11981046[0].slice(); };
           rawEcho(cstrToNimstr(cookie_11981046[0]));
           rawEcho(cstrToNimstr(document.cookie));
