@@ -80,18 +80,17 @@ a {
 }
 
 .nim-link {
-
-  &.nim-link-dark {
-    color: black;
-  }
-
-  &.nim-link-light {
-    color: white;
-  }
-
   padding-right: 4px;
   padding-left: 3px;
   background-color: #ffe953;
+}
+
+#nim-link-dark, #nim-link-dark:visited {
+  color: black;
+}
+
+#nim-link-light, #nim-link-light:visited {
+  color: white;
 }
 
 .theme {
@@ -99,10 +98,7 @@ a {
   &.theme-dark {
     background-color: black;
     color: white;
-    & a {
-      color: white;
-    }
-    & a:visited {
+    & a, & a:visited {
       color: white;
     }
   }
@@ -110,10 +106,7 @@ a {
   &.theme-light {
     background-color: white;
     color: black;
-    & a {
-      color: black;
-    }
-    & a:visited {
+    & a, & a:visited {
       color: black;
     }
   }

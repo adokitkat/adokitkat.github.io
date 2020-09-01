@@ -112,7 +112,7 @@ proc content(typ: ContentType, part: string) : VNode =
             
             tdiv(class="language"):
               p(class="left"): text ["Language:", "Jazyk:"][ord(language)]
-              p(class="right"): text "C++"
+              p(class="right"): text "C, C++"
             
             tdiv(class="os"):
               p(class="left"): text "OS:"
@@ -128,7 +128,10 @@ proc content(typ: ContentType, part: string) : VNode =
 
             tdiv(class="language"):
               p(class="left"): text ["Language:", "Jazyk:"][ord(language)]
-              p(class="right"): text ["Nim (compiled to JS), Sass", "Nim (skompilovaný na JS), Sass"][ord(language)]
+              p(class="right"):
+                a(class=kstring"nim-link", id=applyTheme(kstring"nim-link"), href="https://nim-lang.org/"): text "NIM"
+                text [" (compiled to JS), ", " (skompilovaný na JS), "][ord(language)]
+                text "Sass"
             
             tdiv(class="links"):
               a(class="button github", href="https://github.com/adokitkat/adokitkat.github.io"): text "</> Github"
@@ -136,7 +139,7 @@ proc content(typ: ContentType, part: string) : VNode =
 proc parseCookieTheme(start : var bool) =
   if start == false:
     start = true
-    if document.cookie.contains("Dark"):
+    if document.cookie.contains($Theme.Dark):
       theme = Theme.Dark
 
 proc applyTheme(s: kstring) : kstring =
@@ -148,9 +151,9 @@ proc applyTheme(s: kstring) : kstring =
 
   elif s == "nim-link":
     if theme == Theme.Dark:
-      result = kstring"nim-link nim-link-dark"
+      result = kstring"nim-link-dark"
     elif theme == Theme.Light:
-      result = kstring"nim-link nim-link-light"
+      result = kstring"nim-link-light"
 
   elif s == "navbar":
     if theme == Theme.Dark:
