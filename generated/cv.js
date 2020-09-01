@@ -2703,16 +2703,17 @@ function build_footer_11995018() {
 function create_dom_12000018(data_12000020) {
   var result_12000021 = null;
 
+    rawEcho(makeNimstrLit("Loaded cookie: "), cstrToNimstr(document.cookie));
     if ((data_12000020.hashPart == "#/sk")) {
     language_11981044[0] = 1;
     }
     
-    var tmp_12000022 = tree_9830445(43, []);
-    tmp_12000022.class = apply_theme_11985327("theme");
-    add_9820072(tmp_12000022, build_navbar_11985593());
-    add_9820072(tmp_12000022, build_content_11990326());
-    add_9820072(tmp_12000022, build_footer_11995018());
-    result_12000021 = tmp_12000022;
+    var tmp_12000026 = tree_9830445(43, []);
+    tmp_12000026.class = apply_theme_11985327("theme");
+    add_9820072(tmp_12000026, build_navbar_11985593());
+    add_9820072(tmp_12000026, build_content_11990326());
+    add_9820072(tmp_12000026, build_footer_11995018());
+    result_12000021 = tmp_12000026;
 
   return result_12000021;
 
