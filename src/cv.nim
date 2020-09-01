@@ -172,7 +172,6 @@ proc action(typ: ActionType, entry: kstring): proc() =
         theme = Theme.Dark
     
       document.cookie = setCookie(key="Theme", value=`$`theme, domain="adokitkat.github.io", path="/")
-      echo document.cookie
     
     of NavbarAction:
       #echo "clicked \"", entry, "\" menu button"
