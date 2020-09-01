@@ -2115,9 +2115,9 @@ function contains_11981005(s_11981007, sub_11981008) {
   return result_11981009;
 
 }
-function parse_cookie_theme_11990316(start_11990319, start_11990319_Idx) {
-    if ((start_11990319[start_11990319_Idx] == false)) {
-    start_11990319[start_11990319_Idx] = true;
+function parse_cookie_theme_11990344(start_11990347, start_11990347_Idx) {
+    if ((start_11990347[start_11990347_Idx] == false)) {
+    start_11990347[start_11990347_Idx] = true;
     if (contains_11981005(document.cookie, "Dark")) {
     theme_11985058[0] = 1;
     }
@@ -2277,9 +2277,9 @@ function is_undefined_315483(x_315486) {
   return result_315487;
 
 }
-function action_11990354(typ_11990356, entry_11990357) {
-    function HEX3Aanonymous_11990361() {
-        switch (typ_11990356) {
+function action_11990382(typ_11990384, entry_11990385) {
+    function HEX3Aanonymous_11990389() {
+        switch (typ_11990384) {
         case 1:
           if ((language_11985057[0] == 0)) {
           language_11985057[0] = 1;
@@ -2303,17 +2303,17 @@ function action_11990354(typ_11990356, entry_11990357) {
           break;
         case 0:
           L1: do {
-            var i_11990455 = 0;
-            var n_11990456 = null;
+            var i_11990483 = 0;
+            var n_11990484 = null;
             var i_12010225 = 0;
             if ((i_12010225 <= 2)) {
             L2: do {
                 L3: while (true) {
                 if (!true) break L3;
-                  i_11990455 = i_12010225;
-                  n_11990456 = content_type_kstring_11985016[chckIndx(i_12010225, 0, (content_type_kstring_11985016 != null ? content_type_kstring_11985016.length : 0)+0-1)-0];
-                  if ((entry_11990357 == n_11990456)) {
-                  shown_content_11985056[0] = i_11990455;
+                  i_11990483 = i_12010225;
+                  n_11990484 = content_type_kstring_11985016[chckIndx(i_12010225, 0, (content_type_kstring_11985016 != null ? content_type_kstring_11985016.length : 0)+0-1)-0];
+                  if ((entry_11990385 == n_11990484)) {
+                  shown_content_11985056[0] = i_11990483;
                   }
                   
                   if ((2 <= i_12010225)) {
@@ -2332,11 +2332,11 @@ function action_11990354(typ_11990356, entry_11990357) {
       
     }
 
-  var result_11990360 = null;
+  var result_11990388 = null;
 
-    result_11990360 = HEX3Aanonymous_11990361;
+    result_11990388 = HEX3Aanonymous_11990389;
 
-  return result_11990360;
+  return result_11990388;
 
 }
 function title_11985060(typ_11985062) {
@@ -2384,19 +2384,19 @@ function set_attr_9770105(n_9770107, key_9770108, val_9770109) {
     else {
       L1: do {
         var i_9770138 = 0;
-        var colontmp__12010275 = 0;
-        colontmp__12010275 = subInt((n_9770107.attrs != null ? n_9770107.attrs.length : 0), 2);
-        var res_12010276 = 0;
+        var colontmp__12010279 = 0;
+        colontmp__12010279 = subInt((n_9770107.attrs != null ? n_9770107.attrs.length : 0), 2);
+        var res_12010280 = 0;
         L2: do {
             L3: while (true) {
-            if (!(res_12010276 <= colontmp__12010275)) break L3;
-              i_9770138 = res_12010276;
+            if (!(res_12010280 <= colontmp__12010279)) break L3;
+              i_9770138 = res_12010280;
               if ((n_9770107.attrs[chckIndx(i_9770138, 0, (n_9770107.attrs != null ? n_9770107.attrs.length : 0)+0-1)-0] == key_9770108)) {
               n_9770107.attrs[chckIndx(addInt(i_9770138, 1), 0, (n_9770107.attrs != null ? n_9770107.attrs.length : 0)+0-1)-0] = val_9770109;
               break BeforeRet;
               }
               
-              res_12010276 = addInt(res_12010276, 2);
+              res_12010280 = addInt(res_12010280, 2);
             }
         } while(false);
       } while(false);
@@ -2421,6 +2421,8 @@ function content_11985167(typ_11985169, part_11985170) {
         var Tmp10;
         var Tmp11;
         var Tmp12;
+        var Tmp13;
+        var Tmp14;
 
   var result_11985171 = null;
 
@@ -2616,6 +2618,20 @@ function content_11985167(typ_11985169, part_11985170) {
         add_9820072(tmp_11985256, tmp_11985257);
         add_9820072(tmp_11985249, tmp_11985256);
         add_9820072(tmp_11985216, tmp_11985249);
+        var tmp_11985258 = tree_9830445(43, []);
+        tmp_11985258.class = "project";
+        var tmp_11985259 = tree_9830445(23, []);
+        add_9820072(tmp_11985259, text_9830548((Tmp13 = [makeNimstrLit("And others..."), makeNimstrLit("A in\xC3\xA9...")], Tmp13)[chckIndx(language_11985057[0], 0, (Tmp13 != null ? Tmp13.length : 0)+0-1)-0]));
+        add_9820072(tmp_11985258, tmp_11985259);
+        var tmp_11985260 = tree_9830445(43, []);
+        tmp_11985260.class = "links";
+        var tmp_11985261 = tree_9830445(44, []);
+        tmp_11985261.class = "button github";
+        set_attr_9770105(tmp_11985261, "href", "https://github.com/adokitkat");
+        add_9820072(tmp_11985261, text_9830548((makeNimstrLit("</> Github ") || []).concat((Tmp14 = [makeNimstrLit("profile"), makeNimstrLit("profil")], Tmp14)[chckIndx(language_11985057[0], 0, (Tmp14 != null ? Tmp14.length : 0)+0-1)-0] || [])));
+        add_9820072(tmp_11985260, tmp_11985261);
+        add_9820072(tmp_11985258, tmp_11985260);
+        add_9820072(tmp_11985216, tmp_11985258);
         add_9820072(tmp_11985208, tmp_11985216);
         break;
       default: 
@@ -2628,13 +2644,13 @@ function content_11985167(typ_11985169, part_11985170) {
   return result_11985171;
 
 }
-function build_navbar_11990528() {
-  var result_11990530 = null;
+function build_navbar_11990556() {
+  var result_11990558 = null;
 
-    var tmp_11990531 = tree_9830445(18, []);
-    tmp_11990531.class = apply_theme_11985077("navbar");
-    var tmp_11990532 = tree_9830445(43, []);
-    tmp_11990532.class = "navbar-list center";
+    var tmp_11990559 = tree_9830445(18, []);
+    tmp_11990559.class = apply_theme_11985077("navbar");
+    var tmp_11990560 = tree_9830445(43, []);
+    tmp_11990560.class = "navbar-list center";
     var navbar_item_11995009 = null;
     L1: do {
       var n_11995235 = 0;
@@ -2657,15 +2673,15 @@ function build_navbar_11990528() {
                 navbar_item_11995009 = "navbar-item";
               }
               }
-              var tmp_11990533 = tree_9830445(44, []);
-              tmp_11990533.class = navbar_item_11995009;
-              add_event_handler_10750154(tmp_11990533, 0, action_11990354(0, title_11985060(n_11995235)), kxi_10187284[0]);
-              add_9820072(tmp_11990533, content_11985167(n_11995235, makeNimstrLit("title")));
-              add_9820072(tmp_11990532, tmp_11990533);
+              var tmp_11990561 = tree_9830445(44, []);
+              tmp_11990561.class = navbar_item_11995009;
+              add_event_handler_10750154(tmp_11990561, 0, action_11990382(0, title_11985060(n_11995235)), kxi_10187284[0]);
+              add_9820072(tmp_11990561, content_11985167(n_11995235, makeNimstrLit("title")));
+              add_9820072(tmp_11990560, tmp_11990561);
               if ((n_11995235 < 2)) {
-              var tmp_11990534 = tree_9830445(70, []);
-              add_9820072(tmp_11990534, text_9830548(makeNimstrLit("/")));
-              add_9820072(tmp_11990532, tmp_11990534);
+              var tmp_11990562 = tree_9830445(70, []);
+              add_9820072(tmp_11990562, text_9830548(makeNimstrLit("/")));
+              add_9820072(tmp_11990560, tmp_11990562);
               }
               
               res_12010212 = addInt(res_12010212, 1);
@@ -2673,38 +2689,38 @@ function build_navbar_11990528() {
         } while(false);
       } while(false);
     } while(false);
-    var tmp_11990535 = tree_9830445(43, []);
-    tmp_11990535.class = "navbar-break";
-    var tmp_11990536 = tree_9830445(44, []);
-    tmp_11990536.class = "navbar-item";
-    add_event_handler_10750154(tmp_11990536, 0, action_11990354(1, ""), kxi_10187284[0]);
+    var tmp_11990563 = tree_9830445(43, []);
+    tmp_11990563.class = "navbar-break";
+    var tmp_11990564 = tree_9830445(44, []);
+    tmp_11990564.class = "navbar-item";
+    add_event_handler_10750154(tmp_11990564, 0, action_11990382(1, ""), kxi_10187284[0]);
     if ((language_11985057[0] == 1)) {
-    add_9820072(tmp_11990536, text_9830548(makeNimstrLit("EN")));
+    add_9820072(tmp_11990564, text_9830548(makeNimstrLit("EN")));
     }
     else {
-    add_9820072(tmp_11990536, text_9830548(makeNimstrLit("SK")));
+    add_9820072(tmp_11990564, text_9830548(makeNimstrLit("SK")));
     }
     
-    add_9820072(tmp_11990535, tmp_11990536);
-    var tmp_11990537 = tree_9830445(70, []);
-    add_9820072(tmp_11990537, text_9830548(makeNimstrLit("/")));
-    add_9820072(tmp_11990535, tmp_11990537);
-    var tmp_11990538 = tree_9830445(44, []);
-    tmp_11990538.class = "navbar-item";
-    add_event_handler_10750154(tmp_11990538, 0, action_11990354(2, ""), kxi_10187284[0]);
+    add_9820072(tmp_11990563, tmp_11990564);
+    var tmp_11990565 = tree_9830445(70, []);
+    add_9820072(tmp_11990565, text_9830548(makeNimstrLit("/")));
+    add_9820072(tmp_11990563, tmp_11990565);
+    var tmp_11990566 = tree_9830445(44, []);
+    tmp_11990566.class = "navbar-item";
+    add_event_handler_10750154(tmp_11990566, 0, action_11990382(2, ""), kxi_10187284[0]);
     if ((theme_11985058[0] == 0)) {
-    add_9820072(tmp_11990538, text_9830548(makeNimstrLit("dark theme")));
+    add_9820072(tmp_11990566, text_9830548(makeNimstrLit("dark theme")));
     }
     else {
-    add_9820072(tmp_11990538, text_9830548(makeNimstrLit("light theme")));
+    add_9820072(tmp_11990566, text_9830548(makeNimstrLit("light theme")));
     }
     
-    add_9820072(tmp_11990535, tmp_11990538);
-    add_9820072(tmp_11990532, tmp_11990535);
-    add_9820072(tmp_11990531, tmp_11990532);
-    result_11990530 = tmp_11990531;
+    add_9820072(tmp_11990563, tmp_11990566);
+    add_9820072(tmp_11990560, tmp_11990563);
+    add_9820072(tmp_11990559, tmp_11990560);
+    result_11990558 = tmp_11990559;
 
-  return result_11990530;
+  return result_11990558;
 
 }
 function build_content_11995326() {
@@ -2732,14 +2748,14 @@ function build_footer_12000018() {
 function create_dom_12005018(data_12005020) {
   var result_12005021 = null;
 
-    parse_cookie_theme_11990316(on_load_11985059, 0);
+    parse_cookie_theme_11990344(on_load_11985059, 0);
     if ((data_12005020.hashPart == "#/sk")) {
     language_11985057[0] = 1;
     }
     
     var tmp_12005023 = tree_9830445(43, []);
     tmp_12005023.class = apply_theme_11985077("theme");
-    add_9820072(tmp_12005023, build_navbar_11990528());
+    add_9820072(tmp_12005023, build_navbar_11990556());
     add_9820072(tmp_12005023, build_content_11995326());
     add_9820072(tmp_12005023, build_footer_12000018());
     result_12005021 = tmp_12005023;
