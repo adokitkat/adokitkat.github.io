@@ -3,6 +3,9 @@
 include karax / prelude
 import dom, jsffi, strutils, cookies
 
+proc find(s: cstring, a: cstring): int {.importcpp: "#.indexOf(#)".}
+proc contains*(s, sub: cstring): bool {.noSideEffect.} = return find(s, sub) >= 0
+
 const
   ContentTypeKstring* = [kstring"About", "Skills", "Projects"]
   Themes* = [kstring"theme theme-light", "theme theme-dark"]
@@ -37,6 +40,7 @@ var
   shown_content : ContentType = Projects
   language : Language = Slovak
   theme : Theme = Light
+  on_load : bool = false
 
 proc title(typ: ContentType) : kstring =
   result = case typ
@@ -129,6 +133,12 @@ proc content(typ: ContentType, part: string) : VNode =
             tdiv(class="links"):
               a(class="button github", href="https://github.com/adokitkat/adokitkat.github.io"): text "</> Github"
 
+proc parseCookieTheme(start : var bool) =
+  if start == false:
+    start = true
+    if document.cookie.contains("Dark"):
+      theme = Theme.Dark
+
 proc applyTheme(s: kstring) : kstring =
   if s == "theme":
     if theme == Theme.Dark:
@@ -172,7 +182,7 @@ proc action(typ: ActionType, entry: kstring): proc() =
         theme = Theme.Dark
     
       document.cookie = setCookie(key="Theme", value=`$`theme, domain="adokitkat.github.io", path="/")
-    
+
     of NavbarAction:
       #echo "clicked \"", entry, "\" menu button"
       for i, n in ContentTypeKstring:
@@ -229,7 +239,7 @@ proc buildFooter(): VNode =
     text "Adam Múdry 2020"
 
 proc createDom(data: RouterData): VNode =
-  echo "Loaded cookie: ", document.cookie
+  parseCookieTheme(on_load)
   if data.hashPart == "#/sk": language = Slovak # doesn't work on Github Pages...
   result = buildHtml(tdiv(class=applyTheme(kstring"theme"))):
     buildNavbar()
