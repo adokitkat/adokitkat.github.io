@@ -24,9 +24,6 @@ button {
 
 a {
   text-decoration: none;
-  &:visited {
-    color: inherit;
-  }
 }
 
 .navbar {
@@ -106,6 +103,14 @@ a {
   
   &.theme-light {
     background-color: white;
+    color: black;
+  }
+
+  & a {
+    color: black;
+  }
+
+  & a:visited {
     color: black;
   }
 

@@ -1,7 +1,7 @@
 {.experimental: "codeReordering".}
 
 include karax / prelude
-import dom, jsffi, strutils
+import dom, jsffi, strutils, cookies
 
 const
   ContentTypeKstring* = [kstring"About", "Skills", "Projects"]
@@ -37,6 +37,7 @@ var
   shown_content : ContentType = Projects
   language : Language = Slovak
   theme : Theme = Light
+  cookie : cstring = ""
 
 proc title(typ: ContentType) : kstring =
   result = case typ
@@ -170,6 +171,12 @@ proc action(typ: ActionType, entry: kstring): proc() =
         theme = Theme.Light
       elif theme == Theme.Light:
         theme = Theme.Dark
+      
+      cookie = setCookie(key="theme", value=`$`theme, domain="localhost", path="/")
+
+      document.cookie &= cookie
+      echo cookie
+      echo document.cookie
     
     of NavbarAction:
       #echo "clicked \"", entry, "\" menu button"
@@ -182,8 +189,10 @@ proc buildNavbar(): VNode =
     tdiv(class="navbar-list center"):
       var navbar_item : kstring
       for n in ContentType:
-        if ord(n) == 0:
+        if n == ContentType.low:
           navbar_item = "navbar-item navbar-item-left"
+        elif n == ContentType.high:
+          navbar_item = "navbar-item navbar-item-right"
         else:
           navbar_item = "navbar-item"
 
@@ -203,7 +212,7 @@ proc buildNavbar(): VNode =
         span():
             text "/"
         
-        a(class="navbar-item navbar-item-right", onclick=action(ThemeAction, "")):
+        a(class="navbar-item", onclick=action(ThemeAction, "")):
             if theme == Theme.Light:
               text "Dark"
             else:
@@ -215,11 +224,13 @@ proc buildContent(): VNode =
 
 proc buildFooter(): VNode =
   result = buildHtml(footer(class=applyTheme(kstring"footer"))):
+    #[
     text "Powered by "
     a(class=applyTheme(kstring"nim-link"), href="https://nim-lang.org/"):
       text "NIM"
     span():
       text " | "
+    ]#
     text "Adam Múdry 2020"
 
 proc createDom(data: RouterData): VNode =
