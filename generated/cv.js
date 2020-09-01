@@ -2693,10 +2693,10 @@ function build_navbar_11990528() {
     tmp_11990538.class = "navbar-item";
     add_event_handler_10750154(tmp_11990538, 0, action_11990354(2, ""), kxi_10187284[0]);
     if ((theme_11985058[0] == 0)) {
-    add_9820072(tmp_11990538, text_9830548(makeNimstrLit("Dark")));
+    add_9820072(tmp_11990538, text_9830548(makeNimstrLit("dark theme")));
     }
     else {
-    add_9820072(tmp_11990538, text_9830548(makeNimstrLit("Light")));
+    add_9820072(tmp_11990538, text_9830548(makeNimstrLit("light theme")));
     }
     
     add_9820072(tmp_11990535, tmp_11990538);
