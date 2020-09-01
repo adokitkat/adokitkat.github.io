@@ -222,9 +222,9 @@ proc buildNavbar(): VNode =
         
         a(class="navbar-item", onclick=action(ThemeAction, "")):
             if theme == Theme.Light:
-              text "Dark"
+              text "dark theme"
             else:
-              text "Light"
+              text "light theme"
 
 proc buildContent(): VNode =
   result = buildHtml(tdiv(class="content-body")):
