@@ -11,7 +11,7 @@ if (typeof Uint32Array === 'undefined') Uint32Array = Array;
 if (typeof Float32Array === 'undefined') Float32Array = Array;
 if (typeof Float64Array === 'undefined') Float64Array = Array;
 var NTI9770125 = {size: 0,kind: 24,base: null,node: null,finalizer: null};
-var NTI11981035 = {size: 0, kind: 14, base: null, node: null, finalizer: null};
+var NTI11985048 = {size: 0, kind: 14, base: null, node: null, finalizer: null};
 var NTI6253 = {size: 0, kind: 17, base: null, node: null, finalizer: null};
 var NTI10187211 = {size: 0, kind: 18, base: null, node: null, finalizer: null};
 var NTI861084 = {size: 0, kind: 18, base: null, node: null, finalizer: null};
@@ -452,9 +452,9 @@ NTI10187211.node = NNI10187211;
 var NNI6253 = {kind: 2, len: 0, offset: 0, typ: null, name: null, sons: []};
 NTI6253.node = NNI6253;
 NTI6253.base = NTI6219;
-var NNI11981035 = {kind: 2, offset: 0, typ: null, name: null, len: 2, sons: {"0": {kind: 1, offset: 0, typ: NTI11981035, name: "Light", len: 0, sons: null}, 
-"1": {kind: 1, offset: 1, typ: NTI11981035, name: "Dark", len: 0, sons: null}}};
-NTI11981035.node = NNI11981035;
+var NNI11985048 = {kind: 2, offset: 0, typ: null, name: null, len: 2, sons: {"0": {kind: 1, offset: 0, typ: NTI11985048, name: "Light", len: 0, sons: null}, 
+"1": {kind: 1, offset: 1, typ: NTI11985048, name: "Dark", len: 0, sons: null}}};
+NTI11985048.node = NNI11985048;
 NTI9770125.base = NTI114;
 function cstrToNimstr(c_225079) {
       var ln = c_225079.length;
@@ -791,12 +791,12 @@ function reprEnum(e_315480, typ_315481) {
   return result_315482;
 
 }
-                  var content_type_kstring_11981003 = ["About", "Skills", "Projects"];
-        var about_title_11981009 = ["About me", "O mne"];
-        var about_text_11981018 = ["Work in progress...", "Na stránke sa pracuje..."];
-        var skills_title_11981012 = ["Skills", "Schopnosti"];
-        var skills_text_11981021 = ["Work in progress...", "Na stránke sa pracuje..."];
-        var projects_title_11981015 = ["Projects", "Projekty"];
+                  var content_type_kstring_11985016 = ["About", "Skills", "Projects"];
+        var about_title_11985022 = ["About me", "O mne"];
+        var about_text_11985031 = ["Work in progress...", "Na stránke sa pracuje..."];
+        var skills_title_11985025 = ["Skills", "Schopnosti"];
+        var skills_text_11985034 = ["Work in progress...", "Na stránke sa pracuje..."];
+        var projects_title_11985028 = ["Projects", "Projekty"];
 var nim_program_result = 0;
 var global_raise_hook_142018 = [null];
 var local_raise_hook_142023 = [null];
@@ -1093,15 +1093,15 @@ function apply_events_10300073(n_10300075) {
     var dest_10300076 = n_10300075.dom;
     L1: do {
       var i_10300089 = 0;
-      var colontmp__12005089 = 0;
-      colontmp__12005089 = (n_10300075.events != null ? n_10300075.events.length : 0);
-      var i_12005090 = 0;
+      var colontmp__12010089 = 0;
+      colontmp__12010089 = (n_10300075.events != null ? n_10300075.events.length : 0);
+      var i_12010090 = 0;
       L2: do {
           L3: while (true) {
-          if (!(i_12005090 < colontmp__12005089)) break L3;
-            i_10300089 = i_12005090;
+          if (!(i_12010090 < colontmp__12010089)) break L3;
+            i_10300089 = i_12010090;
             n_10300075.events[chckIndx(i_10300089, 0, (n_10300075.events != null ? n_10300075.events.length : 0)+0-1)-0]["Field2"] = wrap_event_10190097(dest_10300076, n_10300075, n_10300075.events[chckIndx(i_10300089, 0, (n_10300075.events != null ? n_10300075.events.length : 0)+0-1)-0]["Field0"], n_10300075.events[chckIndx(i_10300089, 0, (n_10300075.events != null ? n_10300075.events.length : 0)+0-1)-0]["Field1"]);
-            i_12005090 = addInt(i_12005090, 1);
+            i_12010090 = addInt(i_12010090, 1);
           }
       } while(false);
     } while(false);
@@ -1112,15 +1112,15 @@ function apply_style_900425(n_900427, s_900428) {
     n_900427.style = {};
     L1: do {
       var i_900621 = 0;
-      var colontmp__12005100 = 0;
-      colontmp__12005100 = subInt(s_900428.length, 1);
-      var res_12005101 = 0;
+      var colontmp__12010100 = 0;
+      colontmp__12010100 = subInt(s_900428.length, 1);
+      var res_12010101 = 0;
       L2: do {
           L3: while (true) {
-          if (!(res_12005101 <= colontmp__12005100)) break L3;
-            i_900621 = res_12005101;
+          if (!(res_12010101 <= colontmp__12010100)) break L3;
+            i_900621 = res_12010101;
             n_900427.style[s_900428[i_900621]] = s_900428[addInt(i_900621, 1)];
-            res_12005101 = addInt(res_12005101, 2);
+            res_12010101 = addInt(res_12010101, 2);
           }
       } while(false);
     } while(false);
@@ -1227,17 +1227,17 @@ function to_dom_10300154(n_10300156, use_attached_node_10300157, kxi_10300158) {
       L1: do {
         var k_10425016 = null;
         L2: do {
-          var i_12005058 = 0;
-          var colontmp__12005059 = 0;
-          colontmp__12005059 = (n_10300156.kids != null ? n_10300156.kids.length : 0);
-          var i_12005060 = 0;
+          var i_12010058 = 0;
+          var colontmp__12010059 = 0;
+          colontmp__12010059 = (n_10300156.kids != null ? n_10300156.kids.length : 0);
+          var i_12010060 = 0;
           L3: do {
               L4: while (true) {
-              if (!(i_12005060 < colontmp__12005059)) break L4;
-                i_12005058 = i_12005060;
-                k_10425016 = n_10300156.kids[chckIndx(i_12005058, 0, (n_10300156.kids != null ? n_10300156.kids.length : 0)+0-1)-0];
+              if (!(i_12010060 < colontmp__12010059)) break L4;
+                i_12010058 = i_12010060;
+                k_10425016 = n_10300156.kids[chckIndx(i_12010058, 0, (n_10300156.kids != null ? n_10300156.kids.length : 0)+0-1)-0];
                 result_10300159.appendChild(to_dom_10300154(k_10425016, use_attached_node_10300157, kxi_10300158));
-                i_12005060 = addInt(i_12005060, 1);
+                i_12010060 = addInt(i_12010060, 1);
               }
           } while(false);
         } while(false);
@@ -1260,21 +1260,21 @@ function to_dom_10300154(n_10300156, use_attached_node_10300157, kxi_10300158) {
       var k_10440001 = null;
       var v_10440002 = null;
       L6: do {
-        var i_12005071 = 0;
-        var colontmp__12005072 = 0;
-        colontmp__12005072 = subInt((n_10300156.attrs != null ? n_10300156.attrs.length : 0), 2);
-        var res_12005073 = 0;
+        var i_12010071 = 0;
+        var colontmp__12010072 = 0;
+        colontmp__12010072 = subInt((n_10300156.attrs != null ? n_10300156.attrs.length : 0), 2);
+        var res_12010073 = 0;
         L7: do {
             L8: while (true) {
-            if (!(res_12005073 <= colontmp__12005072)) break L8;
-              i_12005071 = res_12005073;
-              k_10440001 = n_10300156.attrs[chckIndx(i_12005071, 0, (n_10300156.attrs != null ? n_10300156.attrs.length : 0)+0-1)-0];
-              v_10440002 = n_10300156.attrs[chckIndx(addInt(i_12005071, 1), 0, (n_10300156.attrs != null ? n_10300156.attrs.length : 0)+0-1)-0];
+            if (!(res_12010073 <= colontmp__12010072)) break L8;
+              i_12010071 = res_12010073;
+              k_10440001 = n_10300156.attrs[chckIndx(i_12010071, 0, (n_10300156.attrs != null ? n_10300156.attrs.length : 0)+0-1)-0];
+              v_10440002 = n_10300156.attrs[chckIndx(addInt(i_12010071, 1), 0, (n_10300156.attrs != null ? n_10300156.attrs.length : 0)+0-1)-0];
               if (!((v_10440002 == null))) {
               result_10300159.setAttribute(k_10440001, v_10440002);
               }
               
-              res_12005073 = addInt(res_12005073, 2);
+              res_12010073 = addInt(res_12010073, 2);
             }
         } while(false);
       } while(false);
@@ -1351,19 +1351,19 @@ function same_10450072(n_10450074, e_10450075, nesting_10450076) {
     
     L3: do {
       var i_10465024 = 0;
-      var colontmp__12005107 = 0;
-      colontmp__12005107 = len_9820014(n_10450074);
-      var i_12005108 = 0;
+      var colontmp__12010107 = 0;
+      colontmp__12010107 = len_9820014(n_10450074);
+      var i_12010108 = 0;
       L4: do {
           L5: while (true) {
-          if (!(i_12005108 < colontmp__12005107)) break L5;
-            i_10465024 = i_12005108;
+          if (!(i_12010108 < colontmp__12010107)) break L5;
+            i_10465024 = i_12010108;
             if (!(same_10450072(HEX5BHEX5D_9820036(n_10450074, i_10465024), e_10450075.childNodes[i_10465024], addInt(nesting_10450076, 1)))) {
             result_10450078 = false;
             break BeforeRet;
             }
             
-            i_12005108 = addInt(i_12005108, 1);
+            i_12010108 = addInt(i_12010108, 1);
           }
       } while(false);
     } while(false);
@@ -1407,19 +1407,19 @@ function eq_865229(a_865231, b_865232) {
     
     L1: do {
       var i_870083 = 0;
-      var colontmp__12005147 = 0;
-      colontmp__12005147 = a_865231.length;
-      var i_12005148 = 0;
+      var colontmp__12010147 = 0;
+      colontmp__12010147 = a_865231.length;
+      var i_12010148 = 0;
       L2: do {
           L3: while (true) {
-          if (!(i_12005148 < colontmp__12005147)) break L3;
-            i_870083 = i_12005148;
+          if (!(i_12010148 < colontmp__12010147)) break L3;
+            i_870083 = i_12010148;
             if (!((a_865231[i_870083] == b_865232[i_870083]))) {
             result_865233 = false;
             break BeforeRet;
             }
             
-            i_12005148 = addInt(i_12005148, 1);
+            i_12010148 = addInt(i_12010148, 1);
           }
       } while(false);
     } while(false);
@@ -1438,19 +1438,19 @@ function same_attrs_9830879(a_9830881, b_9830882) {
     result_9830883 = true;
     L1: do {
       var i_9830906 = 0;
-      var colontmp__12005151 = 0;
-      colontmp__12005151 = (a_9830881.attrs != null ? a_9830881.attrs.length : 0);
-      var i_12005152 = 0;
+      var colontmp__12010151 = 0;
+      colontmp__12010151 = (a_9830881.attrs != null ? a_9830881.attrs.length : 0);
+      var i_12010152 = 0;
       L2: do {
           L3: while (true) {
-          if (!(i_12005152 < colontmp__12005151)) break L3;
-            i_9830906 = i_12005152;
+          if (!(i_12010152 < colontmp__12010151)) break L3;
+            i_9830906 = i_12010152;
             if (!((a_9830881.attrs[chckIndx(i_9830906, 0, (a_9830881.attrs != null ? a_9830881.attrs.length : 0)+0-1)-0] == b_9830882.attrs[chckIndx(i_9830906, 0, (b_9830882.attrs != null ? b_9830882.attrs.length : 0)+0-1)-0]))) {
             result_9830883 = false;
             break BeforeRet;
             }
             
-            i_12005152 = addInt(i_12005152, 1);
+            i_12010152 = addInt(i_12010152, 1);
           }
       } while(false);
     } while(false);
@@ -1505,19 +1505,19 @@ function eq_10465214(a_10465216, b_10465217, recursive_10465218) {
     
     L1: do {
       var i_10495008 = 0;
-      var colontmp__12005139 = 0;
-      colontmp__12005139 = len_9820014(a_10465216);
-      var i_12005140 = 0;
+      var colontmp__12010139 = 0;
+      colontmp__12010139 = len_9820014(a_10465216);
+      var i_12010140 = 0;
       L2: do {
           L3: while (true) {
-          if (!(i_12005140 < colontmp__12005139)) break L3;
-            i_10495008 = i_12005140;
+          if (!(i_12010140 < colontmp__12010139)) break L3;
+            i_10495008 = i_12010140;
             if ((eq_10465214(HEX5BHEX5D_9820036(a_10465216, i_10495008), HEX5BHEX5D_9820036(b_10465217, i_10495008), recursive_10465218) == 1)) {
             result_10465219 = 1;
             break BeforeRet;
             }
             
-            i_12005140 = addInt(i_12005140, 1);
+            i_12010140 = addInt(i_12010140, 1);
           }
       } while(false);
     } while(false);
@@ -1571,19 +1571,19 @@ function eq_10465214(a_10465216, b_10465217, recursive_10465218) {
     
     L6: do {
       var i_10520008 = 0;
-      var colontmp__12005143 = 0;
-      colontmp__12005143 = len_9820014(a_10465216);
-      var i_12005144 = 0;
+      var colontmp__12010143 = 0;
+      colontmp__12010143 = len_9820014(a_10465216);
+      var i_12010144 = 0;
       L7: do {
           L8: while (true) {
-          if (!(i_12005144 < colontmp__12005143)) break L8;
-            i_10520008 = i_12005144;
+          if (!(i_12010144 < colontmp__12010143)) break L8;
+            i_10520008 = i_12010144;
             if (!((eq_10465214(HEX5BHEX5D_9820036(a_10465216, i_10520008), HEX5BHEX5D_9820036(b_10465217, i_10520008), true) == 3))) {
             result_10465219 = 1;
             break BeforeRet;
             }
             
-            i_12005144 = addInt(i_12005144, 1);
+            i_12010144 = addInt(i_12010144, 1);
           }
       } while(false);
     } while(false);
@@ -1623,18 +1623,18 @@ function update_attributes_10535052(new_node_10535054, old_node_10535055) {
       var k_10540009 = null;
       var __10540010 = null;
       L2: do {
-        var i_12005157 = 0;
-        var colontmp__12005158 = 0;
-        colontmp__12005158 = subInt((old_node_10535055.attrs != null ? old_node_10535055.attrs.length : 0), 2);
-        var res_12005159 = 0;
+        var i_12010157 = 0;
+        var colontmp__12010158 = 0;
+        colontmp__12010158 = subInt((old_node_10535055.attrs != null ? old_node_10535055.attrs.length : 0), 2);
+        var res_12010159 = 0;
         L3: do {
             L4: while (true) {
-            if (!(res_12005159 <= colontmp__12005158)) break L4;
-              i_12005157 = res_12005159;
-              k_10540009 = old_node_10535055.attrs[chckIndx(i_12005157, 0, (old_node_10535055.attrs != null ? old_node_10535055.attrs.length : 0)+0-1)-0];
-              __10540010 = old_node_10535055.attrs[chckIndx(addInt(i_12005157, 1), 0, (old_node_10535055.attrs != null ? old_node_10535055.attrs.length : 0)+0-1)-0];
+            if (!(res_12010159 <= colontmp__12010158)) break L4;
+              i_12010157 = res_12010159;
+              k_10540009 = old_node_10535055.attrs[chckIndx(i_12010157, 0, (old_node_10535055.attrs != null ? old_node_10535055.attrs.length : 0)+0-1)-0];
+              __10540010 = old_node_10535055.attrs[chckIndx(addInt(i_12010157, 1), 0, (old_node_10535055.attrs != null ? old_node_10535055.attrs.length : 0)+0-1)-0];
               old_node_10535055.dom.removeAttribute(k_10540009);
-              res_12005159 = addInt(res_12005159, 2);
+              res_12010159 = addInt(res_12010159, 2);
             }
         } while(false);
       } while(false);
@@ -1643,21 +1643,21 @@ function update_attributes_10535052(new_node_10535054, old_node_10535055) {
       var k_10540011 = null;
       var v_10540012 = null;
       L6: do {
-        var i_12005165 = 0;
-        var colontmp__12005166 = 0;
-        colontmp__12005166 = subInt((new_node_10535054.attrs != null ? new_node_10535054.attrs.length : 0), 2);
-        var res_12005167 = 0;
+        var i_12010165 = 0;
+        var colontmp__12010166 = 0;
+        colontmp__12010166 = subInt((new_node_10535054.attrs != null ? new_node_10535054.attrs.length : 0), 2);
+        var res_12010167 = 0;
         L7: do {
             L8: while (true) {
-            if (!(res_12005167 <= colontmp__12005166)) break L8;
-              i_12005165 = res_12005167;
-              k_10540011 = new_node_10535054.attrs[chckIndx(i_12005165, 0, (new_node_10535054.attrs != null ? new_node_10535054.attrs.length : 0)+0-1)-0];
-              v_10540012 = new_node_10535054.attrs[chckIndx(addInt(i_12005165, 1), 0, (new_node_10535054.attrs != null ? new_node_10535054.attrs.length : 0)+0-1)-0];
+            if (!(res_12010167 <= colontmp__12010166)) break L8;
+              i_12010165 = res_12010167;
+              k_10540011 = new_node_10535054.attrs[chckIndx(i_12010165, 0, (new_node_10535054.attrs != null ? new_node_10535054.attrs.length : 0)+0-1)-0];
+              v_10540012 = new_node_10535054.attrs[chckIndx(addInt(i_12010165, 1), 0, (new_node_10535054.attrs != null ? new_node_10535054.attrs.length : 0)+0-1)-0];
               if (!((v_10540012 == null))) {
               old_node_10535055.dom.setAttribute(k_10540011, v_10540012);
               }
               
-              res_12005167 = addInt(res_12005167, 2);
+              res_12010167 = addInt(res_12010167, 2);
             }
         } while(false);
       } while(false);
@@ -1672,15 +1672,15 @@ function remove_all_event_handlers_10187436(d_10187438) {
     if (!((d_10187438.karaxEvents == null))) {
     L1: do {
       var i_10190041 = 0;
-      var colontmp__12005172 = 0;
-      colontmp__12005172 = d_10187438.karaxEvents.length;
-      var i_12005173 = 0;
+      var colontmp__12010172 = 0;
+      colontmp__12010172 = d_10187438.karaxEvents.length;
+      var i_12010173 = 0;
       L2: do {
           L3: while (true) {
-          if (!(i_12005173 < colontmp__12005172)) break L3;
-            i_10190041 = i_12005173;
+          if (!(i_12010173 < colontmp__12010172)) break L3;
+            i_10190041 = i_12010173;
             d_10187438.removeEventListener(d_10187438.karaxEvents[i_10190041]["Field0"], d_10187438.karaxEvents[i_10190041]["Field1"]);
-            i_12005173 = addInt(i_12005173, 1);
+            i_12010173 = addInt(i_12010173, 1);
           }
       } while(false);
     } while(false);
@@ -1788,28 +1788,28 @@ function diff_10600215(new_node_10600217, old_node_10600218, parent_10600219, cu
       var pos_10630018 = addInt(nimMin(old_pos_10620214, new_pos_10620215), 1);
       L7: do {
         var i_10630024 = 0;
-        var colontmp__12005114 = 0;
-        colontmp__12005114 = subInt(pos_10630018, 1);
-        var res_12005115 = common_prefix_10620202;
+        var colontmp__12010114 = 0;
+        colontmp__12010114 = subInt(pos_10630018, 1);
+        var res_12010115 = common_prefix_10620202;
         L8: do {
             L9: while (true) {
-            if (!(res_12005115 <= colontmp__12005114)) break L9;
-              i_10630024 = res_12005115;
+            if (!(res_12010115 <= colontmp__12010114)) break L9;
+              i_10630024 = res_12010115;
               diff_10600215(HEX5BHEX5D_9820036(new_node_10600217, i_10630024), HEX5BHEX5D_9820036(old_node_10600218, i_10630024), current_10600220, current_10600220.childNodes[chckIndx(i_10630024, 0, (current_10600220.childNodes != null ? current_10600220.childNodes.length : 0)+0-1)-0], kxi_10600221);
-              res_12005115 = addInt(res_12005115, 1);
+              res_12010115 = addInt(res_12010115, 1);
             }
         } while(false);
       } while(false);
       if ((addInt(old_pos_10620214, 1) == old_length_10610007)) {
       L10: do {
         var i_10630030 = 0;
-        var res_12005121 = pos_10630018;
+        var res_12010121 = pos_10630018;
         L11: do {
             L12: while (true) {
-            if (!(res_12005121 <= new_pos_10620215)) break L12;
-              i_10630030 = res_12005121;
+            if (!(res_12010121 <= new_pos_10620215)) break L12;
+              i_10630030 = res_12010121;
               add_patch_10550414(kxi_10600221, 2, current_10600220, null, HEX5BHEX5D_9820036(new_node_10600217, i_10630030), null);
-              res_12005121 = addInt(res_12005121, 1);
+              res_12010121 = addInt(res_12010121, 1);
             }
         } while(false);
       } while(false);
@@ -1818,13 +1818,13 @@ function diff_10600215(new_node_10600217, old_node_10600218, parent_10600219, cu
         var before_10630031 = current_10600220.childNodes[chckIndx(addInt(old_pos_10620214, 1), 0, (current_10600220.childNodes != null ? current_10600220.childNodes.length : 0)+0-1)-0];
         L13: do {
           var i_10630037 = 0;
-          var res_12005127 = pos_10630018;
+          var res_12010127 = pos_10630018;
           L14: do {
               L15: while (true) {
-              if (!(res_12005127 <= new_pos_10620215)) break L15;
-                i_10630037 = res_12005127;
+              if (!(res_12010127 <= new_pos_10620215)) break L15;
+                i_10630037 = res_12010127;
                 add_patch_10550414(kxi_10600221, 3, current_10600220, before_10630031, HEX5BHEX5D_9820036(new_node_10600217, i_10630037), null);
-                res_12005127 = addInt(res_12005127, 1);
+                res_12010127 = addInt(res_12010127, 1);
               }
           } while(false);
         } while(false);
@@ -1832,14 +1832,14 @@ function diff_10600215(new_node_10600217, old_node_10600218, parent_10600219, cu
       
       L16: do {
         var i_10630043 = 0;
-        var res_12005133 = pos_10630018;
+        var res_12010133 = pos_10630018;
         L17: do {
             L18: while (true) {
-            if (!(res_12005133 <= old_pos_10620214)) break L18;
-              i_10630043 = res_12005133;
+            if (!(res_12010133 <= old_pos_10620214)) break L18;
+              i_10630043 = res_12010133;
               add_patch_10550414(kxi_10187284[0], 4, null, null, null, HEX5BHEX5D_9820036(old_node_10600218, i_10630043));
               add_patch_10550414(kxi_10600221, 1, current_10600220, current_10600220.childNodes[chckIndx(i_10630043, 0, (current_10600220.childNodes != null ? current_10600220.childNodes.length : 0)+0-1)-0], null, null);
-              res_12005133 = addInt(res_12005133, 1);
+              res_12010133 = addInt(res_12010133, 1);
             }
         } while(false);
       } while(false);
@@ -1907,15 +1907,15 @@ function move_dom_10560047(dest_10560049, src_10560050) {
     
     L1: do {
       var i_10575208 = 0;
-      var colontmp__12005184 = 0;
-      colontmp__12005184 = len_9820014(dest_10560049);
-      var i_12005185 = 0;
+      var colontmp__12010184 = 0;
+      colontmp__12010184 = len_9820014(dest_10560049);
+      var i_12010185 = 0;
       L2: do {
           L3: while (true) {
-          if (!(i_12005185 < colontmp__12005184)) break L3;
-            i_10575208 = i_12005185;
+          if (!(i_12010185 < colontmp__12010184)) break L3;
+            i_10575208 = i_12010185;
             move_dom_10560047(HEX5BHEX5D_9820036(dest_10560049, i_10575208), HEX5BHEX5D_9820036(src_10560050, i_10575208));
-            i_12005185 = addInt(i_12005185, 1);
+            i_12010185 = addInt(i_12010185, 1);
           }
       } while(false);
     } while(false);
@@ -1930,11 +1930,11 @@ function HEX5BHEX5DHEX3D_9820054(x_9820056, idx_9820057, y_9820058) {
 function apply_patch_10575222(kxi_10575224) {
     L1: do {
       var i_10575232 = 0;
-      var i_12005178 = 0;
+      var i_12010178 = 0;
       L2: do {
           L3: while (true) {
-          if (!(i_12005178 < kxi_10575224.patchLen)) break L3;
-            i_10575232 = i_12005178;
+          if (!(i_12010178 < kxi_10575224.patchLen)) break L3;
+            i_10575232 = i_12010178;
             var p_10575233 = nimCopy(null, kxi_10575224.patches[chckIndx(i_10575232, 0, (kxi_10575224.patches != null ? kxi_10575224.patches.length : 0)+0-1)-0], NTI10187209);
             switch (p_10575233.k) {
             case 0:
@@ -1987,25 +1987,25 @@ function apply_patch_10575222(kxi_10575224) {
               
               break;
             }
-            i_12005178 = addInt(i_12005178, 1);
+            i_12010178 = addInt(i_12010178, 1);
           }
       } while(false);
     } while(false);
     kxi_10575224.patchLen = 0;
     L4: do {
       var i_10585013 = 0;
-      var i_12005181 = 0;
+      var i_12010181 = 0;
       L5: do {
           L6: while (true) {
-          if (!(i_12005181 < kxi_10575224.patchLenV)) break L6;
-            i_10585013 = i_12005181;
+          if (!(i_12010181 < kxi_10575224.patchLenV)) break L6;
+            i_10585013 = i_12010181;
             var p_10585014 = nimCopy(null, kxi_10575224.patchesV[chckIndx(i_10585013, 0, (kxi_10575224.patchesV != null ? kxi_10575224.patchesV.length : 0)+0-1)-0], NTI10187211);
             HEX5BHEX5DHEX3D_9820054(p_10585014.parent, p_10585014.pos, p_10585014.newChild);
             if (!(!((p_10585014.newChild.dom == null)))) {
             failed_assert_impl_102680(makeNimstrLit("karax.nim(429, 12) `p.newChild.dom != nil` "));
             }
             
-            i_12005181 = addInt(i_12005181, 1);
+            i_12010181 = addInt(i_12010181, 1);
           }
       } while(false);
     } while(false);
@@ -2104,6 +2104,29 @@ function set_renderer_10740678(renderer_10740683, root_10740684, client_post_ren
   return result_10740689;
 
 }
+function contains_11981005(s_11981007, sub_11981008) {
+  var result_11981009 = false;
+
+  BeforeRet: do {
+    result_11981009 = (0 <= s_11981007.indexOf(sub_11981008));
+    break BeforeRet;
+  } while (false);
+
+  return result_11981009;
+
+}
+function parse_cookie_theme_11990327(start_11990330, start_11990330_Idx) {
+    if ((start_11990330[start_11990330_Idx] == false)) {
+    start_11990330[start_11990330_Idx] = true;
+    if (contains_11981005(document.cookie, "Dark")) {
+    theme_11985058[0] = 1;
+    }
+    
+    }
+    
+
+  
+}
 function new_vnode_9830428(kind_9830430) {
   var result_9830431 = null;
 
@@ -2123,13 +2146,13 @@ function tree_9830445(kind_9830447, kids_9830449) {
     result_9830450 = new_vnode_9830428(kind_9830447);
     L1: do {
       var k_9830481 = null;
-      var i_12005190 = 0;
+      var i_12010190 = 0;
       L2: do {
           L3: while (true) {
-          if (!(i_12005190 < (kids_9830449 != null ? kids_9830449.length : 0))) break L3;
-            k_9830481 = kids_9830449[chckIndx(i_12005190, 0, (kids_9830449 != null ? kids_9830449.length : 0)+0-1)-0];
+          if (!(i_12010190 < (kids_9830449 != null ? kids_9830449.length : 0))) break L3;
+            k_9830481 = kids_9830449[chckIndx(i_12010190, 0, (kids_9830449 != null ? kids_9830449.length : 0)+0-1)-0];
             add_9820072(result_9830450, k_9830481);
-            i_12005190 = addInt(i_12005190, 1);
+            i_12010190 = addInt(i_12010190, 1);
           }
       } while(false);
     } while(false);
@@ -2137,55 +2160,55 @@ function tree_9830445(kind_9830447, kids_9830449) {
   return result_9830450;
 
 }
-function apply_theme_11985327(s_11985329) {
-  var result_11985330 = null;
+function apply_theme_11990360(s_11990362) {
+  var result_11990363 = null;
 
-    if ((s_11985329 == "theme")) {
-    if ((theme_11981045[0] == 1)) {
-    result_11985330 = "theme theme-dark";
+    if ((s_11990362 == "theme")) {
+    if ((theme_11985058[0] == 1)) {
+    result_11990363 = "theme theme-dark";
     }
     else {
-    if ((theme_11981045[0] == 0)) {
-    result_11985330 = "theme theme-light";
-    }
-    }
-    }
-    else {
-    if ((s_11985329 == "nim-link")) {
-    if ((theme_11981045[0] == 1)) {
-    result_11985330 = "nim-link nim-link-dark";
-    }
-    else {
-    if ((theme_11981045[0] == 0)) {
-    result_11985330 = "nim-link nim-link-light";
+    if ((theme_11985058[0] == 0)) {
+    result_11990363 = "theme theme-light";
     }
     }
     }
     else {
-    if ((s_11985329 == "navbar")) {
-    if ((theme_11981045[0] == 1)) {
-    result_11985330 = "navbar navbar-dark";
+    if ((s_11990362 == "nim-link")) {
+    if ((theme_11985058[0] == 1)) {
+    result_11990363 = "nim-link nim-link-dark";
     }
     else {
-    if ((theme_11981045[0] == 0)) {
-    result_11985330 = "navbar navbar-light";
+    if ((theme_11985058[0] == 0)) {
+    result_11990363 = "nim-link nim-link-light";
     }
     }
     }
     else {
-    if ((s_11985329 == "footer")) {
-    if ((theme_11981045[0] == 1)) {
-    result_11985330 = "footer center footer-dark";
+    if ((s_11990362 == "navbar")) {
+    if ((theme_11985058[0] == 1)) {
+    result_11990363 = "navbar navbar-dark";
     }
     else {
-    if ((theme_11981045[0] == 0)) {
-    result_11985330 = "footer center footer-light";
+    if ((theme_11985058[0] == 0)) {
+    result_11990363 = "navbar navbar-light";
+    }
+    }
+    }
+    else {
+    if ((s_11990362 == "footer")) {
+    if ((theme_11985058[0] == 1)) {
+    result_11990363 = "footer center footer-dark";
+    }
+    else {
+    if ((theme_11985058[0] == 0)) {
+    result_11990363 = "footer center footer-light";
     }
     }
     }
     }}}
 
-  return result_11985330;
+  return result_11990363;
 
 }
 function raiseRangeError() {
@@ -2254,50 +2277,50 @@ function is_undefined_315483(x_315486) {
   return result_315487;
 
 }
-function action_11985402(typ_11985404, entry_11985405) {
-    function HEX3Aanonymous_11985409() {
-        switch (typ_11985404) {
+function action_11990435(typ_11990437, entry_11990438) {
+    function HEX3Aanonymous_11990442() {
+        switch (typ_11990437) {
         case 1:
-          if ((language_11981044[0] == 0)) {
-          language_11981044[0] = 1;
+          if ((language_11985057[0] == 0)) {
+          language_11985057[0] = 1;
           }
           else {
-          if ((language_11981044[0] == 1)) {
-          language_11981044[0] = 0;
+          if ((language_11985057[0] == 1)) {
+          language_11985057[0] = 0;
           }
           }
           break;
         case 2:
-          if ((theme_11981045[0] == 1)) {
-          theme_11981045[0] = 0;
+          if ((theme_11985058[0] == 1)) {
+          theme_11985058[0] = 0;
           }
           else {
-          if ((theme_11981045[0] == 0)) {
-          theme_11981045[0] = 1;
+          if ((theme_11985058[0] == 0)) {
+          theme_11985058[0] = 1;
           }
           }
-          document.cookie = toJSStr(set_cookie_11965020(makeNimstrLit("Theme"), reprEnum(theme_11981045[0], NTI11981035), makeNimstrLit("adokitkat.github.io"), makeNimstrLit("/"), [], false, false, false));
+          document.cookie = toJSStr(set_cookie_11965020(makeNimstrLit("Theme"), reprEnum(theme_11985058[0], NTI11985048), makeNimstrLit("adokitkat.github.io"), makeNimstrLit("/"), [], false, false, false));
           break;
         case 0:
           L1: do {
-            var i_11985503 = 0;
-            var n_11985504 = null;
-            var i_12005225 = 0;
-            if ((i_12005225 <= 2)) {
+            var i_11990536 = 0;
+            var n_11990537 = null;
+            var i_12010225 = 0;
+            if ((i_12010225 <= 2)) {
             L2: do {
                 L3: while (true) {
                 if (!true) break L3;
-                  i_11985503 = i_12005225;
-                  n_11985504 = content_type_kstring_11981003[chckIndx(i_12005225, 0, (content_type_kstring_11981003 != null ? content_type_kstring_11981003.length : 0)+0-1)-0];
-                  if ((entry_11985405 == n_11985504)) {
-                  shown_content_11981043[0] = i_11985503;
+                  i_11990536 = i_12010225;
+                  n_11990537 = content_type_kstring_11985016[chckIndx(i_12010225, 0, (content_type_kstring_11985016 != null ? content_type_kstring_11985016.length : 0)+0-1)-0];
+                  if ((entry_11990438 == n_11990537)) {
+                  shown_content_11985056[0] = i_11990536;
                   }
                   
-                  if ((2 <= i_12005225)) {
+                  if ((2 <= i_12010225)) {
                   break L2;
                   }
                   
-                  i_12005225 = addInt(i_12005225, 1);
+                  i_12010225 = addInt(i_12010225, 1);
                 }
             } while(false);
             }
@@ -2309,19 +2332,19 @@ function action_11985402(typ_11985404, entry_11985405) {
       
     }
 
-  var result_11985408 = null;
+  var result_11990441 = null;
 
-    result_11985408 = HEX3Aanonymous_11985409;
+    result_11990441 = HEX3Aanonymous_11990442;
 
-  return result_11985408;
+  return result_11990441;
 
 }
-function title_11981046(typ_11981048) {
+function title_11985060(typ_11985062) {
     var Tmp1;
 
-  var result_11981049 = null;
+  var result_11985063 = null;
 
-    switch (typ_11981048) {
+    switch (typ_11985062) {
     case 0:
       Tmp1 = "About";
       break;
@@ -2332,9 +2355,9 @@ function title_11981046(typ_11981048) {
       Tmp1 = "Projects";
       break;
     }
-    result_11981049 = Tmp1;
+    result_11985063 = Tmp1;
 
-  return result_11981049;
+  return result_11985063;
 
 }
 function text_9830601(s_9830603) {
@@ -2361,19 +2384,19 @@ function set_attr_9770105(n_9770107, key_9770108, val_9770109) {
     else {
       L1: do {
         var i_9770138 = 0;
-        var colontmp__12005274 = 0;
-        colontmp__12005274 = subInt((n_9770107.attrs != null ? n_9770107.attrs.length : 0), 2);
-        var res_12005275 = 0;
+        var colontmp__12010274 = 0;
+        colontmp__12010274 = subInt((n_9770107.attrs != null ? n_9770107.attrs.length : 0), 2);
+        var res_12010275 = 0;
         L2: do {
             L3: while (true) {
-            if (!(res_12005275 <= colontmp__12005274)) break L3;
-              i_9770138 = res_12005275;
+            if (!(res_12010275 <= colontmp__12010274)) break L3;
+              i_9770138 = res_12010275;
               if ((n_9770107.attrs[chckIndx(i_9770138, 0, (n_9770107.attrs != null ? n_9770107.attrs.length : 0)+0-1)-0] == key_9770108)) {
               n_9770107.attrs[chckIndx(addInt(i_9770138, 1), 0, (n_9770107.attrs != null ? n_9770107.attrs.length : 0)+0-1)-0] = val_9770109;
               break BeforeRet;
               }
               
-              res_12005275 = addInt(res_12005275, 2);
+              res_12010275 = addInt(res_12010275, 2);
             }
         } while(false);
       } while(false);
@@ -2385,7 +2408,7 @@ function set_attr_9770105(n_9770107, key_9770108, val_9770109) {
 
   
 }
-function content_11981063(typ_11981065, part_11981066) {
+function content_11985077(typ_11985079, part_11985080) {
         var Tmp1;
         var Tmp2;
         var Tmp3;
@@ -2399,325 +2422,326 @@ function content_11981063(typ_11981065, part_11981066) {
         var Tmp11;
         var Tmp12;
 
-  var result_11981067 = null;
+  var result_11985081 = null;
 
-    var tmp_11981104 = tree_9830445(43, []);
-    tmp_11981104.class = "content";
-    switch (typ_11981065) {
+    var tmp_11985118 = tree_9830445(43, []);
+    tmp_11985118.class = "content";
+    switch (typ_11985079) {
     case 0:
-      switch (toJSStr(part_11981066)) {
+      switch (toJSStr(part_11985080)) {
       case "title":
-        add_9820072(tmp_11981104, text_9830601(about_title_11981009[chckIndx(language_11981044[0], 0, (about_title_11981009 != null ? about_title_11981009.length : 0)+0-1)-0]));
+        add_9820072(tmp_11985118, text_9830601(about_title_11985022[chckIndx(language_11985057[0], 0, (about_title_11985022 != null ? about_title_11985022.length : 0)+0-1)-0]));
         break;
       case "text":
-        var tmp_11981110 = tree_9830445(31, []);
-        add_9820072(tmp_11981110, text_9830601(about_text_11981018[chckIndx(language_11981044[0], 0, (about_text_11981018 != null ? about_text_11981018.length : 0)+0-1)-0]));
-        add_9820072(tmp_11981104, tmp_11981110);
+        var tmp_11985124 = tree_9830445(31, []);
+        add_9820072(tmp_11985124, text_9830601(about_text_11985031[chckIndx(language_11985057[0], 0, (about_text_11985031 != null ? about_text_11985031.length : 0)+0-1)-0]));
+        add_9820072(tmp_11985118, tmp_11985124);
         break;
       default: 
         break;
       }
       break;
     case 1:
-      switch (toJSStr(part_11981066)) {
+      switch (toJSStr(part_11985080)) {
       case "title":
-        add_9820072(tmp_11981104, text_9830601(skills_title_11981012[chckIndx(language_11981044[0], 0, (skills_title_11981012 != null ? skills_title_11981012.length : 0)+0-1)-0]));
+        add_9820072(tmp_11985118, text_9830601(skills_title_11985025[chckIndx(language_11985057[0], 0, (skills_title_11985025 != null ? skills_title_11985025.length : 0)+0-1)-0]));
         break;
       case "text":
-        var tmp_11981111 = tree_9830445(31, []);
-        add_9820072(tmp_11981111, text_9830601(skills_text_11981021[chckIndx(language_11981044[0], 0, (skills_text_11981021 != null ? skills_text_11981021.length : 0)+0-1)-0]));
-        add_9820072(tmp_11981104, tmp_11981111);
+        var tmp_11985125 = tree_9830445(31, []);
+        add_9820072(tmp_11985125, text_9830601(skills_text_11985034[chckIndx(language_11985057[0], 0, (skills_text_11985034 != null ? skills_text_11985034.length : 0)+0-1)-0]));
+        add_9820072(tmp_11985118, tmp_11985125);
         break;
       default: 
         break;
       }
       break;
     case 2:
-      switch (toJSStr(part_11981066)) {
+      switch (toJSStr(part_11985080)) {
       case "title":
-        add_9820072(tmp_11981104, text_9830601(projects_title_11981015[chckIndx(language_11981044[0], 0, (projects_title_11981015 != null ? projects_title_11981015.length : 0)+0-1)-0]));
+        add_9820072(tmp_11985118, text_9830601(projects_title_11985028[chckIndx(language_11985057[0], 0, (projects_title_11985028 != null ? projects_title_11985028.length : 0)+0-1)-0]));
         break;
       case "text":
-        var tmp_11981112 = tree_9830445(43, []);
-        tmp_11981112.class = "projects";
-        var tmp_11981113 = tree_9830445(43, []);
-        tmp_11981113.class = "project";
-        var tmp_11981114 = tree_9830445(23, []);
-        add_9820072(tmp_11981114, text_9830548((Tmp1 = [makeNimstrLit("Apache log viewer & filter"), makeNimstrLit("N\xC3\xA1stroj pre zobrazovanie a filtrovanie Apache logov")], Tmp1)[chckIndx(language_11981044[0], 0, (Tmp1 != null ? Tmp1.length : 0)+0-1)-0]));
-        add_9820072(tmp_11981113, tmp_11981114);
-        var tmp_11981115 = tree_9830445(43, []);
-        tmp_11981115.class = "language";
-        var tmp_11981116 = tree_9830445(31, []);
-        tmp_11981116.class = "left";
-        add_9820072(tmp_11981116, text_9830548((Tmp2 = [makeNimstrLit("Language:"), makeNimstrLit("Jazyk:")], Tmp2)[chckIndx(language_11981044[0], 0, (Tmp2 != null ? Tmp2.length : 0)+0-1)-0]));
-        add_9820072(tmp_11981115, tmp_11981116);
-        var tmp_11981117 = tree_9830445(31, []);
-        tmp_11981117.class = "right";
-        add_9820072(tmp_11981117, text_9830548(makeNimstrLit("Shell script")));
-        add_9820072(tmp_11981115, tmp_11981117);
-        add_9820072(tmp_11981113, tmp_11981115);
-        var tmp_11981118 = tree_9830445(43, []);
-        tmp_11981118.class = "os";
-        var tmp_11981119 = tree_9830445(31, []);
-        tmp_11981119.class = "left";
-        add_9820072(tmp_11981119, text_9830548(makeNimstrLit("OS:")));
-        add_9820072(tmp_11981118, tmp_11981119);
-        var tmp_11981120 = tree_9830445(31, []);
-        tmp_11981120.class = "right";
-        add_9820072(tmp_11981120, text_9830548(makeNimstrLit("Linux, BSD, MacOS")));
-        add_9820072(tmp_11981118, tmp_11981120);
-        add_9820072(tmp_11981113, tmp_11981118);
-        var tmp_11981121 = tree_9830445(43, []);
-        tmp_11981121.class = "links";
-        var tmp_11981122 = tree_9830445(44, []);
-        tmp_11981122.class = "button github";
-        set_attr_9770105(tmp_11981122, "href", "https://github.com/adokitkat/vut-fit-ios-1");
-        add_9820072(tmp_11981122, text_9830548(makeNimstrLit("</> Github")));
-        add_9820072(tmp_11981121, tmp_11981122);
-        add_9820072(tmp_11981113, tmp_11981121);
-        add_9820072(tmp_11981112, tmp_11981113);
-        var tmp_11981123 = tree_9830445(43, []);
-        tmp_11981123.class = "project";
-        var tmp_11981124 = tree_9830445(23, []);
-        add_9820072(tmp_11981124, text_9830548((Tmp3 = [makeNimstrLit("Public transport line simulator"), makeNimstrLit("Simul\xC3\xA1tor liniek hromadnej dopravy")], Tmp3)[chckIndx(language_11981044[0], 0, (Tmp3 != null ? Tmp3.length : 0)+0-1)-0]));
-        add_9820072(tmp_11981123, tmp_11981124);
-        var tmp_11981125 = tree_9830445(31, []);
-        tmp_11981125.class = "left";
-        add_9820072(tmp_11981125, text_9830548((Tmp4 = [makeNimstrLit("Uses A* path-finding algorithm"), makeNimstrLit("Pou\xC5\xBE\xC3\xADva A* algoritmus na n\xC3\xA1jdenie cesty")], Tmp4)[chckIndx(language_11981044[0], 0, (Tmp4 != null ? Tmp4.length : 0)+0-1)-0]));
-        add_9820072(tmp_11981123, tmp_11981125);
-        var tmp_11981126 = tree_9830445(43, []);
-        tmp_11981126.class = "language";
-        var tmp_11981127 = tree_9830445(31, []);
-        tmp_11981127.class = "left";
-        add_9820072(tmp_11981127, text_9830548((Tmp5 = [makeNimstrLit("Language:"), makeNimstrLit("Jazyk:")], Tmp5)[chckIndx(language_11981044[0], 0, (Tmp5 != null ? Tmp5.length : 0)+0-1)-0]));
-        add_9820072(tmp_11981126, tmp_11981127);
-        var tmp_11981128 = tree_9830445(31, []);
-        tmp_11981128.class = "right";
-        add_9820072(tmp_11981128, text_9830548(makeNimstrLit("C++, Qt5")));
-        add_9820072(tmp_11981126, tmp_11981128);
-        add_9820072(tmp_11981123, tmp_11981126);
-        var tmp_11981129 = tree_9830445(43, []);
-        tmp_11981129.class = "os";
-        var tmp_11981130 = tree_9830445(31, []);
-        tmp_11981130.class = "left";
-        add_9820072(tmp_11981130, text_9830548(makeNimstrLit("OS:")));
-        add_9820072(tmp_11981129, tmp_11981130);
-        var tmp_11981131 = tree_9830445(31, []);
-        tmp_11981131.class = "right";
-        add_9820072(tmp_11981131, text_9830548(makeNimstrLit("Windows, Linux")));
-        add_9820072(tmp_11981129, tmp_11981131);
-        add_9820072(tmp_11981123, tmp_11981129);
-        var tmp_11981132 = tree_9830445(43, []);
-        tmp_11981132.class = "links";
-        var tmp_11981133 = tree_9830445(44, []);
-        tmp_11981133.class = "button github";
-        set_attr_9770105(tmp_11981133, "href", "https://github.com/adokitkat/vut-fit-icp");
-        add_9820072(tmp_11981133, text_9830548(makeNimstrLit("</> Github")));
-        add_9820072(tmp_11981132, tmp_11981133);
-        var tmp_11981134 = tree_9830445(44, []);
-        tmp_11981134.class = "button";
-        set_attr_9770105(tmp_11981134, "href", "https://github.com/adokitkat/vut-fit-icp/releases");
-        add_9820072(tmp_11981134, text_9830548((Tmp6 = [makeNimstrLit("<~> Try it"), makeNimstrLit("<~> Vysk\xC3\xBA\xC5\xA1aj")], Tmp6)[chckIndx(language_11981044[0], 0, (Tmp6 != null ? Tmp6.length : 0)+0-1)-0]));
-        add_9820072(tmp_11981132, tmp_11981134);
-        add_9820072(tmp_11981123, tmp_11981132);
-        add_9820072(tmp_11981112, tmp_11981123);
-        var tmp_11981135 = tree_9830445(43, []);
-        tmp_11981135.class = "project";
-        var tmp_11981136 = tree_9830445(23, []);
-        add_9820072(tmp_11981136, text_9830548((Tmp7 = [makeNimstrLit("Packet sniffer (IPv4)"), makeNimstrLit("Sniffer packetov (IPv4)")], Tmp7)[chckIndx(language_11981044[0], 0, (Tmp7 != null ? Tmp7.length : 0)+0-1)-0]));
-        add_9820072(tmp_11981135, tmp_11981136);
-        var tmp_11981137 = tree_9830445(43, []);
-        tmp_11981137.class = "language";
-        var tmp_11981138 = tree_9830445(31, []);
-        tmp_11981138.class = "left";
-        add_9820072(tmp_11981138, text_9830548((Tmp8 = [makeNimstrLit("Language:"), makeNimstrLit("Jazyk:")], Tmp8)[chckIndx(language_11981044[0], 0, (Tmp8 != null ? Tmp8.length : 0)+0-1)-0]));
-        add_9820072(tmp_11981137, tmp_11981138);
-        var tmp_11981139 = tree_9830445(31, []);
-        tmp_11981139.class = "right";
-        add_9820072(tmp_11981139, text_9830548(makeNimstrLit("C++")));
-        add_9820072(tmp_11981137, tmp_11981139);
-        add_9820072(tmp_11981135, tmp_11981137);
-        var tmp_11981140 = tree_9830445(43, []);
-        tmp_11981140.class = "os";
-        var tmp_11981141 = tree_9830445(31, []);
-        tmp_11981141.class = "left";
-        add_9820072(tmp_11981141, text_9830548(makeNimstrLit("OS:")));
-        add_9820072(tmp_11981140, tmp_11981141);
-        var tmp_11981142 = tree_9830445(31, []);
-        tmp_11981142.class = "right";
-        add_9820072(tmp_11981142, text_9830548(makeNimstrLit("Linux")));
-        add_9820072(tmp_11981140, tmp_11981142);
-        add_9820072(tmp_11981135, tmp_11981140);
-        var tmp_11981143 = tree_9830445(43, []);
-        tmp_11981143.class = "links";
-        var tmp_11981144 = tree_9830445(44, []);
-        tmp_11981144.class = "button github";
-        set_attr_9770105(tmp_11981144, "href", "https://github.com/adokitkat/vut-fit-ipk-2");
-        add_9820072(tmp_11981144, text_9830548(makeNimstrLit("</> Github")));
-        add_9820072(tmp_11981143, tmp_11981144);
-        add_9820072(tmp_11981135, tmp_11981143);
-        add_9820072(tmp_11981112, tmp_11981135);
-        var tmp_11981145 = tree_9830445(43, []);
-        tmp_11981145.class = "project";
-        var tmp_11981146 = tree_9830445(23, []);
-        add_9820072(tmp_11981146, text_9830548((Tmp9 = [makeNimstrLit("This portfolio page"), makeNimstrLit("T\xC3\xA1to portf\xC3\xB3lio str\xC3\xA1nka")], Tmp9)[chckIndx(language_11981044[0], 0, (Tmp9 != null ? Tmp9.length : 0)+0-1)-0]));
-        add_9820072(tmp_11981145, tmp_11981146);
-        var tmp_11981147 = tree_9830445(31, []);
-        tmp_11981147.class = "left";
-        add_9820072(tmp_11981147, text_9830548((Tmp10 = [makeNimstrLit("Single-page web app experiment with automatized building via Github Actions"), makeNimstrLit("Single-page web app experiment s automatick\xC3\xBDm stavan\xC3\xADm pomocou Github Actions")], Tmp10)[chckIndx(language_11981044[0], 0, (Tmp10 != null ? Tmp10.length : 0)+0-1)-0]));
-        add_9820072(tmp_11981145, tmp_11981147);
-        var tmp_11981148 = tree_9830445(43, []);
-        tmp_11981148.class = "language";
-        var tmp_11981149 = tree_9830445(31, []);
-        tmp_11981149.class = "left";
-        add_9820072(tmp_11981149, text_9830548((Tmp11 = [makeNimstrLit("Language:"), makeNimstrLit("Jazyk:")], Tmp11)[chckIndx(language_11981044[0], 0, (Tmp11 != null ? Tmp11.length : 0)+0-1)-0]));
-        add_9820072(tmp_11981148, tmp_11981149);
-        var tmp_11981150 = tree_9830445(31, []);
-        tmp_11981150.class = "right";
-        add_9820072(tmp_11981150, text_9830548((Tmp12 = [makeNimstrLit("Nim (compiled to JS), Sass"), makeNimstrLit("Nim (skompilovan\xC3\xBD na JS), Sass")], Tmp12)[chckIndx(language_11981044[0], 0, (Tmp12 != null ? Tmp12.length : 0)+0-1)-0]));
-        add_9820072(tmp_11981148, tmp_11981150);
-        add_9820072(tmp_11981145, tmp_11981148);
-        var tmp_11981151 = tree_9830445(43, []);
-        tmp_11981151.class = "links";
-        var tmp_11981152 = tree_9830445(44, []);
-        tmp_11981152.class = "button github";
-        set_attr_9770105(tmp_11981152, "href", "https://github.com/adokitkat/adokitkat.github.io");
-        add_9820072(tmp_11981152, text_9830548(makeNimstrLit("</> Github")));
-        add_9820072(tmp_11981151, tmp_11981152);
-        add_9820072(tmp_11981145, tmp_11981151);
-        add_9820072(tmp_11981112, tmp_11981145);
-        add_9820072(tmp_11981104, tmp_11981112);
+        var tmp_11985126 = tree_9830445(43, []);
+        tmp_11985126.class = "projects";
+        var tmp_11985127 = tree_9830445(43, []);
+        tmp_11985127.class = "project";
+        var tmp_11985128 = tree_9830445(23, []);
+        add_9820072(tmp_11985128, text_9830548((Tmp1 = [makeNimstrLit("Apache log viewer & filter"), makeNimstrLit("N\xC3\xA1stroj pre zobrazovanie a filtrovanie Apache logov")], Tmp1)[chckIndx(language_11985057[0], 0, (Tmp1 != null ? Tmp1.length : 0)+0-1)-0]));
+        add_9820072(tmp_11985127, tmp_11985128);
+        var tmp_11985129 = tree_9830445(43, []);
+        tmp_11985129.class = "language";
+        var tmp_11985130 = tree_9830445(31, []);
+        tmp_11985130.class = "left";
+        add_9820072(tmp_11985130, text_9830548((Tmp2 = [makeNimstrLit("Language:"), makeNimstrLit("Jazyk:")], Tmp2)[chckIndx(language_11985057[0], 0, (Tmp2 != null ? Tmp2.length : 0)+0-1)-0]));
+        add_9820072(tmp_11985129, tmp_11985130);
+        var tmp_11985131 = tree_9830445(31, []);
+        tmp_11985131.class = "right";
+        add_9820072(tmp_11985131, text_9830548(makeNimstrLit("Shell script")));
+        add_9820072(tmp_11985129, tmp_11985131);
+        add_9820072(tmp_11985127, tmp_11985129);
+        var tmp_11985132 = tree_9830445(43, []);
+        tmp_11985132.class = "os";
+        var tmp_11985133 = tree_9830445(31, []);
+        tmp_11985133.class = "left";
+        add_9820072(tmp_11985133, text_9830548(makeNimstrLit("OS:")));
+        add_9820072(tmp_11985132, tmp_11985133);
+        var tmp_11985134 = tree_9830445(31, []);
+        tmp_11985134.class = "right";
+        add_9820072(tmp_11985134, text_9830548(makeNimstrLit("Linux, BSD, MacOS")));
+        add_9820072(tmp_11985132, tmp_11985134);
+        add_9820072(tmp_11985127, tmp_11985132);
+        var tmp_11985135 = tree_9830445(43, []);
+        tmp_11985135.class = "links";
+        var tmp_11985136 = tree_9830445(44, []);
+        tmp_11985136.class = "button github";
+        set_attr_9770105(tmp_11985136, "href", "https://github.com/adokitkat/vut-fit-ios-1");
+        add_9820072(tmp_11985136, text_9830548(makeNimstrLit("</> Github")));
+        add_9820072(tmp_11985135, tmp_11985136);
+        add_9820072(tmp_11985127, tmp_11985135);
+        add_9820072(tmp_11985126, tmp_11985127);
+        var tmp_11985137 = tree_9830445(43, []);
+        tmp_11985137.class = "project";
+        var tmp_11985138 = tree_9830445(23, []);
+        add_9820072(tmp_11985138, text_9830548((Tmp3 = [makeNimstrLit("Public transport line simulator"), makeNimstrLit("Simul\xC3\xA1tor liniek hromadnej dopravy")], Tmp3)[chckIndx(language_11985057[0], 0, (Tmp3 != null ? Tmp3.length : 0)+0-1)-0]));
+        add_9820072(tmp_11985137, tmp_11985138);
+        var tmp_11985139 = tree_9830445(31, []);
+        tmp_11985139.class = "left";
+        add_9820072(tmp_11985139, text_9830548((Tmp4 = [makeNimstrLit("Uses A* path-finding algorithm"), makeNimstrLit("Pou\xC5\xBE\xC3\xADva A* algoritmus na n\xC3\xA1jdenie cesty")], Tmp4)[chckIndx(language_11985057[0], 0, (Tmp4 != null ? Tmp4.length : 0)+0-1)-0]));
+        add_9820072(tmp_11985137, tmp_11985139);
+        var tmp_11985140 = tree_9830445(43, []);
+        tmp_11985140.class = "language";
+        var tmp_11985141 = tree_9830445(31, []);
+        tmp_11985141.class = "left";
+        add_9820072(tmp_11985141, text_9830548((Tmp5 = [makeNimstrLit("Language:"), makeNimstrLit("Jazyk:")], Tmp5)[chckIndx(language_11985057[0], 0, (Tmp5 != null ? Tmp5.length : 0)+0-1)-0]));
+        add_9820072(tmp_11985140, tmp_11985141);
+        var tmp_11985142 = tree_9830445(31, []);
+        tmp_11985142.class = "right";
+        add_9820072(tmp_11985142, text_9830548(makeNimstrLit("C++, Qt5")));
+        add_9820072(tmp_11985140, tmp_11985142);
+        add_9820072(tmp_11985137, tmp_11985140);
+        var tmp_11985143 = tree_9830445(43, []);
+        tmp_11985143.class = "os";
+        var tmp_11985144 = tree_9830445(31, []);
+        tmp_11985144.class = "left";
+        add_9820072(tmp_11985144, text_9830548(makeNimstrLit("OS:")));
+        add_9820072(tmp_11985143, tmp_11985144);
+        var tmp_11985145 = tree_9830445(31, []);
+        tmp_11985145.class = "right";
+        add_9820072(tmp_11985145, text_9830548(makeNimstrLit("Windows, Linux")));
+        add_9820072(tmp_11985143, tmp_11985145);
+        add_9820072(tmp_11985137, tmp_11985143);
+        var tmp_11985146 = tree_9830445(43, []);
+        tmp_11985146.class = "links";
+        var tmp_11985147 = tree_9830445(44, []);
+        tmp_11985147.class = "button github";
+        set_attr_9770105(tmp_11985147, "href", "https://github.com/adokitkat/vut-fit-icp");
+        add_9820072(tmp_11985147, text_9830548(makeNimstrLit("</> Github")));
+        add_9820072(tmp_11985146, tmp_11985147);
+        var tmp_11985148 = tree_9830445(44, []);
+        tmp_11985148.class = "button";
+        set_attr_9770105(tmp_11985148, "href", "https://github.com/adokitkat/vut-fit-icp/releases");
+        add_9820072(tmp_11985148, text_9830548((Tmp6 = [makeNimstrLit("<~> Try it"), makeNimstrLit("<~> Vysk\xC3\xBA\xC5\xA1aj")], Tmp6)[chckIndx(language_11985057[0], 0, (Tmp6 != null ? Tmp6.length : 0)+0-1)-0]));
+        add_9820072(tmp_11985146, tmp_11985148);
+        add_9820072(tmp_11985137, tmp_11985146);
+        add_9820072(tmp_11985126, tmp_11985137);
+        var tmp_11985149 = tree_9830445(43, []);
+        tmp_11985149.class = "project";
+        var tmp_11985150 = tree_9830445(23, []);
+        add_9820072(tmp_11985150, text_9830548((Tmp7 = [makeNimstrLit("Packet sniffer (IPv4)"), makeNimstrLit("Sniffer packetov (IPv4)")], Tmp7)[chckIndx(language_11985057[0], 0, (Tmp7 != null ? Tmp7.length : 0)+0-1)-0]));
+        add_9820072(tmp_11985149, tmp_11985150);
+        var tmp_11985151 = tree_9830445(43, []);
+        tmp_11985151.class = "language";
+        var tmp_11985152 = tree_9830445(31, []);
+        tmp_11985152.class = "left";
+        add_9820072(tmp_11985152, text_9830548((Tmp8 = [makeNimstrLit("Language:"), makeNimstrLit("Jazyk:")], Tmp8)[chckIndx(language_11985057[0], 0, (Tmp8 != null ? Tmp8.length : 0)+0-1)-0]));
+        add_9820072(tmp_11985151, tmp_11985152);
+        var tmp_11985153 = tree_9830445(31, []);
+        tmp_11985153.class = "right";
+        add_9820072(tmp_11985153, text_9830548(makeNimstrLit("C++")));
+        add_9820072(tmp_11985151, tmp_11985153);
+        add_9820072(tmp_11985149, tmp_11985151);
+        var tmp_11985154 = tree_9830445(43, []);
+        tmp_11985154.class = "os";
+        var tmp_11985155 = tree_9830445(31, []);
+        tmp_11985155.class = "left";
+        add_9820072(tmp_11985155, text_9830548(makeNimstrLit("OS:")));
+        add_9820072(tmp_11985154, tmp_11985155);
+        var tmp_11985156 = tree_9830445(31, []);
+        tmp_11985156.class = "right";
+        add_9820072(tmp_11985156, text_9830548(makeNimstrLit("Linux")));
+        add_9820072(tmp_11985154, tmp_11985156);
+        add_9820072(tmp_11985149, tmp_11985154);
+        var tmp_11985157 = tree_9830445(43, []);
+        tmp_11985157.class = "links";
+        var tmp_11985158 = tree_9830445(44, []);
+        tmp_11985158.class = "button github";
+        set_attr_9770105(tmp_11985158, "href", "https://github.com/adokitkat/vut-fit-ipk-2");
+        add_9820072(tmp_11985158, text_9830548(makeNimstrLit("</> Github")));
+        add_9820072(tmp_11985157, tmp_11985158);
+        add_9820072(tmp_11985149, tmp_11985157);
+        add_9820072(tmp_11985126, tmp_11985149);
+        var tmp_11985159 = tree_9830445(43, []);
+        tmp_11985159.class = "project";
+        var tmp_11985160 = tree_9830445(23, []);
+        add_9820072(tmp_11985160, text_9830548((Tmp9 = [makeNimstrLit("This portfolio page"), makeNimstrLit("T\xC3\xA1to portf\xC3\xB3lio str\xC3\xA1nka")], Tmp9)[chckIndx(language_11985057[0], 0, (Tmp9 != null ? Tmp9.length : 0)+0-1)-0]));
+        add_9820072(tmp_11985159, tmp_11985160);
+        var tmp_11985161 = tree_9830445(31, []);
+        tmp_11985161.class = "left";
+        add_9820072(tmp_11985161, text_9830548((Tmp10 = [makeNimstrLit("Single-page web app experiment with automatized building via Github Actions"), makeNimstrLit("Single-page web app experiment s automatick\xC3\xBDm stavan\xC3\xADm pomocou Github Actions")], Tmp10)[chckIndx(language_11985057[0], 0, (Tmp10 != null ? Tmp10.length : 0)+0-1)-0]));
+        add_9820072(tmp_11985159, tmp_11985161);
+        var tmp_11985162 = tree_9830445(43, []);
+        tmp_11985162.class = "language";
+        var tmp_11985163 = tree_9830445(31, []);
+        tmp_11985163.class = "left";
+        add_9820072(tmp_11985163, text_9830548((Tmp11 = [makeNimstrLit("Language:"), makeNimstrLit("Jazyk:")], Tmp11)[chckIndx(language_11985057[0], 0, (Tmp11 != null ? Tmp11.length : 0)+0-1)-0]));
+        add_9820072(tmp_11985162, tmp_11985163);
+        var tmp_11985164 = tree_9830445(31, []);
+        tmp_11985164.class = "right";
+        add_9820072(tmp_11985164, text_9830548((Tmp12 = [makeNimstrLit("Nim (compiled to JS), Sass"), makeNimstrLit("Nim (skompilovan\xC3\xBD na JS), Sass")], Tmp12)[chckIndx(language_11985057[0], 0, (Tmp12 != null ? Tmp12.length : 0)+0-1)-0]));
+        add_9820072(tmp_11985162, tmp_11985164);
+        add_9820072(tmp_11985159, tmp_11985162);
+        var tmp_11985165 = tree_9830445(43, []);
+        tmp_11985165.class = "links";
+        var tmp_11985166 = tree_9830445(44, []);
+        tmp_11985166.class = "button github";
+        set_attr_9770105(tmp_11985166, "href", "https://github.com/adokitkat/adokitkat.github.io");
+        add_9820072(tmp_11985166, text_9830548(makeNimstrLit("</> Github")));
+        add_9820072(tmp_11985165, tmp_11985166);
+        add_9820072(tmp_11985159, tmp_11985165);
+        add_9820072(tmp_11985126, tmp_11985159);
+        add_9820072(tmp_11985118, tmp_11985126);
         break;
       default: 
         break;
       }
       break;
     }
-    result_11981067 = tmp_11981104;
+    result_11985081 = tmp_11985118;
 
-  return result_11981067;
+  return result_11985081;
 
 }
-function build_navbar_11985591() {
-  var result_11985593 = null;
+function build_navbar_11990609() {
+  var result_11990611 = null;
 
-    var tmp_11985594 = tree_9830445(18, []);
-    tmp_11985594.class = apply_theme_11985327("navbar");
-    var tmp_11985595 = tree_9830445(43, []);
-    tmp_11985595.class = "navbar-list center";
-    var navbar_item_11990009 = null;
+    var tmp_11990612 = tree_9830445(18, []);
+    tmp_11990612.class = apply_theme_11990360("navbar");
+    var tmp_11990613 = tree_9830445(43, []);
+    tmp_11990613.class = "navbar-list center";
+    var navbar_item_11995009 = null;
     L1: do {
-      var n_11990235 = 0;
+      var n_11995235 = 0;
       L2: do {
-        var v_12005211 = 0;
-        var res_12005212 = 0;
+        var v_12010211 = 0;
+        var res_12010212 = 0;
         L3: do {
             L4: while (true) {
-            if (!(res_12005212 <= 2)) break L4;
-              v_12005211 = chckRange(res_12005212, 0, 2);
-              n_11990235 = v_12005211;
-              if ((n_11990235 == 0)) {
-              navbar_item_11990009 = "navbar-item navbar-item-left";
+            if (!(res_12010212 <= 2)) break L4;
+              v_12010211 = chckRange(res_12010212, 0, 2);
+              n_11995235 = v_12010211;
+              if ((n_11995235 == 0)) {
+              navbar_item_11995009 = "navbar-item navbar-item-left";
               }
               else {
-              if ((n_11990235 == 2)) {
-              navbar_item_11990009 = "navbar-item navbar-item-right";
+              if ((n_11995235 == 2)) {
+              navbar_item_11995009 = "navbar-item navbar-item-right";
               }
               else {
-                navbar_item_11990009 = "navbar-item";
+                navbar_item_11995009 = "navbar-item";
               }
               }
-              var tmp_11985596 = tree_9830445(44, []);
-              tmp_11985596.class = navbar_item_11990009;
-              add_event_handler_10750154(tmp_11985596, 0, action_11985402(0, title_11981046(n_11990235)), kxi_10187284[0]);
-              add_9820072(tmp_11985596, content_11981063(n_11990235, makeNimstrLit("title")));
-              add_9820072(tmp_11985595, tmp_11985596);
-              if ((n_11990235 < 2)) {
-              var tmp_11985597 = tree_9830445(70, []);
-              add_9820072(tmp_11985597, text_9830548(makeNimstrLit("/")));
-              add_9820072(tmp_11985595, tmp_11985597);
+              var tmp_11990614 = tree_9830445(44, []);
+              tmp_11990614.class = navbar_item_11995009;
+              add_event_handler_10750154(tmp_11990614, 0, action_11990435(0, title_11985060(n_11995235)), kxi_10187284[0]);
+              add_9820072(tmp_11990614, content_11985077(n_11995235, makeNimstrLit("title")));
+              add_9820072(tmp_11990613, tmp_11990614);
+              if ((n_11995235 < 2)) {
+              var tmp_11990615 = tree_9830445(70, []);
+              add_9820072(tmp_11990615, text_9830548(makeNimstrLit("/")));
+              add_9820072(tmp_11990613, tmp_11990615);
               }
               
-              res_12005212 = addInt(res_12005212, 1);
+              res_12010212 = addInt(res_12010212, 1);
             }
         } while(false);
       } while(false);
     } while(false);
-    var tmp_11985598 = tree_9830445(43, []);
-    tmp_11985598.class = "navbar-break";
-    var tmp_11985599 = tree_9830445(44, []);
-    tmp_11985599.class = "navbar-item";
-    add_event_handler_10750154(tmp_11985599, 0, action_11985402(1, ""), kxi_10187284[0]);
-    if ((language_11981044[0] == 1)) {
-    add_9820072(tmp_11985599, text_9830548(makeNimstrLit("EN")));
+    var tmp_11990616 = tree_9830445(43, []);
+    tmp_11990616.class = "navbar-break";
+    var tmp_11990617 = tree_9830445(44, []);
+    tmp_11990617.class = "navbar-item";
+    add_event_handler_10750154(tmp_11990617, 0, action_11990435(1, ""), kxi_10187284[0]);
+    if ((language_11985057[0] == 1)) {
+    add_9820072(tmp_11990617, text_9830548(makeNimstrLit("EN")));
     }
     else {
-    add_9820072(tmp_11985599, text_9830548(makeNimstrLit("SK")));
+    add_9820072(tmp_11990617, text_9830548(makeNimstrLit("SK")));
     }
     
-    add_9820072(tmp_11985598, tmp_11985599);
-    var tmp_11985600 = tree_9830445(70, []);
-    add_9820072(tmp_11985600, text_9830548(makeNimstrLit("/")));
-    add_9820072(tmp_11985598, tmp_11985600);
-    var tmp_11985601 = tree_9830445(44, []);
-    tmp_11985601.class = "navbar-item";
-    add_event_handler_10750154(tmp_11985601, 0, action_11985402(2, ""), kxi_10187284[0]);
-    if ((theme_11981045[0] == 0)) {
-    add_9820072(tmp_11985601, text_9830548(makeNimstrLit("Dark")));
+    add_9820072(tmp_11990616, tmp_11990617);
+    var tmp_11990618 = tree_9830445(70, []);
+    add_9820072(tmp_11990618, text_9830548(makeNimstrLit("/")));
+    add_9820072(tmp_11990616, tmp_11990618);
+    var tmp_11990619 = tree_9830445(44, []);
+    tmp_11990619.class = "navbar-item";
+    add_event_handler_10750154(tmp_11990619, 0, action_11990435(2, ""), kxi_10187284[0]);
+    if ((theme_11985058[0] == 0)) {
+    add_9820072(tmp_11990619, text_9830548(makeNimstrLit("Dark")));
     }
     else {
-    add_9820072(tmp_11985601, text_9830548(makeNimstrLit("Light")));
+    add_9820072(tmp_11990619, text_9830548(makeNimstrLit("Light")));
     }
     
-    add_9820072(tmp_11985598, tmp_11985601);
-    add_9820072(tmp_11985595, tmp_11985598);
-    add_9820072(tmp_11985594, tmp_11985595);
-    result_11985593 = tmp_11985594;
+    add_9820072(tmp_11990616, tmp_11990619);
+    add_9820072(tmp_11990613, tmp_11990616);
+    add_9820072(tmp_11990612, tmp_11990613);
+    result_11990611 = tmp_11990612;
 
-  return result_11985593;
-
-}
-function build_content_11990326() {
-  var result_11990328 = null;
-
-    var tmp_11990329 = tree_9830445(43, []);
-    tmp_11990329.class = "content-body";
-    add_9820072(tmp_11990329, content_11981063(shown_content_11981043[0], makeNimstrLit("text")));
-    result_11990328 = tmp_11990329;
-
-  return result_11990328;
+  return result_11990611;
 
 }
-function build_footer_11995018() {
-  var result_11995020 = null;
+function build_content_11995326() {
+  var result_11995328 = null;
 
-    var tmp_11995021 = tree_9830445(28, []);
-    tmp_11995021.class = apply_theme_11985327("footer");
-    add_9820072(tmp_11995021, text_9830548(makeNimstrLit("Adam M\xC3\xBAdry 2020")));
-    result_11995020 = tmp_11995021;
+    var tmp_11995329 = tree_9830445(43, []);
+    tmp_11995329.class = "content-body";
+    add_9820072(tmp_11995329, content_11985077(shown_content_11985056[0], makeNimstrLit("text")));
+    result_11995328 = tmp_11995329;
 
-  return result_11995020;
+  return result_11995328;
 
 }
-function create_dom_12000018(data_12000020) {
-  var result_12000021 = null;
+function build_footer_12000018() {
+  var result_12000020 = null;
 
-    rawEcho(makeNimstrLit("Loaded cookie: "), cstrToNimstr(document.cookie));
-    if ((data_12000020.hashPart == "#/sk")) {
-    language_11981044[0] = 1;
+    var tmp_12000021 = tree_9830445(28, []);
+    tmp_12000021.class = apply_theme_11990360("footer");
+    add_9820072(tmp_12000021, text_9830548(makeNimstrLit("Adam M\xC3\xBAdry 2020")));
+    result_12000020 = tmp_12000021;
+
+  return result_12000020;
+
+}
+function create_dom_12005018(data_12005020) {
+  var result_12005021 = null;
+
+    parse_cookie_theme_11990327(on_load_11985059, 0);
+    if ((data_12005020.hashPart == "#/sk")) {
+    language_11985057[0] = 1;
     }
     
-    var tmp_12000026 = tree_9830445(43, []);
-    tmp_12000026.class = apply_theme_11985327("theme");
-    add_9820072(tmp_12000026, build_navbar_11985591());
-    add_9820072(tmp_12000026, build_content_11990326());
-    add_9820072(tmp_12000026, build_footer_11995018());
-    result_12000021 = tmp_12000026;
+    var tmp_12005023 = tree_9830445(43, []);
+    tmp_12005023.class = apply_theme_11990360("theme");
+    add_9820072(tmp_12005023, build_navbar_11990609());
+    add_9820072(tmp_12005023, build_content_11995326());
+    add_9820072(tmp_12005023, build_footer_12000018());
+    result_12005021 = tmp_12005023;
 
-  return result_12000021;
+  return result_12005021;
 
 }
-var shown_content_11981043 = [2];
-var language_11981044 = [1];
-var theme_11981045 = [0];
-set_renderer_10740678(create_dom_12000018, "ROOT", null);
+var shown_content_11985056 = [2];
+var language_11985057 = [1];
+var theme_11985058 = [0];
+var on_load_11985059 = [false];
+set_renderer_10740678(create_dom_12005018, "ROOT", null);
