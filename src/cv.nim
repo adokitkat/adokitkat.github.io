@@ -230,6 +230,7 @@ proc buildFooter(): VNode =
     text "Adam Múdry 2020"
 
 proc createDom(data: RouterData): VNode =
+  echo "Loaded cookie: ", document.cookie
   if data.hashPart == "#/sk": language = Slovak # doesn't work on Github Pages...
   result = buildHtml(tdiv(class=applyTheme(kstring"theme"))):
     buildNavbar()
