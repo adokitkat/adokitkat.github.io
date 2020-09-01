@@ -37,7 +37,6 @@ var
   shown_content : ContentType = Projects
   language : Language = Slovak
   theme : Theme = Light
-  cookie : cstring = ""
 
 proc title(typ: ContentType) : kstring =
   result = case typ
@@ -171,11 +170,8 @@ proc action(typ: ActionType, entry: kstring): proc() =
         theme = Theme.Light
       elif theme == Theme.Light:
         theme = Theme.Dark
-      
-      cookie = setCookie(key="theme", value=`$`theme, domain="adokitkat.github.io", path="/")
-
-      document.cookie &= cookie
-      echo cookie
+    
+      document.cookie = setCookie(key="Theme", value=`$`theme, domain="adokitkat.github.io", path="/")
       echo document.cookie
     
     of NavbarAction:
