@@ -2277,21 +2277,20 @@ function action_11985402(typ_11985404, entry_11985405) {
           }
           }
           document.cookie = toJSStr(set_cookie_11965020(makeNimstrLit("Theme"), reprEnum(theme_11981045[0], NTI11981035), makeNimstrLit("adokitkat.github.io"), makeNimstrLit("/"), [], false, false, false));
-          rawEcho(cstrToNimstr(document.cookie));
           break;
         case 0:
           L1: do {
-            var i_11985505 = 0;
-            var n_11985506 = null;
+            var i_11985503 = 0;
+            var n_11985504 = null;
             var i_12005225 = 0;
             if ((i_12005225 <= 2)) {
             L2: do {
                 L3: while (true) {
                 if (!true) break L3;
-                  i_11985505 = i_12005225;
-                  n_11985506 = content_type_kstring_11981003[chckIndx(i_12005225, 0, (content_type_kstring_11981003 != null ? content_type_kstring_11981003.length : 0)+0-1)-0];
-                  if ((entry_11985405 == n_11985506)) {
-                  shown_content_11981043[0] = i_11985505;
+                  i_11985503 = i_12005225;
+                  n_11985504 = content_type_kstring_11981003[chckIndx(i_12005225, 0, (content_type_kstring_11981003 != null ? content_type_kstring_11981003.length : 0)+0-1)-0];
+                  if ((entry_11985405 == n_11985504)) {
+                  shown_content_11981043[0] = i_11985503;
                   }
                   
                   if ((2 <= i_12005225)) {
@@ -2599,13 +2598,13 @@ function content_11981063(typ_11981065, part_11981066) {
   return result_11981067;
 
 }
-function build_navbar_11985593() {
-  var result_11985595 = null;
+function build_navbar_11985591() {
+  var result_11985593 = null;
 
-    var tmp_11985596 = tree_9830445(18, []);
-    tmp_11985596.class = apply_theme_11985327("navbar");
-    var tmp_11985597 = tree_9830445(43, []);
-    tmp_11985597.class = "navbar-list center";
+    var tmp_11985594 = tree_9830445(18, []);
+    tmp_11985594.class = apply_theme_11985327("navbar");
+    var tmp_11985595 = tree_9830445(43, []);
+    tmp_11985595.class = "navbar-list center";
     var navbar_item_11990009 = null;
     L1: do {
       var n_11990235 = 0;
@@ -2628,15 +2627,15 @@ function build_navbar_11985593() {
                 navbar_item_11990009 = "navbar-item";
               }
               }
-              var tmp_11985598 = tree_9830445(44, []);
-              tmp_11985598.class = navbar_item_11990009;
-              add_event_handler_10750154(tmp_11985598, 0, action_11985402(0, title_11981046(n_11990235)), kxi_10187284[0]);
-              add_9820072(tmp_11985598, content_11981063(n_11990235, makeNimstrLit("title")));
-              add_9820072(tmp_11985597, tmp_11985598);
+              var tmp_11985596 = tree_9830445(44, []);
+              tmp_11985596.class = navbar_item_11990009;
+              add_event_handler_10750154(tmp_11985596, 0, action_11985402(0, title_11981046(n_11990235)), kxi_10187284[0]);
+              add_9820072(tmp_11985596, content_11981063(n_11990235, makeNimstrLit("title")));
+              add_9820072(tmp_11985595, tmp_11985596);
               if ((n_11990235 < 2)) {
-              var tmp_11985599 = tree_9830445(70, []);
-              add_9820072(tmp_11985599, text_9830548(makeNimstrLit("/")));
-              add_9820072(tmp_11985597, tmp_11985599);
+              var tmp_11985597 = tree_9830445(70, []);
+              add_9820072(tmp_11985597, text_9830548(makeNimstrLit("/")));
+              add_9820072(tmp_11985595, tmp_11985597);
               }
               
               res_12005212 = addInt(res_12005212, 1);
@@ -2644,38 +2643,38 @@ function build_navbar_11985593() {
         } while(false);
       } while(false);
     } while(false);
-    var tmp_11985600 = tree_9830445(43, []);
-    tmp_11985600.class = "navbar-break";
+    var tmp_11985598 = tree_9830445(43, []);
+    tmp_11985598.class = "navbar-break";
+    var tmp_11985599 = tree_9830445(44, []);
+    tmp_11985599.class = "navbar-item";
+    add_event_handler_10750154(tmp_11985599, 0, action_11985402(1, ""), kxi_10187284[0]);
+    if ((language_11981044[0] == 1)) {
+    add_9820072(tmp_11985599, text_9830548(makeNimstrLit("EN")));
+    }
+    else {
+    add_9820072(tmp_11985599, text_9830548(makeNimstrLit("SK")));
+    }
+    
+    add_9820072(tmp_11985598, tmp_11985599);
+    var tmp_11985600 = tree_9830445(70, []);
+    add_9820072(tmp_11985600, text_9830548(makeNimstrLit("/")));
+    add_9820072(tmp_11985598, tmp_11985600);
     var tmp_11985601 = tree_9830445(44, []);
     tmp_11985601.class = "navbar-item";
-    add_event_handler_10750154(tmp_11985601, 0, action_11985402(1, ""), kxi_10187284[0]);
-    if ((language_11981044[0] == 1)) {
-    add_9820072(tmp_11985601, text_9830548(makeNimstrLit("EN")));
-    }
-    else {
-    add_9820072(tmp_11985601, text_9830548(makeNimstrLit("SK")));
-    }
-    
-    add_9820072(tmp_11985600, tmp_11985601);
-    var tmp_11985602 = tree_9830445(70, []);
-    add_9820072(tmp_11985602, text_9830548(makeNimstrLit("/")));
-    add_9820072(tmp_11985600, tmp_11985602);
-    var tmp_11985603 = tree_9830445(44, []);
-    tmp_11985603.class = "navbar-item";
-    add_event_handler_10750154(tmp_11985603, 0, action_11985402(2, ""), kxi_10187284[0]);
+    add_event_handler_10750154(tmp_11985601, 0, action_11985402(2, ""), kxi_10187284[0]);
     if ((theme_11981045[0] == 0)) {
-    add_9820072(tmp_11985603, text_9830548(makeNimstrLit("Dark")));
+    add_9820072(tmp_11985601, text_9830548(makeNimstrLit("Dark")));
     }
     else {
-    add_9820072(tmp_11985603, text_9830548(makeNimstrLit("Light")));
+    add_9820072(tmp_11985601, text_9830548(makeNimstrLit("Light")));
     }
     
-    add_9820072(tmp_11985600, tmp_11985603);
-    add_9820072(tmp_11985597, tmp_11985600);
-    add_9820072(tmp_11985596, tmp_11985597);
-    result_11985595 = tmp_11985596;
+    add_9820072(tmp_11985598, tmp_11985601);
+    add_9820072(tmp_11985595, tmp_11985598);
+    add_9820072(tmp_11985594, tmp_11985595);
+    result_11985593 = tmp_11985594;
 
-  return result_11985595;
+  return result_11985593;
 
 }
 function build_content_11990326() {
@@ -2710,7 +2709,7 @@ function create_dom_12000018(data_12000020) {
     
     var tmp_12000026 = tree_9830445(43, []);
     tmp_12000026.class = apply_theme_11985327("theme");
-    add_9820072(tmp_12000026, build_navbar_11985593());
+    add_9820072(tmp_12000026, build_navbar_11985591());
     add_9820072(tmp_12000026, build_content_11990326());
     add_9820072(tmp_12000026, build_footer_11995018());
     result_12000021 = tmp_12000026;
