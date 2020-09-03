@@ -62,6 +62,14 @@ proc content(typ: ContentType, part: string) : VNode =
         p:
           text about_text[ord(language)]
         
+        tdiv(class="about-me"):
+          p(class="left"): text ["Contact:", "Kontakt:"][ord(language)]
+
+          tdiv(class="links"):
+            a(class="button button-left", href="mailto:mudry.ado+githubio@gmail.com"): text "<@> Email"
+            #a(class="button button-disabled"): text "<#> LinkedIn"
+
+        
     of Skills:
       case part
       of "title":
@@ -88,7 +96,7 @@ proc content(typ: ContentType, part: string) : VNode =
               p(class="right"): text "Linux, BSD, MacOS"
             
             tdiv(class="links"):
-              a(class="button github", href="https://github.com/adokitkat/vut-fit-ios-1"): text "</> Github"
+              a(class="button", href="https://github.com/adokitkat/vut-fit-ios-1"): text "</> Github"
 
           tdiv(class="project"):
             h3: text ["Public transport line simulator", "Simulátor liniek hromadnej dopravy"][ord(language)]
@@ -104,7 +112,7 @@ proc content(typ: ContentType, part: string) : VNode =
               p(class="right"): text "Windows, Linux"
             
             tdiv(class="links"):
-              a(class="button github", href="https://github.com/adokitkat/vut-fit-icp"): text "</> Github"
+              a(class="button button-left", href="https://github.com/adokitkat/vut-fit-icp"): text "</> Github"
               a(class="button", href="https://github.com/adokitkat/vut-fit-icp/releases"): text ["<~> Try it", "<~> Vyskúšaj"][ord(language)]
 
           tdiv(class="project"):
@@ -119,7 +127,7 @@ proc content(typ: ContentType, part: string) : VNode =
               p(class="right"): text "Linux"
             
             tdiv(class="links"):
-              a(class="button github", href="https://github.com/adokitkat/vut-fit-ipk-2"): text "</> Github"
+              a(class="button", href="https://github.com/adokitkat/vut-fit-ipk-2"): text "</> Github"
 
           tdiv(class="project"):
             h3: text ["This portfolio page", "Táto portfólio stránka"][ord(language)]
@@ -134,12 +142,12 @@ proc content(typ: ContentType, part: string) : VNode =
                 text "Sass"
             
             tdiv(class="links"):
-              a(class="button github", href="https://github.com/adokitkat/adokitkat.github.io"): text "</> Github"
+              a(class="button", href="https://github.com/adokitkat/adokitkat.github.io"): text "</> Github"
 
           tdiv(class="project"):
             h3: text ["And others...", "A iné..."][ord(language)]
             tdiv(class="links"):
-              a(class="button github", href="https://github.com/adokitkat"): text "</> Github " & ["profile", "profil"][ord(language)]
+              a(class="button", href="https://github.com/adokitkat"): text "</> Github " & ["profile", "profil"][ord(language)]
 
 
 proc parseCookieTheme(start : var bool) =
@@ -238,13 +246,6 @@ proc buildContent(): VNode =
 
 proc buildFooter(): VNode =
   result = buildHtml(footer(class=applyTheme(kstring"footer"))):
-    #[
-    text "Powered by "
-    a(class=applyTheme(kstring"nim-link"), href="https://nim-lang.org/"):
-      text "NIM"
-    span():
-      text " | "
-    ]#
     text "Adam Múdry 2020"
 
 proc createDom(data: RouterData): VNode =

@@ -8,7 +8,7 @@
 }
 
 $mini: 315px;
-$link_mini: 408px;
+$link_mini: 411px;
 $phone: 640px;
 $tablet: 768px;
 $desktop: 1024px;
@@ -24,6 +24,44 @@ button {
 
 a {
   text-decoration: none;
+}
+
+.links {
+  margin: 8px 0;
+
+  &a {
+    color: inherit;
+  }
+}
+
+.button {
+  display: inline-block;
+  border: solid;
+  padding: 3px 4px;
+
+  &.button-disabled {
+    color: gray !important;
+  }
+}
+
+.project > .links > .button-left {
+  @media (min-width: $link_mini + 1) {
+    margin: 0 30px 0 0;
+  }
+
+  @media (max-width: $link_mini) {
+    margin: 0 10px 10px 0;
+  }
+}
+
+.about-me > .links > .button-left {
+  @media (min-width: $link_mini + 1) {
+    margin: 0 20px 0 0;
+  }
+
+  @media (max-width: $link_mini) {
+    margin: 0 10px 10px 0;
+  }
 }
 
 .navbar {
@@ -157,31 +195,5 @@ a {
 
   & .right {
     display: inline-block;
-  }
-
-  & .links {
-    margin: 8px 0;
-
-    &a {
-      color: inherit;
-    }
-
-    & .button {
-      display:  inline-block;
-      border: solid;
-      padding: 3px 4px;
-
-    }
-    
-    & .github {
-      @media (min-width: $link_mini + 1) {
-        margin: 0 30px 0 0;
-      }
-
-      @media (max-width: $link_mini) {
-        margin: 0 10px 10px 0;
-      }
-      
-    }
   }
 }
