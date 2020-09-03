@@ -85,6 +85,8 @@ proc content(typ: ContentType, part: string) : VNode =
           tdiv(class="project"):
             h3: text ["Apache log viewer & filter", "Nástroj pre zobrazovanie a filtrovanie Apache logov"][ord(language)]
             
+            p(class="left"): text ["POSIX-ly correct", "Splňujúce štandard POSIX"][ord(language)]
+
             tdiv(class="language"):
               p(class="left"): text ["Language:", "Jazyk:"][ord(language)]
               p(class="right"): text "Shell script"
@@ -103,7 +105,7 @@ proc content(typ: ContentType, part: string) : VNode =
 
             tdiv(class="language"):
               p(class="left"): text ["Language:", "Jazyk:"][ord(language)]
-              p(class="right"): text "C++, Qt5"
+              p(class="right"): text "C++ (Qt5)"
             
             tdiv(class="os"):
               p(class="left"): text "OS:"
@@ -136,7 +138,7 @@ proc content(typ: ContentType, part: string) : VNode =
               p(class="left"): text ["Language:", "Jazyk:"][ord(language)]
               p(class="right"):
                 a(class=kstring"nim-link", id=applyTheme(kstring"nim-link"), href="https://nim-lang.org/"): text "NIM"
-                text [" (compiled to JS), ", " (skompilovaný na JS), "][ord(language)]
+                text [" (Karax, compiled to JS), ", " (Karax, skompilovaný na JS), "][ord(language)]
                 text "Sass"
             
             tdiv(class="links"):
