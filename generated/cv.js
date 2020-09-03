@@ -2115,9 +2115,9 @@ function contains_11981005(s_11981007, sub_11981008) {
   return result_11981009;
 
 }
-function parse_cookie_theme_11990366(start_11990369, start_11990369_Idx) {
-    if ((start_11990369[start_11990369_Idx] == false)) {
-    start_11990369[start_11990369_Idx] = true;
+function parse_cookie_theme_11990374(start_11990377, start_11990377_Idx) {
+    if ((start_11990377[start_11990377_Idx] == false)) {
+    start_11990377[start_11990377_Idx] = true;
     if (contains_11981005(document.cookie, "Dark")) {
     theme_11985058[0] = 1;
     }
@@ -2277,9 +2277,9 @@ function is_undefined_315483(x_315486) {
   return result_315487;
 
 }
-function action_11990404(typ_11990406, entry_11990407) {
-    function HEX3Aanonymous_11990411() {
-        switch (typ_11990406) {
+function action_11990412(typ_11990414, entry_11990415) {
+    function HEX3Aanonymous_11990419() {
+        switch (typ_11990414) {
         case 1:
           if ((language_11985057[0] == 0)) {
           language_11985057[0] = 1;
@@ -2303,17 +2303,17 @@ function action_11990404(typ_11990406, entry_11990407) {
           break;
         case 0:
           L1: do {
-            var i_11990505 = 0;
-            var n_11990506 = null;
+            var i_11990513 = 0;
+            var n_11990514 = null;
             var i_12010225 = 0;
             if ((i_12010225 <= 2)) {
             L2: do {
                 L3: while (true) {
                 if (!true) break L3;
-                  i_11990505 = i_12010225;
-                  n_11990506 = content_type_kstring_11985016[chckIndx(i_12010225, 0, (content_type_kstring_11985016 != null ? content_type_kstring_11985016.length : 0)+0-1)-0];
-                  if ((entry_11990407 == n_11990506)) {
-                  shown_content_11985056[0] = i_11990505;
+                  i_11990513 = i_12010225;
+                  n_11990514 = content_type_kstring_11985016[chckIndx(i_12010225, 0, (content_type_kstring_11985016 != null ? content_type_kstring_11985016.length : 0)+0-1)-0];
+                  if ((entry_11990415 == n_11990514)) {
+                  shown_content_11985056[0] = i_11990513;
                   }
                   
                   if ((2 <= i_12010225)) {
@@ -2332,11 +2332,11 @@ function action_11990404(typ_11990406, entry_11990407) {
       
     }
 
-  var result_11990410 = null;
+  var result_11990418 = null;
 
-    result_11990410 = HEX3Aanonymous_11990411;
+    result_11990418 = HEX3Aanonymous_11990419;
 
-  return result_11990410;
+  return result_11990418;
 
 }
 function title_11985060(typ_11985062) {
@@ -2384,19 +2384,19 @@ function set_attr_9770105(n_9770107, key_9770108, val_9770109) {
     else {
       L1: do {
         var i_9770138 = 0;
-        var colontmp__12010283 = 0;
-        colontmp__12010283 = subInt((n_9770107.attrs != null ? n_9770107.attrs.length : 0), 2);
-        var res_12010284 = 0;
+        var colontmp__12010285 = 0;
+        colontmp__12010285 = subInt((n_9770107.attrs != null ? n_9770107.attrs.length : 0), 2);
+        var res_12010286 = 0;
         L2: do {
             L3: while (true) {
-            if (!(res_12010284 <= colontmp__12010283)) break L3;
-              i_9770138 = res_12010284;
+            if (!(res_12010286 <= colontmp__12010285)) break L3;
+              i_9770138 = res_12010286;
               if ((n_9770107.attrs[chckIndx(i_9770138, 0, (n_9770107.attrs != null ? n_9770107.attrs.length : 0)+0-1)-0] == key_9770108)) {
               n_9770107.attrs[chckIndx(addInt(i_9770138, 1), 0, (n_9770107.attrs != null ? n_9770107.attrs.length : 0)+0-1)-0] = val_9770109;
               break BeforeRet;
               }
               
-              res_12010284 = addInt(res_12010284, 2);
+              res_12010286 = addInt(res_12010286, 2);
             }
         } while(false);
       } while(false);
@@ -2436,24 +2436,28 @@ function content_11985167(typ_11985169, part_11985170) {
         add_9820072(tmp_11985208, text_9830601(about_title_11985022[chckIndx(language_11985057[0], 0, (about_title_11985022 != null ? about_title_11985022.length : 0)+0-1)-0]));
         break;
       case "text":
-        var tmp_11985214 = tree_9830445(31, []);
-        add_9820072(tmp_11985214, text_9830601(about_text_11985031[chckIndx(language_11985057[0], 0, (about_text_11985031 != null ? about_text_11985031.length : 0)+0-1)-0]));
+        var tmp_11985214 = tree_9830445(43, []);
+        tmp_11985214.class = "about-me";
+        var tmp_11985215 = tree_9830445(31, []);
+        tmp_11985215.class = "about-me-text center";
+        add_9820072(tmp_11985215, text_9830601(about_text_11985031[chckIndx(language_11985057[0], 0, (about_text_11985031 != null ? about_text_11985031.length : 0)+0-1)-0]));
+        add_9820072(tmp_11985214, tmp_11985215);
+        var tmp_11985216 = tree_9830445(43, []);
+        tmp_11985216.class = "contact center";
+        var tmp_11985217 = tree_9830445(31, []);
+        tmp_11985217.class = "contact-text";
+        add_9820072(tmp_11985217, text_9830548((Tmp1 = [makeNimstrLit("Contact:"), makeNimstrLit("Kontakt:")], Tmp1)[chckIndx(language_11985057[0], 0, (Tmp1 != null ? Tmp1.length : 0)+0-1)-0]));
+        add_9820072(tmp_11985216, tmp_11985217);
+        var tmp_11985218 = tree_9830445(43, []);
+        tmp_11985218.class = "links";
+        var tmp_11985219 = tree_9830445(44, []);
+        tmp_11985219.class = "button";
+        set_attr_9770105(tmp_11985219, "href", "mailto:mudry.ado+githubio@gmail.com");
+        add_9820072(tmp_11985219, text_9830548(makeNimstrLit("<@> Email")));
+        add_9820072(tmp_11985218, tmp_11985219);
+        add_9820072(tmp_11985216, tmp_11985218);
+        add_9820072(tmp_11985214, tmp_11985216);
         add_9820072(tmp_11985208, tmp_11985214);
-        var tmp_11985215 = tree_9830445(43, []);
-        tmp_11985215.class = "about-me";
-        var tmp_11985216 = tree_9830445(31, []);
-        tmp_11985216.class = "left";
-        add_9820072(tmp_11985216, text_9830548((Tmp1 = [makeNimstrLit("Contact:"), makeNimstrLit("Kontakt:")], Tmp1)[chckIndx(language_11985057[0], 0, (Tmp1 != null ? Tmp1.length : 0)+0-1)-0]));
-        add_9820072(tmp_11985215, tmp_11985216);
-        var tmp_11985217 = tree_9830445(43, []);
-        tmp_11985217.class = "links";
-        var tmp_11985218 = tree_9830445(44, []);
-        tmp_11985218.class = "button button-left";
-        set_attr_9770105(tmp_11985218, "href", "mailto:mudry.ado+githubio@gmail.com");
-        add_9820072(tmp_11985218, text_9830548(makeNimstrLit("<@> Email")));
-        add_9820072(tmp_11985217, tmp_11985218);
-        add_9820072(tmp_11985215, tmp_11985217);
-        add_9820072(tmp_11985208, tmp_11985215);
         break;
       default: 
         break;
@@ -2465,9 +2469,13 @@ function content_11985167(typ_11985169, part_11985170) {
         add_9820072(tmp_11985208, text_9830601(skills_title_11985025[chckIndx(language_11985057[0], 0, (skills_title_11985025 != null ? skills_title_11985025.length : 0)+0-1)-0]));
         break;
       case "text":
-        var tmp_11985219 = tree_9830445(31, []);
-        add_9820072(tmp_11985219, text_9830601(skills_text_11985034[chckIndx(language_11985057[0], 0, (skills_text_11985034 != null ? skills_text_11985034.length : 0)+0-1)-0]));
-        add_9820072(tmp_11985208, tmp_11985219);
+        var tmp_11985220 = tree_9830445(43, []);
+        tmp_11985220.class = "skills";
+        var tmp_11985221 = tree_9830445(31, []);
+        tmp_11985221.class = "center";
+        add_9820072(tmp_11985221, text_9830601(skills_text_11985034[chckIndx(language_11985057[0], 0, (skills_text_11985034 != null ? skills_text_11985034.length : 0)+0-1)-0]));
+        add_9820072(tmp_11985220, tmp_11985221);
+        add_9820072(tmp_11985208, tmp_11985220);
         break;
       default: 
         break;
@@ -2479,176 +2487,176 @@ function content_11985167(typ_11985169, part_11985170) {
         add_9820072(tmp_11985208, text_9830601(projects_title_11985028[chckIndx(language_11985057[0], 0, (projects_title_11985028 != null ? projects_title_11985028.length : 0)+0-1)-0]));
         break;
       case "text":
-        var tmp_11985220 = tree_9830445(43, []);
-        tmp_11985220.class = "projects";
-        var tmp_11985221 = tree_9830445(43, []);
-        tmp_11985221.class = "project";
-        var tmp_11985222 = tree_9830445(23, []);
-        add_9820072(tmp_11985222, text_9830548((Tmp2 = [makeNimstrLit("Apache log viewer & filter"), makeNimstrLit("N\xC3\xA1stroj pre zobrazovanie a filtrovanie Apache logov")], Tmp2)[chckIndx(language_11985057[0], 0, (Tmp2 != null ? Tmp2.length : 0)+0-1)-0]));
-        add_9820072(tmp_11985221, tmp_11985222);
+        var tmp_11985222 = tree_9830445(43, []);
+        tmp_11985222.class = "projects";
         var tmp_11985223 = tree_9830445(43, []);
-        tmp_11985223.class = "language";
-        var tmp_11985224 = tree_9830445(31, []);
-        tmp_11985224.class = "left";
-        add_9820072(tmp_11985224, text_9830548((Tmp3 = [makeNimstrLit("Language:"), makeNimstrLit("Jazyk:")], Tmp3)[chckIndx(language_11985057[0], 0, (Tmp3 != null ? Tmp3.length : 0)+0-1)-0]));
+        tmp_11985223.class = "project";
+        var tmp_11985224 = tree_9830445(23, []);
+        add_9820072(tmp_11985224, text_9830548((Tmp2 = [makeNimstrLit("Apache log viewer & filter"), makeNimstrLit("N\xC3\xA1stroj pre zobrazovanie a filtrovanie Apache logov")], Tmp2)[chckIndx(language_11985057[0], 0, (Tmp2 != null ? Tmp2.length : 0)+0-1)-0]));
         add_9820072(tmp_11985223, tmp_11985224);
-        var tmp_11985225 = tree_9830445(31, []);
-        tmp_11985225.class = "right";
-        add_9820072(tmp_11985225, text_9830548(makeNimstrLit("Shell script")));
-        add_9820072(tmp_11985223, tmp_11985225);
-        add_9820072(tmp_11985221, tmp_11985223);
-        var tmp_11985226 = tree_9830445(43, []);
-        tmp_11985226.class = "os";
+        var tmp_11985225 = tree_9830445(43, []);
+        tmp_11985225.class = "language";
+        var tmp_11985226 = tree_9830445(31, []);
+        tmp_11985226.class = "left";
+        add_9820072(tmp_11985226, text_9830548((Tmp3 = [makeNimstrLit("Language:"), makeNimstrLit("Jazyk:")], Tmp3)[chckIndx(language_11985057[0], 0, (Tmp3 != null ? Tmp3.length : 0)+0-1)-0]));
+        add_9820072(tmp_11985225, tmp_11985226);
         var tmp_11985227 = tree_9830445(31, []);
-        tmp_11985227.class = "left";
-        add_9820072(tmp_11985227, text_9830548(makeNimstrLit("OS:")));
-        add_9820072(tmp_11985226, tmp_11985227);
-        var tmp_11985228 = tree_9830445(31, []);
-        tmp_11985228.class = "right";
-        add_9820072(tmp_11985228, text_9830548(makeNimstrLit("Linux, BSD, MacOS")));
-        add_9820072(tmp_11985226, tmp_11985228);
-        add_9820072(tmp_11985221, tmp_11985226);
-        var tmp_11985229 = tree_9830445(43, []);
-        tmp_11985229.class = "links";
-        var tmp_11985230 = tree_9830445(44, []);
-        tmp_11985230.class = "button";
-        set_attr_9770105(tmp_11985230, "href", "https://github.com/adokitkat/vut-fit-ios-1");
-        add_9820072(tmp_11985230, text_9830548(makeNimstrLit("</> Github")));
-        add_9820072(tmp_11985229, tmp_11985230);
-        add_9820072(tmp_11985221, tmp_11985229);
-        add_9820072(tmp_11985220, tmp_11985221);
+        tmp_11985227.class = "right";
+        add_9820072(tmp_11985227, text_9830548(makeNimstrLit("Shell script")));
+        add_9820072(tmp_11985225, tmp_11985227);
+        add_9820072(tmp_11985223, tmp_11985225);
+        var tmp_11985228 = tree_9830445(43, []);
+        tmp_11985228.class = "os";
+        var tmp_11985229 = tree_9830445(31, []);
+        tmp_11985229.class = "left";
+        add_9820072(tmp_11985229, text_9830548(makeNimstrLit("OS:")));
+        add_9820072(tmp_11985228, tmp_11985229);
+        var tmp_11985230 = tree_9830445(31, []);
+        tmp_11985230.class = "right";
+        add_9820072(tmp_11985230, text_9830548(makeNimstrLit("Linux, BSD, MacOS")));
+        add_9820072(tmp_11985228, tmp_11985230);
+        add_9820072(tmp_11985223, tmp_11985228);
         var tmp_11985231 = tree_9830445(43, []);
-        tmp_11985231.class = "project";
-        var tmp_11985232 = tree_9830445(23, []);
-        add_9820072(tmp_11985232, text_9830548((Tmp4 = [makeNimstrLit("Public transport line simulator"), makeNimstrLit("Simul\xC3\xA1tor liniek hromadnej dopravy")], Tmp4)[chckIndx(language_11985057[0], 0, (Tmp4 != null ? Tmp4.length : 0)+0-1)-0]));
+        tmp_11985231.class = "links";
+        var tmp_11985232 = tree_9830445(44, []);
+        tmp_11985232.class = "button";
+        set_attr_9770105(tmp_11985232, "href", "https://github.com/adokitkat/vut-fit-ios-1");
+        add_9820072(tmp_11985232, text_9830548(makeNimstrLit("</> Github")));
         add_9820072(tmp_11985231, tmp_11985232);
-        var tmp_11985233 = tree_9830445(31, []);
-        tmp_11985233.class = "left";
-        add_9820072(tmp_11985233, text_9830548((Tmp5 = [makeNimstrLit("Uses A* path-finding algorithm"), makeNimstrLit("Pou\xC5\xBE\xC3\xADva A* algoritmus na n\xC3\xA1jdenie cesty")], Tmp5)[chckIndx(language_11985057[0], 0, (Tmp5 != null ? Tmp5.length : 0)+0-1)-0]));
-        add_9820072(tmp_11985231, tmp_11985233);
-        var tmp_11985234 = tree_9830445(43, []);
-        tmp_11985234.class = "language";
+        add_9820072(tmp_11985223, tmp_11985231);
+        add_9820072(tmp_11985222, tmp_11985223);
+        var tmp_11985233 = tree_9830445(43, []);
+        tmp_11985233.class = "project";
+        var tmp_11985234 = tree_9830445(23, []);
+        add_9820072(tmp_11985234, text_9830548((Tmp4 = [makeNimstrLit("Public transport line simulator"), makeNimstrLit("Simul\xC3\xA1tor liniek hromadnej dopravy")], Tmp4)[chckIndx(language_11985057[0], 0, (Tmp4 != null ? Tmp4.length : 0)+0-1)-0]));
+        add_9820072(tmp_11985233, tmp_11985234);
         var tmp_11985235 = tree_9830445(31, []);
         tmp_11985235.class = "left";
-        add_9820072(tmp_11985235, text_9830548((Tmp6 = [makeNimstrLit("Language:"), makeNimstrLit("Jazyk:")], Tmp6)[chckIndx(language_11985057[0], 0, (Tmp6 != null ? Tmp6.length : 0)+0-1)-0]));
-        add_9820072(tmp_11985234, tmp_11985235);
-        var tmp_11985236 = tree_9830445(31, []);
-        tmp_11985236.class = "right";
-        add_9820072(tmp_11985236, text_9830548(makeNimstrLit("C++, Qt5")));
-        add_9820072(tmp_11985234, tmp_11985236);
-        add_9820072(tmp_11985231, tmp_11985234);
-        var tmp_11985237 = tree_9830445(43, []);
-        tmp_11985237.class = "os";
+        add_9820072(tmp_11985235, text_9830548((Tmp5 = [makeNimstrLit("Uses A* path-finding algorithm"), makeNimstrLit("Pou\xC5\xBE\xC3\xADva A* algoritmus na n\xC3\xA1jdenie cesty")], Tmp5)[chckIndx(language_11985057[0], 0, (Tmp5 != null ? Tmp5.length : 0)+0-1)-0]));
+        add_9820072(tmp_11985233, tmp_11985235);
+        var tmp_11985236 = tree_9830445(43, []);
+        tmp_11985236.class = "language";
+        var tmp_11985237 = tree_9830445(31, []);
+        tmp_11985237.class = "left";
+        add_9820072(tmp_11985237, text_9830548((Tmp6 = [makeNimstrLit("Language:"), makeNimstrLit("Jazyk:")], Tmp6)[chckIndx(language_11985057[0], 0, (Tmp6 != null ? Tmp6.length : 0)+0-1)-0]));
+        add_9820072(tmp_11985236, tmp_11985237);
         var tmp_11985238 = tree_9830445(31, []);
-        tmp_11985238.class = "left";
-        add_9820072(tmp_11985238, text_9830548(makeNimstrLit("OS:")));
-        add_9820072(tmp_11985237, tmp_11985238);
-        var tmp_11985239 = tree_9830445(31, []);
-        tmp_11985239.class = "right";
-        add_9820072(tmp_11985239, text_9830548(makeNimstrLit("Windows, Linux")));
-        add_9820072(tmp_11985237, tmp_11985239);
-        add_9820072(tmp_11985231, tmp_11985237);
-        var tmp_11985240 = tree_9830445(43, []);
-        tmp_11985240.class = "links";
-        var tmp_11985241 = tree_9830445(44, []);
-        tmp_11985241.class = "button button-left";
-        set_attr_9770105(tmp_11985241, "href", "https://github.com/adokitkat/vut-fit-icp");
-        add_9820072(tmp_11985241, text_9830548(makeNimstrLit("</> Github")));
-        add_9820072(tmp_11985240, tmp_11985241);
-        var tmp_11985242 = tree_9830445(44, []);
-        tmp_11985242.class = "button";
-        set_attr_9770105(tmp_11985242, "href", "https://github.com/adokitkat/vut-fit-icp/releases");
-        add_9820072(tmp_11985242, text_9830548((Tmp7 = [makeNimstrLit("<~> Try it"), makeNimstrLit("<~> Vysk\xC3\xBA\xC5\xA1aj")], Tmp7)[chckIndx(language_11985057[0], 0, (Tmp7 != null ? Tmp7.length : 0)+0-1)-0]));
-        add_9820072(tmp_11985240, tmp_11985242);
-        add_9820072(tmp_11985231, tmp_11985240);
-        add_9820072(tmp_11985220, tmp_11985231);
-        var tmp_11985243 = tree_9830445(43, []);
-        tmp_11985243.class = "project";
-        var tmp_11985244 = tree_9830445(23, []);
-        add_9820072(tmp_11985244, text_9830548((Tmp8 = [makeNimstrLit("Packet sniffer (IPv4)"), makeNimstrLit("Sniffer packetov (IPv4)")], Tmp8)[chckIndx(language_11985057[0], 0, (Tmp8 != null ? Tmp8.length : 0)+0-1)-0]));
-        add_9820072(tmp_11985243, tmp_11985244);
+        tmp_11985238.class = "right";
+        add_9820072(tmp_11985238, text_9830548(makeNimstrLit("C++, Qt5")));
+        add_9820072(tmp_11985236, tmp_11985238);
+        add_9820072(tmp_11985233, tmp_11985236);
+        var tmp_11985239 = tree_9830445(43, []);
+        tmp_11985239.class = "os";
+        var tmp_11985240 = tree_9830445(31, []);
+        tmp_11985240.class = "left";
+        add_9820072(tmp_11985240, text_9830548(makeNimstrLit("OS:")));
+        add_9820072(tmp_11985239, tmp_11985240);
+        var tmp_11985241 = tree_9830445(31, []);
+        tmp_11985241.class = "right";
+        add_9820072(tmp_11985241, text_9830548(makeNimstrLit("Windows, Linux")));
+        add_9820072(tmp_11985239, tmp_11985241);
+        add_9820072(tmp_11985233, tmp_11985239);
+        var tmp_11985242 = tree_9830445(43, []);
+        tmp_11985242.class = "links";
+        var tmp_11985243 = tree_9830445(44, []);
+        tmp_11985243.class = "button button-left";
+        set_attr_9770105(tmp_11985243, "href", "https://github.com/adokitkat/vut-fit-icp");
+        add_9820072(tmp_11985243, text_9830548(makeNimstrLit("</> Github")));
+        add_9820072(tmp_11985242, tmp_11985243);
+        var tmp_11985244 = tree_9830445(44, []);
+        tmp_11985244.class = "button";
+        set_attr_9770105(tmp_11985244, "href", "https://github.com/adokitkat/vut-fit-icp/releases");
+        add_9820072(tmp_11985244, text_9830548((Tmp7 = [makeNimstrLit("<~> Try it"), makeNimstrLit("<~> Vysk\xC3\xBA\xC5\xA1aj")], Tmp7)[chckIndx(language_11985057[0], 0, (Tmp7 != null ? Tmp7.length : 0)+0-1)-0]));
+        add_9820072(tmp_11985242, tmp_11985244);
+        add_9820072(tmp_11985233, tmp_11985242);
+        add_9820072(tmp_11985222, tmp_11985233);
         var tmp_11985245 = tree_9830445(43, []);
-        tmp_11985245.class = "language";
-        var tmp_11985246 = tree_9830445(31, []);
-        tmp_11985246.class = "left";
-        add_9820072(tmp_11985246, text_9830548((Tmp9 = [makeNimstrLit("Language:"), makeNimstrLit("Jazyk:")], Tmp9)[chckIndx(language_11985057[0], 0, (Tmp9 != null ? Tmp9.length : 0)+0-1)-0]));
+        tmp_11985245.class = "project";
+        var tmp_11985246 = tree_9830445(23, []);
+        add_9820072(tmp_11985246, text_9830548((Tmp8 = [makeNimstrLit("Packet sniffer (IPv4)"), makeNimstrLit("Sniffer packetov (IPv4)")], Tmp8)[chckIndx(language_11985057[0], 0, (Tmp8 != null ? Tmp8.length : 0)+0-1)-0]));
         add_9820072(tmp_11985245, tmp_11985246);
-        var tmp_11985247 = tree_9830445(31, []);
-        tmp_11985247.class = "right";
-        add_9820072(tmp_11985247, text_9830548(makeNimstrLit("C, C++")));
-        add_9820072(tmp_11985245, tmp_11985247);
-        add_9820072(tmp_11985243, tmp_11985245);
-        var tmp_11985248 = tree_9830445(43, []);
-        tmp_11985248.class = "os";
+        var tmp_11985247 = tree_9830445(43, []);
+        tmp_11985247.class = "language";
+        var tmp_11985248 = tree_9830445(31, []);
+        tmp_11985248.class = "left";
+        add_9820072(tmp_11985248, text_9830548((Tmp9 = [makeNimstrLit("Language:"), makeNimstrLit("Jazyk:")], Tmp9)[chckIndx(language_11985057[0], 0, (Tmp9 != null ? Tmp9.length : 0)+0-1)-0]));
+        add_9820072(tmp_11985247, tmp_11985248);
         var tmp_11985249 = tree_9830445(31, []);
-        tmp_11985249.class = "left";
-        add_9820072(tmp_11985249, text_9830548(makeNimstrLit("OS:")));
-        add_9820072(tmp_11985248, tmp_11985249);
-        var tmp_11985250 = tree_9830445(31, []);
-        tmp_11985250.class = "right";
-        add_9820072(tmp_11985250, text_9830548(makeNimstrLit("Linux")));
-        add_9820072(tmp_11985248, tmp_11985250);
-        add_9820072(tmp_11985243, tmp_11985248);
-        var tmp_11985251 = tree_9830445(43, []);
-        tmp_11985251.class = "links";
-        var tmp_11985252 = tree_9830445(44, []);
-        tmp_11985252.class = "button";
-        set_attr_9770105(tmp_11985252, "href", "https://github.com/adokitkat/vut-fit-ipk-2");
-        add_9820072(tmp_11985252, text_9830548(makeNimstrLit("</> Github")));
-        add_9820072(tmp_11985251, tmp_11985252);
-        add_9820072(tmp_11985243, tmp_11985251);
-        add_9820072(tmp_11985220, tmp_11985243);
+        tmp_11985249.class = "right";
+        add_9820072(tmp_11985249, text_9830548(makeNimstrLit("C, C++")));
+        add_9820072(tmp_11985247, tmp_11985249);
+        add_9820072(tmp_11985245, tmp_11985247);
+        var tmp_11985250 = tree_9830445(43, []);
+        tmp_11985250.class = "os";
+        var tmp_11985251 = tree_9830445(31, []);
+        tmp_11985251.class = "left";
+        add_9820072(tmp_11985251, text_9830548(makeNimstrLit("OS:")));
+        add_9820072(tmp_11985250, tmp_11985251);
+        var tmp_11985252 = tree_9830445(31, []);
+        tmp_11985252.class = "right";
+        add_9820072(tmp_11985252, text_9830548(makeNimstrLit("Linux")));
+        add_9820072(tmp_11985250, tmp_11985252);
+        add_9820072(tmp_11985245, tmp_11985250);
         var tmp_11985253 = tree_9830445(43, []);
-        tmp_11985253.class = "project";
-        var tmp_11985254 = tree_9830445(23, []);
-        add_9820072(tmp_11985254, text_9830548((Tmp10 = [makeNimstrLit("This portfolio page"), makeNimstrLit("T\xC3\xA1to portf\xC3\xB3lio str\xC3\xA1nka")], Tmp10)[chckIndx(language_11985057[0], 0, (Tmp10 != null ? Tmp10.length : 0)+0-1)-0]));
+        tmp_11985253.class = "links";
+        var tmp_11985254 = tree_9830445(44, []);
+        tmp_11985254.class = "button";
+        set_attr_9770105(tmp_11985254, "href", "https://github.com/adokitkat/vut-fit-ipk-2");
+        add_9820072(tmp_11985254, text_9830548(makeNimstrLit("</> Github")));
         add_9820072(tmp_11985253, tmp_11985254);
-        var tmp_11985255 = tree_9830445(31, []);
-        tmp_11985255.class = "left";
-        add_9820072(tmp_11985255, text_9830548((Tmp11 = [makeNimstrLit("Single-page web app experiment with automatized building via Github Actions"), makeNimstrLit("Single-page web app experiment s automatick\xC3\xBDm stavan\xC3\xADm pomocou Github Actions")], Tmp11)[chckIndx(language_11985057[0], 0, (Tmp11 != null ? Tmp11.length : 0)+0-1)-0]));
-        add_9820072(tmp_11985253, tmp_11985255);
-        var tmp_11985256 = tree_9830445(43, []);
-        tmp_11985256.class = "language";
+        add_9820072(tmp_11985245, tmp_11985253);
+        add_9820072(tmp_11985222, tmp_11985245);
+        var tmp_11985255 = tree_9830445(43, []);
+        tmp_11985255.class = "project";
+        var tmp_11985256 = tree_9830445(23, []);
+        add_9820072(tmp_11985256, text_9830548((Tmp10 = [makeNimstrLit("This portfolio page"), makeNimstrLit("T\xC3\xA1to portf\xC3\xB3lio str\xC3\xA1nka")], Tmp10)[chckIndx(language_11985057[0], 0, (Tmp10 != null ? Tmp10.length : 0)+0-1)-0]));
+        add_9820072(tmp_11985255, tmp_11985256);
         var tmp_11985257 = tree_9830445(31, []);
         tmp_11985257.class = "left";
-        add_9820072(tmp_11985257, text_9830548((Tmp12 = [makeNimstrLit("Language:"), makeNimstrLit("Jazyk:")], Tmp12)[chckIndx(language_11985057[0], 0, (Tmp12 != null ? Tmp12.length : 0)+0-1)-0]));
-        add_9820072(tmp_11985256, tmp_11985257);
-        var tmp_11985258 = tree_9830445(31, []);
-        tmp_11985258.class = "right";
-        var tmp_11985259 = tree_9830445(44, []);
-        tmp_11985259.class = "nim-link";
-        tmp_11985259.id = apply_theme_11985077("nim-link");
-        set_attr_9770105(tmp_11985259, "href", "https://nim-lang.org/");
-        add_9820072(tmp_11985259, text_9830548(makeNimstrLit("NIM")));
+        add_9820072(tmp_11985257, text_9830548((Tmp11 = [makeNimstrLit("Single-page web app experiment with automatized building via Github Actions"), makeNimstrLit("Single-page web app experiment s automatick\xC3\xBDm stavan\xC3\xADm pomocou Github Actions")], Tmp11)[chckIndx(language_11985057[0], 0, (Tmp11 != null ? Tmp11.length : 0)+0-1)-0]));
+        add_9820072(tmp_11985255, tmp_11985257);
+        var tmp_11985258 = tree_9830445(43, []);
+        tmp_11985258.class = "language";
+        var tmp_11985259 = tree_9830445(31, []);
+        tmp_11985259.class = "left";
+        add_9820072(tmp_11985259, text_9830548((Tmp12 = [makeNimstrLit("Language:"), makeNimstrLit("Jazyk:")], Tmp12)[chckIndx(language_11985057[0], 0, (Tmp12 != null ? Tmp12.length : 0)+0-1)-0]));
         add_9820072(tmp_11985258, tmp_11985259);
-        add_9820072(tmp_11985258, text_9830548((Tmp13 = [makeNimstrLit(" (compiled to JS), "), makeNimstrLit(" (skompilovan\xC3\xBD na JS), ")], Tmp13)[chckIndx(language_11985057[0], 0, (Tmp13 != null ? Tmp13.length : 0)+0-1)-0]));
-        add_9820072(tmp_11985258, text_9830548(makeNimstrLit("Sass")));
-        add_9820072(tmp_11985256, tmp_11985258);
-        add_9820072(tmp_11985253, tmp_11985256);
-        var tmp_11985260 = tree_9830445(43, []);
-        tmp_11985260.class = "links";
+        var tmp_11985260 = tree_9830445(31, []);
+        tmp_11985260.class = "right";
         var tmp_11985261 = tree_9830445(44, []);
-        tmp_11985261.class = "button";
-        set_attr_9770105(tmp_11985261, "href", "https://github.com/adokitkat/adokitkat.github.io");
-        add_9820072(tmp_11985261, text_9830548(makeNimstrLit("</> Github")));
+        tmp_11985261.class = "nim-link";
+        tmp_11985261.id = apply_theme_11985077("nim-link");
+        set_attr_9770105(tmp_11985261, "href", "https://nim-lang.org/");
+        add_9820072(tmp_11985261, text_9830548(makeNimstrLit("NIM")));
         add_9820072(tmp_11985260, tmp_11985261);
-        add_9820072(tmp_11985253, tmp_11985260);
-        add_9820072(tmp_11985220, tmp_11985253);
+        add_9820072(tmp_11985260, text_9830548((Tmp13 = [makeNimstrLit(" (compiled to JS), "), makeNimstrLit(" (skompilovan\xC3\xBD na JS), ")], Tmp13)[chckIndx(language_11985057[0], 0, (Tmp13 != null ? Tmp13.length : 0)+0-1)-0]));
+        add_9820072(tmp_11985260, text_9830548(makeNimstrLit("Sass")));
+        add_9820072(tmp_11985258, tmp_11985260);
+        add_9820072(tmp_11985255, tmp_11985258);
         var tmp_11985262 = tree_9830445(43, []);
-        tmp_11985262.class = "project";
-        var tmp_11985263 = tree_9830445(23, []);
-        add_9820072(tmp_11985263, text_9830548((Tmp14 = [makeNimstrLit("And others..."), makeNimstrLit("A in\xC3\xA9...")], Tmp14)[chckIndx(language_11985057[0], 0, (Tmp14 != null ? Tmp14.length : 0)+0-1)-0]));
+        tmp_11985262.class = "links";
+        var tmp_11985263 = tree_9830445(44, []);
+        tmp_11985263.class = "button";
+        set_attr_9770105(tmp_11985263, "href", "https://github.com/adokitkat/adokitkat.github.io");
+        add_9820072(tmp_11985263, text_9830548(makeNimstrLit("</> Github")));
         add_9820072(tmp_11985262, tmp_11985263);
+        add_9820072(tmp_11985255, tmp_11985262);
+        add_9820072(tmp_11985222, tmp_11985255);
         var tmp_11985264 = tree_9830445(43, []);
-        tmp_11985264.class = "links";
-        var tmp_11985265 = tree_9830445(44, []);
-        tmp_11985265.class = "button";
-        set_attr_9770105(tmp_11985265, "href", "https://github.com/adokitkat");
-        add_9820072(tmp_11985265, text_9830548((makeNimstrLit("</> Github ") || []).concat((Tmp15 = [makeNimstrLit("profile"), makeNimstrLit("profil")], Tmp15)[chckIndx(language_11985057[0], 0, (Tmp15 != null ? Tmp15.length : 0)+0-1)-0] || [])));
+        tmp_11985264.class = "project";
+        var tmp_11985265 = tree_9830445(23, []);
+        add_9820072(tmp_11985265, text_9830548((Tmp14 = [makeNimstrLit("And others..."), makeNimstrLit("A in\xC3\xA9...")], Tmp14)[chckIndx(language_11985057[0], 0, (Tmp14 != null ? Tmp14.length : 0)+0-1)-0]));
         add_9820072(tmp_11985264, tmp_11985265);
-        add_9820072(tmp_11985262, tmp_11985264);
-        add_9820072(tmp_11985220, tmp_11985262);
-        add_9820072(tmp_11985208, tmp_11985220);
+        var tmp_11985266 = tree_9830445(43, []);
+        tmp_11985266.class = "links";
+        var tmp_11985267 = tree_9830445(44, []);
+        tmp_11985267.class = "button";
+        set_attr_9770105(tmp_11985267, "href", "https://github.com/adokitkat");
+        add_9820072(tmp_11985267, text_9830548((makeNimstrLit("</> Github ") || []).concat((Tmp15 = [makeNimstrLit("profile"), makeNimstrLit("profil")], Tmp15)[chckIndx(language_11985057[0], 0, (Tmp15 != null ? Tmp15.length : 0)+0-1)-0] || [])));
+        add_9820072(tmp_11985266, tmp_11985267);
+        add_9820072(tmp_11985264, tmp_11985266);
+        add_9820072(tmp_11985222, tmp_11985264);
+        add_9820072(tmp_11985208, tmp_11985222);
         break;
       default: 
         break;
@@ -2660,13 +2668,13 @@ function content_11985167(typ_11985169, part_11985170) {
   return result_11985171;
 
 }
-function build_navbar_11990578() {
-  var result_11990580 = null;
+function build_navbar_11990586() {
+  var result_11990588 = null;
 
-    var tmp_11990581 = tree_9830445(18, []);
-    tmp_11990581.class = apply_theme_11985077("navbar");
-    var tmp_11990582 = tree_9830445(43, []);
-    tmp_11990582.class = "navbar-list center";
+    var tmp_11990589 = tree_9830445(18, []);
+    tmp_11990589.class = apply_theme_11985077("navbar");
+    var tmp_11990590 = tree_9830445(43, []);
+    tmp_11990590.class = "navbar-list center";
     var navbar_item_11995009 = null;
     L1: do {
       var n_11995235 = 0;
@@ -2689,15 +2697,15 @@ function build_navbar_11990578() {
                 navbar_item_11995009 = "navbar-item";
               }
               }
-              var tmp_11990583 = tree_9830445(44, []);
-              tmp_11990583.class = navbar_item_11995009;
-              add_event_handler_10750154(tmp_11990583, 0, action_11990404(0, title_11985060(n_11995235)), kxi_10187284[0]);
-              add_9820072(tmp_11990583, content_11985167(n_11995235, makeNimstrLit("title")));
-              add_9820072(tmp_11990582, tmp_11990583);
+              var tmp_11990591 = tree_9830445(44, []);
+              tmp_11990591.class = navbar_item_11995009;
+              add_event_handler_10750154(tmp_11990591, 0, action_11990412(0, title_11985060(n_11995235)), kxi_10187284[0]);
+              add_9820072(tmp_11990591, content_11985167(n_11995235, makeNimstrLit("title")));
+              add_9820072(tmp_11990590, tmp_11990591);
               if ((n_11995235 < 2)) {
-              var tmp_11990584 = tree_9830445(70, []);
-              add_9820072(tmp_11990584, text_9830548(makeNimstrLit("/")));
-              add_9820072(tmp_11990582, tmp_11990584);
+              var tmp_11990592 = tree_9830445(70, []);
+              add_9820072(tmp_11990592, text_9830548(makeNimstrLit("/")));
+              add_9820072(tmp_11990590, tmp_11990592);
               }
               
               res_12010212 = addInt(res_12010212, 1);
@@ -2705,38 +2713,38 @@ function build_navbar_11990578() {
         } while(false);
       } while(false);
     } while(false);
-    var tmp_11990585 = tree_9830445(43, []);
-    tmp_11990585.class = "navbar-break";
-    var tmp_11990586 = tree_9830445(44, []);
-    tmp_11990586.class = "navbar-item";
-    add_event_handler_10750154(tmp_11990586, 0, action_11990404(1, ""), kxi_10187284[0]);
+    var tmp_11990593 = tree_9830445(43, []);
+    tmp_11990593.class = "navbar-break";
+    var tmp_11990594 = tree_9830445(44, []);
+    tmp_11990594.class = "navbar-item";
+    add_event_handler_10750154(tmp_11990594, 0, action_11990412(1, ""), kxi_10187284[0]);
     if ((language_11985057[0] == 1)) {
-    add_9820072(tmp_11990586, text_9830548(makeNimstrLit("EN")));
+    add_9820072(tmp_11990594, text_9830548(makeNimstrLit("EN")));
     }
     else {
-    add_9820072(tmp_11990586, text_9830548(makeNimstrLit("SK")));
+    add_9820072(tmp_11990594, text_9830548(makeNimstrLit("SK")));
     }
     
-    add_9820072(tmp_11990585, tmp_11990586);
-    var tmp_11990587 = tree_9830445(70, []);
-    add_9820072(tmp_11990587, text_9830548(makeNimstrLit("/")));
-    add_9820072(tmp_11990585, tmp_11990587);
-    var tmp_11990588 = tree_9830445(44, []);
-    tmp_11990588.class = "navbar-item";
-    add_event_handler_10750154(tmp_11990588, 0, action_11990404(2, ""), kxi_10187284[0]);
+    add_9820072(tmp_11990593, tmp_11990594);
+    var tmp_11990595 = tree_9830445(70, []);
+    add_9820072(tmp_11990595, text_9830548(makeNimstrLit("/")));
+    add_9820072(tmp_11990593, tmp_11990595);
+    var tmp_11990596 = tree_9830445(44, []);
+    tmp_11990596.class = "navbar-item";
+    add_event_handler_10750154(tmp_11990596, 0, action_11990412(2, ""), kxi_10187284[0]);
     if ((theme_11985058[0] == 0)) {
-    add_9820072(tmp_11990588, text_9830548(makeNimstrLit("dark theme")));
+    add_9820072(tmp_11990596, text_9830548(makeNimstrLit("dark theme")));
     }
     else {
-    add_9820072(tmp_11990588, text_9830548(makeNimstrLit("light theme")));
+    add_9820072(tmp_11990596, text_9830548(makeNimstrLit("light theme")));
     }
     
-    add_9820072(tmp_11990585, tmp_11990588);
-    add_9820072(tmp_11990582, tmp_11990585);
-    add_9820072(tmp_11990581, tmp_11990582);
-    result_11990580 = tmp_11990581;
+    add_9820072(tmp_11990593, tmp_11990596);
+    add_9820072(tmp_11990590, tmp_11990593);
+    add_9820072(tmp_11990589, tmp_11990590);
+    result_11990588 = tmp_11990589;
 
-  return result_11990580;
+  return result_11990588;
 
 }
 function build_content_11995326() {
@@ -2764,14 +2772,14 @@ function build_footer_12000018() {
 function create_dom_12005018(data_12005020) {
   var result_12005021 = null;
 
-    parse_cookie_theme_11990366(on_load_11985059, 0);
+    parse_cookie_theme_11990374(on_load_11985059, 0);
     if ((data_12005020.hashPart == "#/sk")) {
     language_11985057[0] = 1;
     }
     
     var tmp_12005023 = tree_9830445(43, []);
     tmp_12005023.class = apply_theme_11985077("theme");
-    add_9820072(tmp_12005023, build_navbar_11990578());
+    add_9820072(tmp_12005023, build_navbar_11990586());
     add_9820072(tmp_12005023, build_content_11995326());
     add_9820072(tmp_12005023, build_footer_12000018());
     result_12005021 = tmp_12005023;
