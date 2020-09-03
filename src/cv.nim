@@ -59,24 +59,22 @@ proc content(typ: ContentType, part: string) : VNode =
       of "title":
         text about_title[ord(language)]
       of "text":
-        p:
-          text about_text[ord(language)]
-        
         tdiv(class="about-me"):
-          p(class="left"): text ["Contact:", "Kontakt:"][ord(language)]
+          p(class="about-me-text center"): text about_text[ord(language)]
 
-          tdiv(class="links"):
-            a(class="button button-left", href="mailto:mudry.ado+githubio@gmail.com"): text "<@> Email"
-            #a(class="button button-disabled"): text "<#> LinkedIn"
+          tdiv(class="contact center"):
+            p(class="contact-text"): text ["Contact:", "Kontakt:"][ord(language)]
+            tdiv(class="links"):
+              a(class="button", href="mailto:mudry.ado+githubio@gmail.com"): text "<@> Email"
+              #a(class="button button-disabled"): text "<#> LinkedIn"
 
-        
     of Skills:
       case part
       of "title":
         text skills_title[ord(language)]
       of "text":
-        p:
-          text skills_text[ord(language)]
+        tdiv(class="skills"):
+          p(class="center"): text skills_text[ord(language)]
 
     of Projects:
       case part

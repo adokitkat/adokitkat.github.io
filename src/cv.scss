@@ -114,7 +114,6 @@ a {
   
   margin-left: 10vw;
   margin-right: 10vw;
-  text-align: center;
 }
 
 .nim-link {
@@ -169,7 +168,16 @@ a {
   }
 }
 
-.projects {
+.about-me-text {
+  display: block;
+}
+
+.contact-text {
+  margin-top: 2em;
+  margin-bottom: 0.5em;
+}
+
+.projects, .links {
   display: inline-flex;
   flex-wrap: wrap;
 }
@@ -188,7 +196,7 @@ a {
     margin-block-end: 8px;
   }
 
-  & .left {
+  & .left, & .mid {
     display: inline-block;
     margin-right: 10px;
   }
@@ -196,4 +204,13 @@ a {
   & .right {
     display: inline-block;
   }
+}
+
+.left, .mid {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.right {
+  display: inline-block;
 }
