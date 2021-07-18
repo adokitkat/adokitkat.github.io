@@ -38,8 +38,8 @@ type
 
 var
   shown_content : ContentType = Projects
-  language : Language = Slovak
-  theme : Theme = Light
+  language : Language = English
+  theme : Theme = Dark
   on_load : bool = false
 
 proc title(typ: ContentType) : kstring =
