@@ -8,6 +8,7 @@ on:
   push:
     paths: 
       - 'src/**'
+      - '.github/workflows/**'
     branches: [ master ]
   pull_request:
     branches: [ master ]
@@ -22,7 +23,7 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v2.3.4
       
       - name: Sass Build
         uses: gha-utilities/sass-build@v0.4.4
