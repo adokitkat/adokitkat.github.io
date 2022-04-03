@@ -39,7 +39,7 @@ type
 var
   shown_content : ContentType = Projects
   language : Language = English
-  theme : Theme = Dark
+  theme : Theme = Light
   on_load : bool = false
 
 proc title(typ: ContentType) : kstring =
@@ -65,8 +65,8 @@ proc content(typ: ContentType, part: string) : VNode =
           tdiv(class="contact center"):
             p(class="contact-text"): text ["Contact:", "Kontakt:"][ord(language)]
             tdiv(class="links"):
-              a(class="button", href="mailto:mudry.ado+githubio@gmail.com"): text "<@> Email"
-              #a(class="button button-disabled"): text "<#> LinkedIn"
+              a(class="button button-left", target="_blank", href="mailto:mudry.ado+githubio@gmail.com"): text "<@> Email"
+              a(class="button", target="_blank", href="https://www.linkedin.com/in/adam-mudry"): text "<#> LinkedIn"
 
     of Skills:
       case part
@@ -83,6 +83,23 @@ proc content(typ: ContentType, part: string) : VNode =
       of "text":
         tdiv(class="projects"):
           tdiv(class="project"):
+            h3: text "dnd"
+            
+            p(class="left"): text ["Bi-directional drag&drop source/taget", "Obojsmerný drag&drop zdroj/cieľ"][ord(language)]
+
+            tdiv(class="language"):
+              p(class="left"): text ["Language:", "Jazyk:"][ord(language)]
+              p(class="right"): 
+                a(class=kstring"nim-link", id=applyTheme(kstring"nim-link"), target="_blank", href="https://nim-lang.org/"): text "NIM"
+            
+            tdiv(class="os"):
+              p(class="left"): text "OS:"
+              p(class="right"): text "Linux"
+            
+            tdiv(class="links"):
+              a(class="button", target="_blank", href="https://github.com/adokitkat/dnd"): text "</> Github"
+
+          tdiv(class="project"):
             h3: text ["Apache log viewer & filter", "Nástroj pre zobrazovanie a filtrovanie Apache logov"][ord(language)]
             
             p(class="left"): text ["POSIX-ly correct", "Splňujúce štandard POSIX"][ord(language)]
@@ -96,7 +113,7 @@ proc content(typ: ContentType, part: string) : VNode =
               p(class="right"): text "Linux, BSD, MacOS"
             
             tdiv(class="links"):
-              a(class="button", href="https://github.com/adokitkat/vut-fit-ios-1"): text "</> Github"
+              a(class="button", target="_blank", href="https://github.com/adokitkat/vut-fit-ios-1"): text "</> Github"
 
           tdiv(class="project"):
             h3: text ["Public transport line simulator", "Simulátor liniek hromadnej dopravy"][ord(language)]
@@ -112,8 +129,8 @@ proc content(typ: ContentType, part: string) : VNode =
               p(class="right"): text "Windows, Linux"
             
             tdiv(class="links"):
-              a(class="button button-left", href="https://github.com/adokitkat/vut-fit-icp"): text "</> Github"
-              a(class="button", href="https://github.com/adokitkat/vut-fit-icp/releases"): text ["<~> Try it", "<~> Vyskúšaj"][ord(language)]
+              a(class="button button-left", target="_blank", href="https://github.com/adokitkat/vut-fit-icp"): text "</> Github"
+              a(class="button", target="_blank", href="https://github.com/adokitkat/vut-fit-icp/releases"): text ["<~> Try it", "<~> Vyskúšaj"][ord(language)]
 
           tdiv(class="project"):
             h3: text ["Packet sniffer (IPv4)", "Sniffer packetov (IPv4)"][ord(language)]
@@ -127,7 +144,7 @@ proc content(typ: ContentType, part: string) : VNode =
               p(class="right"): text "Linux"
             
             tdiv(class="links"):
-              a(class="button", href="https://github.com/adokitkat/vut-fit-ipk-2"): text "</> Github"
+              a(class="button", target="_blank", href="https://github.com/adokitkat/vut-fit-ipk-2"): text "</> Github"
 
           tdiv(class="project"):
             h3: text ["This portfolio page", "Táto portfólio stránka"][ord(language)]
@@ -137,17 +154,17 @@ proc content(typ: ContentType, part: string) : VNode =
             tdiv(class="language"):
               p(class="left"): text ["Language:", "Jazyk:"][ord(language)]
               p(class="right"):
-                a(class=kstring"nim-link", id=applyTheme(kstring"nim-link"), href="https://nim-lang.org/"): text "NIM"
+                a(class=kstring"nim-link", id=applyTheme(kstring"nim-link"), target="_blank", href="https://nim-lang.org/"): text "NIM"
                 text [" (Karax, compiled to JS), ", " (Karax, skompilovaný na JS), "][ord(language)]
                 text "Sass"
             
             tdiv(class="links"):
-              a(class="button", href="https://github.com/adokitkat/adokitkat.github.io"): text "</> Github"
+              a(class="button", target="_blank", href="https://github.com/adokitkat/adokitkat.github.io"): text "</> Github"
 
           tdiv(class="project"):
             h3: text ["And others...", "A iné..."][ord(language)]
             tdiv(class="links"):
-              a(class="button", href="https://github.com/adokitkat"): text "</> Github " & ["profile", "profil"][ord(language)]
+              a(class="button", target="_blank", href="https://github.com/adokitkat"): text "</> Github " & ["profile", "profil"][ord(language)]
 
 
 proc parseCookieTheme(start : var bool) =
@@ -155,6 +172,8 @@ proc parseCookieTheme(start : var bool) =
     start = true
     if document.cookie.contains($Theme.Dark):
       theme = Theme.Dark
+    else:
+      theme = Theme.Light
 
 proc applyTheme(s: kstring) : kstring =
   if s == "theme":
@@ -246,7 +265,7 @@ proc buildContent(): VNode =
 
 proc buildFooter(): VNode =
   result = buildHtml(footer(class=applyTheme(kstring"footer"))):
-    text "Adam Múdry 2020"
+    text "Adam Múdry 2022"
 
 proc createDom(data: RouterData): VNode =
   parseCookieTheme(on_load)
